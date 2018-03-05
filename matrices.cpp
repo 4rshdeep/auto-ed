@@ -19,6 +19,13 @@ public:
 
 	}
 
+	/*! Inverts two 4x4 matrices
+	*/
+	int* inv4x4(int arr[][]) {
+
+	}
+
+
 	/*! Adds two 3x3 matrices
 	*/
 	int* add3x3(int arr[][]) {

@@ -1,7 +1,0 @@
-digraph "twoD_to_threeD"
-{
-  bgcolor="transparent";
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{twoD_to_threeD\n||+ find_correspondence()\l+ generate_3D_edges()\l+ generate_face()\l+ generate_3D_object()\l+ check_edges()\l+ check_vertices()\l+ check_faces()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}
