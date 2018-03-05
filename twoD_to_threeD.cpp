@@ -20,41 +20,40 @@ class twoD_to_threeD
 {
 public:
 
-	// @2D to 3D transformation
-	/*We take the input in the form of 2D vertices and 2D Lines.  Now point of intersections
-of all the 2D lines are added to the list of 2D vertices.  Point of intersection of two 2D
-lines can be obtained by standard methods.  While constructing a 3D object, we consider
-each quantity as a probable quantity since that quantity may not be present in the final
-analysis.*/
-	vector<coordinate> find_correspondence() {
-
+	graph find_correspondence( orthographic x ) {
+	/*!	Takes 3 orthographic views as input and returns a graph by finding correspondence between the points in all 3 views.
+	*/
 	}
 
-	// involves  both  the  generation  of  probable-edges  and  checking  the  validity  of
-// probable-vertices.  If any probable-vertex is found to be invalid, that probable-vertex is
-// deleted and the procedure goes back to the beginning of this step.
-	vector<line> generate_lines(){
-
+	graph generate_lines(graph x, orthographic y){
+	/*!	Genrates possible vertices according to all 3 orthographic views given in the graph given.
+	*/
 	}
 
-	vector<plane> generate_face() {
-
+	vector<plane> generate_face(graph x , orthographic y) {
+	/*!	Finds possible faces according to all 3 orthographic views given.
+	*/
 	}
 
-	vector<adjacency_list> generate_3D_graph() {
-
+	graph check_edges(graph x , orthographic y) {
+	/*!	Checks for the presence of redundant egdes in the given graph by comparing with the given orthographic views and returns the edited graph.
+	*/
 	}
 
-	vector<adjacency_list>  check_edges() {
-
-	}
-
-	vector<adjacency_list> check_vertices() {
-
+	graph check_vertices(graph x , orthographic y) {
+	/*!	Checks for the presence of redundant vertices in the given graph by comparing with the given orthographic views and returns the edited graph.
+	*/
 	}	
 
-	vector<adjacency_list>  check_faces() {
+	vector<plane>  check_faces(graph x , orthographic y, vector<plane>) {
+	/*!	Checks for the presence of redundant planes in the given graph by comparing with the given orthographic views and returns the edited vector of planes.
+	*/
+	}
 
+	bool matches (graph x , orthographic y){
+	/*!	Checks if the orthographic views generated from the given graph matches with the orthographic views "y". 
+	*	Returns true if they match, else returns false.
+	*/		
 	}
 
 };
