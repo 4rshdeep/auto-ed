@@ -2,42 +2,17 @@
 
 using namespace std;
 
-
-
 class matrices
 {
 public:
-	/*! Adds two 4x4 matrices
-	*/
-	int* add4x4(int arr[][]) {
 
+	int* mult4x4(int arr1[][], int arr2[][]) {
+	/*! Takes 2 4X4 matrices as input and returns their product as the output.
+	*/
 	}
 
-	/*! Multiplies two 4x4 matrices
-	*/
-	int* mult4x4(int arr[][]) {
-
-	}
-
-	/*! Inverts two 4x4 matrices
-	*/
 	int* inv4x4(int arr[][]) {
-
-	}
-
-
-	/*! Adds two 3x3 matrices
+	/*! Takes a 4X4 matrix as input and returns its inverse as the output.
 	*/
-	int* add3x3(int arr[][]) {
-
-	}
-
-	/*! Multiplies two 4x4 matrices
-	*/
-	int* mult3x3(int arr[][]) {
-
-	}
-
-
-	
+	}	
 };
