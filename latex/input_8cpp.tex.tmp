@@ -1,0 +1,18 @@
+\hypertarget{input_8cpp}{}\section{input.\+cpp File Reference}
+\label{input_8cpp}\index{input.\+cpp@{input.\+cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+Include dependency graph for input.\+cpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcoordinates}{coordinates}
+\item 
+struct \hyperlink{structadjacency__list}{adjacency\+\_\+list}
+\item 
+struct \hyperlink{structgraph}{graph}
+\item 
+class \hyperlink{classinput}{input}
+\end{DoxyCompactItemize}

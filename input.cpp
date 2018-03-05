@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct coordinates
+struct coordinate
 {
     int x;
     int y;
@@ -11,7 +11,7 @@ struct coordinates
 struct adjacency_list
 {
 	vector<coordinates> adj_list;
-	coordinates coord;
+	coordinate coord;
 };
 
 struct graph
