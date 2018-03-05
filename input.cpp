@@ -35,7 +35,7 @@ public:
 	*/
 	}
 
-	void threeD_to_graph() {
+	graph threeD_to_graph() {
 	/*! Converts the given 3D input into a graph. Graph is described as follows
 	* 	- Graph is a list of vertices
 	*	- Each vertex itself has a coordinate value associated with itself 
@@ -43,7 +43,7 @@ public:
 	*/
 	}
 
-	void twoD_to_graph() {
+	graph twoD_to_graph() {
 	/*! Converts the 2D input to a probable 3D graph descriptions according to the following procedure.
 	* 	- Find correspondence of different points in all 3 orthographic views to get the 3D description of the vertices in the 3D model.
 	*	- Find and add all the probable edges to the graph formed in last step. 
