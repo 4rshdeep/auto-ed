@@ -5,7 +5,15 @@ using namespace std;
 
 struct line
 {
-	
+	coordinate c1;
+	coordinate c2;
+};
+
+struct plane
+{
+	coordinate c1;
+	coordinate c2;
+	coordinate c3;
 };
 
 class twoD_to_threeD
@@ -18,34 +26,34 @@ of all the 2D lines are added to the list of 2D vertices.  Point of intersection
 lines can be obtained by standard methods.  While constructing a 3D object, we consider
 each quantity as a probable quantity since that quantity may not be present in the final
 analysis.*/
-	coordinates find_correspondence() {
+	vector<coordinate> find_correspondence() {
 
 	}
 
 	// involves  both  the  generation  of  probable-edges  and  checking  the  validity  of
 // probable-vertices.  If any probable-vertex is found to be invalid, that probable-vertex is
 // deleted and the procedure goes back to the beginning of this step.
-	returntype generate_edges(){
+	vector<line> generate_lines(){
 
 	}
 
-	returntype generate_face() {
+	vector<plane> generate_face() {
 
 	}
 
-	returntype generate_3D_object() {
+	vector<adjacency_list> generate_3D_graph() {
 
 	}
 
-	returntype check_edges() {
+	vector<adjacency_list>  check_edges() {
 
 	}
 
-	returntype check_vertices() {
+	vector<adjacency_list> check_vertices() {
 
 	}	
 
-	returntype check_faces() {
+	vector<adjacency_list>  check_faces() {
 
 	}
 
