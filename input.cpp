@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+#include <threeD_to_ortho.cpp>
+#include <twoD_to_threeD.cpp>
+
 
 struct coordinate
 {
