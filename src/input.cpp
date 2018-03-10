@@ -11,15 +11,15 @@ struct coordinate
     int z;
 };
 
-struct adjacency_list
+struct node
 {
-	vector<coordinates> adj_list;
+	vector<node*> adj_list;	// pointer to neighbours
 	coordinate coord;
 };
 
 struct graph
 {
-	vector<adjacency_list> g;
+	vector<node> g;
 };
 
 class input
