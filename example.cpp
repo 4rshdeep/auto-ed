@@ -10,7 +10,7 @@ int main()
   	// mat B = ones<mat>(4 ,5);
   	int block_size = 3;
   	double *matrix = new double [block_size*block_size];
-	arma::mat arma_matrix( matrix, block_size, block_size, true, true );
+    arma::mat arma_matrix( matrix, block_size, block_size, true, true );
   	// mat arma_matrix(x, 3, 2, true, true );
 	// arma::mat arma_matrix( matrix, block_size, block_size, true, true );
   	
