@@ -42,8 +42,10 @@ int main() {
     int j = 0;
 
     std::vector<node> v;
-    
-    while (inFile >> x) {
+    int iter = size; 
+    while (iter > 0) {
+        iter--;
+        inFile >> x;
         inFile >> y;
         inFile >> z;
 
@@ -69,9 +71,39 @@ int main() {
     {
         
         node n = v[i];
-        cout << n.coord.x << " " << n.coord.y << " " << n.coord.z << endl;
+        // cout << n.coord.x << " " << n.coord.y << " " << n.coord.z << endl;
     }
 
+    //  Take edges.
+    int edges;
+    inFile >> edges;
+    int idx1;
+    int idx2;
+    for (int i = 0; i < edges; ++i)
+    {
+        inFile >> idx1;
+        inFile >> idx2;
+        node* n1 = &v[idx1];
+        node* n2 = &v[idx2];
+
+        v[idx1].adj_list.push_back(n2);
+        v[idx2].adj_list.push_back(n1);
+    }
+
+    v[0].coord.x = -1;
+
+    for (int i = 0; i < v.size(); ++i)
+    {
+        /* code */
+        node n = v[i];
+        cout << "Cordinates are " << n.coord.x << " " << n.coord.y << " " << n.coord.z << "  Neighbours are: ";
+        for (int j = 0; j < n.adj_list.size(); ++j)
+        {
+            /* code */
+            cout << j << ") " << (n.adj_list[j])->coord.x << endl;
+        }
+        cout << endl;
+    }
 
     inFile.close();
     return 0;
