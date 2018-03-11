@@ -59,11 +59,11 @@ using namespace arma;
 // };
 
 mat graph_to_mat(vector<node> nodes, int cols=4){
-	mat A = zeroes(v.size(), cols);
-	for (int i=0; i < static_cast<int>(v.size()); ++i){
-			A(i, 0) = v[i].coord.x;
-			A(i, 1) = v[i].coord.y;
-			A(i, 2) = v[i].coord.z;
+	mat A = zeros(nodes.size(), cols);
+	for (int i=0; i < static_cast<int>(nodes.size()); ++i){
+			A(i, 0) = nodes[i].coord.x;
+			A(i, 1) = nodes[i].coord.y;
+			A(i, 2) = nodes[i].coord.z;
 			A(i, 3) = 1;
 	}
 	return A;
@@ -90,6 +90,14 @@ mat translate_graph(mat A, coordinate t_factor) {
 	T = A*T;
 	return T;
 }
+direction find_rot(dir_ratios d){
+	direction dir;		//Using constructor
+	theta_x = (-1) * (acos ( c/( sqrt( a*a + b*b ) ) )) * (180) / PI;   	// into |b|/b
+	theta_y = (acos (sqrt ( (b*b + c*c)/(a*a + b*b + c*c) ) )) * 180 / PI ;	// into |a|/a
+	theta_z = 0;
+	return dir;
+}
+
 
 // theta is in degrees
 rot_matrix rot_about_coord_axis(mat A, direction theta) {
