@@ -58,9 +58,18 @@ using namespace arma;
 
 // };
 
+mat graph_to_mat(vector<node> nodes){
+	
+}
+
+
+
 // input is mx4 matrix and translation factor
 mat translate_graph(mat A, coordinate t_factor) {
 	mat T = eye(4,4);
+
+
+
 	T(3, 0) = t_factor.x;
 	T(3, 1) = t_factor.y;
 	T(3, 2) = t_factor.z;
