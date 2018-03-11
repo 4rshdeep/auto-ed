@@ -169,7 +169,7 @@ mat find_rot(mat A, dir_ratios d){
 	if(d.b-0.00 > 1e-5) {
 		dir.theta_x = (( acos(d.c/(sqrt( d.a*d.a + d.b*d.b )))) *(180)/ PI)*(fabs(d.b)/d.b) ;   	// into |b|/b
 	}
-	if(!((d.b-0.00 < 1e-5)&&(d.a-0.00 < 1e-5))) {
+	if(d.a-0.00 > 1e-5) {
 		dir.theta_y = (-(acos (sqrt ( (d.b*d.b + d.c*d.c)/(d.a*d.a + d.b*d.b + d.c*d.c) ) )) * 180 / PI)*(fabs(d.a)/d.a) ;	// into |a|/a
 	}
 
