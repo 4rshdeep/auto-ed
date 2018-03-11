@@ -58,11 +58,25 @@ using namespace arma;
 
 // };
 
-mat graph_to_mat(vector<node> nodes){
-	
+mat graph_to_mat(vector<node> nodes, int cols=4){
+	mat A = zeroes(v.size(), cols);
+	for (int i=0; i < static_cast<int>(v.size()); ++i){
+			A(i, 0) = v[i].coord.x;
+			A(i, 1) = v[i].coord.y;
+			A(i, 2) = v[i].coord.z;
+			A(i, 3) = 1;
+	}
+	return A;
 }
 
-
+vector<node> mat_to_graph(mat A, vector<node> vec){
+	for (int i=0; i < static_cast<int>(vec.size()); ++i){
+		vec[i].coord.x = A(i, 0);
+		vec[i].coord.y = A(i, 1);
+		vec[i].coord.z = A(i, 2);
+	}
+	return vec;
+}
 
 // input is mx4 matrix and translation factor
 mat translate_graph(mat A, coordinate t_factor) {
