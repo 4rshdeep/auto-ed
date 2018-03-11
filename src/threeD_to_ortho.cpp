@@ -145,13 +145,20 @@ mat find_rot(mat A, dir_ratios d){
 	if(!((d.b-0.00 < 1e-5)&&(d.a-0.00 < 1e-5))) {
 		dir.theta_y = (-(acos (sqrt ( (d.b*d.b + d.c*d.c)/(d.a*d.a + d.b*d.b + d.c*d.c) ) )) * 180 / PI)*(fabs(d.a)/d.a) ;	// into |a|/a
 	}
-	cout << dir.theta_x << " " << dir.theta_y << endl;
+
 	rot_matrix r = rot_about_coord_axis(A, dir);
 	mat res;
 	res = A*r.Rx;
 	res = res*r.Ry;
 
 	return res;
+}
+
+mat find_projection(mat A) {
+	mat P = eye(4, 4);
+	P(2, 2) = 0;
+	A = A*P;
+	return A;
 }
 
 int main(int argc, char const *argv[])
