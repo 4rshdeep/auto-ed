@@ -99,44 +99,7 @@ mat get_mx4_matrix(vector<node> v, int cols=4) {
 int main() {
     std::vector<node> v = get_2d_graph();
     check_graph(v);
-    // mat B;
-  
-    // endr indicates "end of row"
-    // B << 0.555950 << 0.274690 << 0.540605 << 0.798938 << endr
-    //   << 0.108929 << 0.830123 << 0.891726 << 0.895283 << endr
-    //   << 0.948014 << 0.973234 << 0.216504 << 0.883152 << endr
-    //   << 0.023787 << 0.675382 << 0.231751 << 0.450332 << endr;
-    // B(0, 1) = 1;
-    // // print to the cout stream
-    // // with an optional string before the contents of the matrix
-    // B.print("B:");
-    // cout << "size of B: " << size(B) << endl;
-
-    // mat A = zeros(v.size(), 4);
-
-    // for (int i = 0; i < static_cast<int>(v.size()); ++i)
-    // {
-    //         A(i, 0) = v[i].coord.x;
-    //         A(i, 1) = v[i].coord.y;
-    //         A(i, 2) = v[i].coord.z;
-    //         A(i, 3) = 0;
-    // }
-
-    // for(it = v.begin(); it != v.end(); it++)    {
-    //     node n = *it;
-    //     cout << n.coord.x << n.coord.y << n.coord.z << endl;
-    //     // cout << n.coord.x << endl;
-        
-    //     // for (size_t i = 0; i < n.adj_list.size(); ++i)
-    //     // {
-    //     //     cout << (n.adj_list[i])->coord.x << endl;
-    //     // }
-
-    // }
     mat A = get_mx4_matrix(v);
-
-
     A.print();
-
     return 0;
 }

@@ -1,16 +1,9 @@
 #include <bits/stdc++.h>
-#include <Output.cpp>
-#include <matrices.cpp>
+#include "input.cpp"
+#include "struct.h"
+
 
 using namespace std;
-
-struct direction
-{
-	float theta_x;
-	float theta_y;
-	float theta_z;
-
-};
 
 class threeD_to_ortho
 {
