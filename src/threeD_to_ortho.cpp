@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include <armadillo>
 #include "input.cpp"
-#include <math.h>  
+#include <math.h>
 
 #define PI 3.14159265
 
@@ -15,12 +15,12 @@ using namespace arma;
 // public:
 // 	void get_direction_for_projection() {
 // 	/*!	Asks the user for the direction along which it is desired to take the projection.
-// 	*/	
+// 	*/
 // 	}
 
 // 	void get_transitions() {
 // 	/*!	This functon takes the graph and the directions that the user has specified.
-// 	* 	Finds and applies the transitions required to be applied to the graph in order to get the projection along the desired direction. 
+// 	* 	Finds and applies the transitions required to be applied to the graph in order to get the projection along the desired direction.
 // 	*/
 // 	}
 
@@ -43,7 +43,7 @@ using namespace arma;
 // 	*	- The graph g which has to rotated
 // 	*	- The direction of the final line-of-sight.
 // 	* 	This function makes multiple calls to the function rotate_coordinate for all the vertices of the input graph.
-// 	*/	
+// 	*/
 // 	}
 
 // 	coordinate rotate_coordinate(coordinate c1, direction c2) {
@@ -52,21 +52,52 @@ using namespace arma;
 // 	}
 
 // 	void projection(graph x) {
-// 	/*!	Returns the projection of the graph after applying all the required transitions using z axis as the line-of-sight. 
+// 	/*!	Returns the projection of the graph after applying all the required transitions using z axis as the line-of-sight.
 // 	*/
 // 	}
 
 // };
 
+mat graph_to_mat(vector<node> nodes, int cols=4){
+	mat A = zeros(nodes.size(), cols);
+	for (int i=0; i < static_cast<int>(nodes.size()); ++i){
+			A(i, 0) = nodes[i].coord.x;
+			A(i, 1) = nodes[i].coord.y;
+			A(i, 2) = nodes[i].coord.z;
+			A(i, 3) = 1;
+	}
+	return A;
+}
+
+vector<node> mat_to_graph(mat A, vector<node> vec){
+	for (int i=0; i < static_cast<int>(vec.size()); ++i){
+		vec[i].coord.x = A(i, 0);
+		vec[i].coord.y = A(i, 1);
+		vec[i].coord.z = A(i, 2);
+	}
+	return vec;
+}
+
 // input is mx4 matrix and translation factor
 mat translate_graph(mat A, coordinate t_factor) {
 	mat T = eye(4,4);
+
+
+
 	T(3, 0) = t_factor.x;
 	T(3, 1) = t_factor.y;
 	T(3, 2) = t_factor.z;
 	T = A*T;
 	return T;
 }
+direction find_rot(dir_ratios d){
+	direction dir;		//Using constructor
+	theta_x = (-1) * (acos ( c/( sqrt( a*a + b*b ) ) )) * (180) / PI;   	// into |b|/b
+	theta_y = (acos (sqrt ( (b*b + c*c)/(a*a + b*b + c*c) ) )) * 180 / PI ;	// into |a|/a
+	theta_z = 0;
+	return dir;
+}
+
 
 // theta is in degrees
 rot_matrix rot_about_coord_axis(mat A, direction theta) {
@@ -113,7 +144,7 @@ rot_matrix rot_about_coord_axis(mat A, direction theta) {
 int main(int argc, char const *argv[])
 {
 	std::vector<node> v = get_2d_graph();
-    
+
     mat A = get_mx4_matrix(v);
     A.print("Before ");
 
@@ -123,17 +154,17 @@ int main(int argc, char const *argv[])
     c1.z = -0.5;
 
 
-	mat T = translate_graph(A, c1);
-	T.print("\nAfter rot_about_coord_axis");
-	// cout << endl;
-	// direction theta;
-	// theta.theta_x = 30;
-	// theta.theta_y = 30;
-	// theta.theta_z = 30;
-	// rot_matrix r = rot_about_coord_axis(A, theta);
-	// r.Rx.print();
-	// r.Ry.print();
-	// r.Rz.print();
+	// mat T = translate_graph(A, c1);
+	// T.print("\nAfter rot_about_coord_axis");
+	cout << endl;
+	direction theta;
+	theta.theta_x = 30;
+	theta.theta_y = 30;
+	theta.theta_z = 30;
+	rot_matrix r = rot_about_coord_axis(A, theta);
+	r.Rx.print();
+	r.Ry.print();
+	r.Rz.print();
 
  	return 0;
 }
