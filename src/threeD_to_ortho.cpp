@@ -58,6 +58,16 @@ using namespace arma;
 
 // };
 
+vector<node> find_projection(vector<node> graph){
+	//Give Option for translation as well
+	dir_ratios dir = get_dir_ratios();
+	mat A = graph_to_mat(A);
+	A = find_rot(A, dir);
+	A = find_projection(A);
+	return mat_to_graph(A, graph);
+}		
+
+
 mat graph_to_mat(vector<node> nodes, int cols=4){
 	mat A = zeros(nodes.size(), cols);
 	for (int i=0; i < static_cast<int>(nodes.size()); ++i){
@@ -90,6 +100,7 @@ mat translate_graph(mat A, coordinate t_factor) {
 	T = A*T;
 	return T;
 }
+
 
 // theta is in degrees
 rot_matrix rot_about_coord_axis(mat A, direction theta)
