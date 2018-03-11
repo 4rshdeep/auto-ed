@@ -34,3 +34,10 @@ struct rot_matrix
 	mat Ry;
 	mat Rz;
 };
+
+struct dir_ratios
+{
+	double a;
+	double b;
+	double c;
+};
