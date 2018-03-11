@@ -88,13 +88,13 @@ mat get_mx4_matrix(vector<node> v, int cols=4) {
     return A;
 }
 
-int main() {
-    std::vector<node> v = get_2d_graph();
-    // check_graph(v);
-    mat A = get_mx4_matrix(v);
-    A.print();
-    return 0;
-}
+// int main() {
+//     std::vector<node> v = get_2d_graph();
+//     // check_graph(v);
+//     mat A = get_mx4_matrix(v);
+//     A.print();
+//     return 0;
+// }
 
 
 

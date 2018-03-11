@@ -1,4 +1,7 @@
 #include<bits/stdc++.h>
+#include <armadillo>
+
+using namespace arma;
 
 struct coordinate
 {
@@ -25,3 +28,9 @@ struct direction
 	double theta_z;
 };
 
+struct rot_matrix
+{
+	mat Rx;
+	mat Ry;
+	mat Rz;
+};
