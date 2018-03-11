@@ -123,17 +123,17 @@ int main(int argc, char const *argv[])
     c1.z = -0.5;
 
 
-	// mat T = translate_graph(A, c1);
-	// T.print("\nAfter rot_about_coord_axis");
-	cout << endl;
-	direction theta;
-	theta.theta_x = 30;
-	theta.theta_y = 30;
-	theta.theta_z = 30;
-	rot_matrix r = rot_about_coord_axis(A, theta);
-	r.Rx.print();
-	r.Ry.print();
-	r.Rz.print();
+	mat T = translate_graph(A, c1);
+	T.print("\nAfter rot_about_coord_axis");
+	// cout << endl;
+	// direction theta;
+	// theta.theta_x = 30;
+	// theta.theta_y = 30;
+	// theta.theta_z = 30;
+	// rot_matrix r = rot_about_coord_axis(A, theta);
+	// r.Rx.print();
+	// r.Ry.print();
+	// r.Rz.print();
 
  	return 0;
 }
