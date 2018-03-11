@@ -58,7 +58,7 @@ using namespace arma;
 
 // };
 
-vector<node> find_projection(vector<node> graph){
+vector<node> find_ortho(vector<node> graph){
 	//Give Option for translation as well
 	dir_ratios dir = get_dir_ratios();
 	mat A = graph_to_mat(A);
@@ -66,6 +66,22 @@ vector<node> find_projection(vector<node> graph){
 	A = find_projection(A);
 	return mat_to_graph(A, graph);
 }		
+
+dir_ratios get_dir_ratios(){
+	dir_ratios dir;
+	double x,y,z;
+	cout << "Please Enter Direction Ratios of the line-of-sight" << endl;
+	cout << "Direction Ratio Component along X : ";
+	cin >> x;
+	cout << "Direction Ratio Component along Y : ";
+	cin y;
+	cout << "Direction Ratio Component along Z : ";
+	cin z;
+	dir.a = x;
+	dir.b = y;
+	dir.c = z;
+	return dir;
+}
 
 
 mat graph_to_mat(vector<node> nodes, int cols=4){
@@ -179,18 +195,22 @@ int main(int argc, char const *argv[])
     mat A = get_mx4_matrix(v);
     A.print("Before ");
 
-    coordinate c1;
-    c1.x = 1;
-    c1.y = 1;
-    c1.z = 1;
+	v = find_ortho(v);
+    A = graph_to_mat(v);
+    Cout << endl;
+    A.print("After");
+ //    coordinate c1;
+ //    c1.x = 1;
+ //    c1.y = 1;
+ //    c1.z = 1;
 
-	dir_ratios dir;
-	dir.a = 1;
-	dir.b = 1;
-	dir.c = 1;
+	// dir_ratios dir;
+	// dir.a = 1;
+	// dir.b = 1;
+	// dir.c = 1;
 
-	A = find_rot(graph_to_mat(v), dir);
-	A.print();
+	// A = find_rot(graph_to_mat(v), dir);
+	// A.print();
 	// cout << endl;
 	// direction theta;
 	// theta.theta_x = 30;
