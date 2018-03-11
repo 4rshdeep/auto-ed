@@ -20,6 +20,7 @@ struct node
 
 
 int main() {
+    string filename = "input.txt";
     double x;
     double y;
     double z;
@@ -29,18 +30,15 @@ int main() {
     ifstream inFile;
     
     // opening the input stream
-    inFile.open("input.txt");
+    inFile.open(filename);
     if (!inFile) {
         cout << "Unable to open file";
-        return 0;
+        return 1;
     }
 
     inFile >> size;
-    double data[size][3];
-
     int i=0;
     int j = 0;
-
 
     // file contains coordinates and edges
     // edges have been described using two numbers corresponding
@@ -48,17 +46,13 @@ int main() {
     std::vector<node> v;
     int iter = size; 
     while (iter > 0) {
-        iter--;
-        inFile >> x;
-        inFile >> y;
-        inFile >> z;
-
         node n;
-        n.coord.x = x;
-        n.coord.y = y;
-        n.coord.z = z;
+        inFile >> n.coord.x;
+        inFile >> n.coord.y;
+        inFile >> n.coord.z;
 
         v.push_back(n);
+        iter--;
     }
     
     //  Take edges.
@@ -70,27 +64,28 @@ int main() {
     {
         inFile >> idx1;
         inFile >> idx2;
-        node* n1 = &v[idx1];
-        node* n2 = &v[idx2];
-
-        v[idx1].adj_list.push_back(n2);
-        v[idx2].adj_list.push_back(n1);
+        // node* n1 = &v[idx1];
+        // node* n2 = &v[idx2];
+        // v[idx1].adj_list.push_back(n2);
+        v[idx1].adj_list.push_back(&v[idx2]);
+        v[idx2].adj_list.push_back(&v[idx1]);
+        // v[idx2].adj_list.push_back(n1);
     }
 
     //check whether it makes changes
-    // v[0].coord.x = -1;
+    v[0].coord.x = -1;
 
     // print coordinates and neighbours
-    // for (int i = 0; i < v.size(); ++i)
-    // {
-    //     node n = v[i];
-    //     cout << "Cordinates are " << n.coord.x << " " << n.coord.y << " " << n.coord.z << "  Neighbours are: ";
-    //     for (int j = 0; j < n.adj_list.size(); ++j)
-    //     {
-    //         cout << j << ") " << (n.adj_list[j])->coord.x << endl;
-    //     }
-    //     cout << endl;
-    // }
+    for (int i = 0; i < v.size(); ++i)
+    {
+        node n = v[i];
+        cout << "Cordinates are " << n.coord.x << " " << n.coord.y << " " << n.coord.z << "  Neighbours are: ";
+        for (int j = 0; j < n.adj_list.size(); ++j)
+        {
+            cout << (n.adj_list[j])->coord.x << endl;
+        }
+        cout << endl;
+    }
 
     inFile.close();
     return 0;
