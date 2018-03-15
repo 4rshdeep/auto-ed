@@ -58,14 +58,6 @@ using namespace arma;
 
 // };
 
-vector<node> find_ortho(vector<node> graph){
-	//Give Option for translation as well
-	dir_ratios dir = get_dir_ratios();
-	mat A = graph_to_mat(A);
-	A = find_rot(A, dir);
-	A = find_projection(A);
-	return mat_to_graph(A, graph);
-}		
 
 dir_ratios get_dir_ratios(){
 	dir_ratios dir;
@@ -74,9 +66,9 @@ dir_ratios get_dir_ratios(){
 	cout << "Direction Ratio Component along X : ";
 	cin >> x;
 	cout << "Direction Ratio Component along Y : ";
-	cin y;
+	cin >> y;
 	cout << "Direction Ratio Component along Z : ";
-	cin z;
+	cin >> z;
 	dir.a = x;
 	dir.b = y;
 	dir.c = z;
@@ -188,26 +180,39 @@ mat find_projection(mat A) {
 	return A;
 }
 
+vector<node> find_ortho(vector<node> graph){
+	//Give Option for translation as well
+	dir_ratios dir = get_dir_ratios();
+	mat A = graph_to_mat(graph);
+	A = find_rot(A, dir);
+	A = find_projection(A);
+	return mat_to_graph(A, graph);
+}		
+
+
 int main(int argc, char const *argv[])
 {
 	std::vector<node> v = get_2d_graph();
+	dir_ratios dir;
+	dir.a = 1;
+	dir.b = 1;
+	dir.c = 1;
 
     mat A = get_mx4_matrix(v);
     A.print("Before ");
 
 	v = find_ortho(v);
+	// A = find_rot(A, dir);
+	// A = find_projection(A);
+
     A = graph_to_mat(v);
-    Cout << endl;
+    cout << endl;
     A.print("After");
  //    coordinate c1;
  //    c1.x = 1;
  //    c1.y = 1;
  //    c1.z = 1;
 
-	// dir_ratios dir;
-	// dir.a = 1;
-	// dir.b = 1;
-	// dir.c = 1;
 
 	// A = find_rot(graph_to_mat(v), dir);
 	// A.print();
