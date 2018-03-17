@@ -99,9 +99,6 @@ vector<node> mat_to_graph(mat A, vector<node> vec){
 // input is mx4 matrix and translation factor
 mat translate_graph(mat A, coordinate t_factor) {
 	mat T = eye(4,4);
-
-
-
 	T(3, 0) = t_factor.x;
 	T(3, 1) = t_factor.y;
 	T(3, 2) = t_factor.z;
@@ -111,7 +108,7 @@ mat translate_graph(mat A, coordinate t_factor) {
 
 
 // theta is in degrees
-rot_matrix rot_about_coord_axis(mat A, direction theta)
+rot_matrix rot_about_coord_axis(direction theta)
 {
 	double sin_theta = sin(theta.theta_x * PI / 180.00);
 	double cos_theta = cos(theta.theta_x * PI / 180.00);
@@ -123,7 +120,9 @@ rot_matrix rot_about_coord_axis(mat A, direction theta)
 	Rx(1, 2) = sin_theta;
 	Rx(2, 1) = -sin_theta;
 	Rx(2, 2) = cos_theta;
-	double invsqrt3 = 1 / sqrt(3);
+
+	// UNUSED VAR
+	// double invsqrt3 = 1 / sqrt(3);
 
 	// Rx.print("Rx : ");
 
@@ -165,7 +164,7 @@ mat find_rot(mat A, dir_ratios d){
 		dir.theta_y = (-(acos (sqrt ( (d.b*d.b + d.c*d.c)/(d.a*d.a + d.b*d.b + d.c*d.c) ) )) * 180 / PI)*(fabs(d.a)/d.a) ;	// into |a|/a
 	}
 
-	rot_matrix r = rot_about_coord_axis(A, dir);
+	rot_matrix r = rot_about_coord_axis(dir);
 	mat res;
 	res = A*r.Rx;
 	res = res*r.Ry;
@@ -190,41 +189,3 @@ vector<node> find_ortho(vector<node> graph){
 }		
 
 
-int main(int argc, char const *argv[])
-{
-	std::vector<node> v = get_2d_graph();
-	dir_ratios dir;
-	dir.a = 1;
-	dir.b = 1;
-	dir.c = 1;
-
-    mat A = get_mx4_matrix(v);
-    A.print("Before ");
-
-	v = find_ortho(v);
-	// A = find_rot(A, dir);
-	// A = find_projection(A);
-
-    A = graph_to_mat(v);
-    cout << endl;
-    A.print("After");
- //    coordinate c1;
- //    c1.x = 1;
- //    c1.y = 1;
- //    c1.z = 1;
-
-
-	// A = find_rot(graph_to_mat(v), dir);
-	// A.print();
-	// cout << endl;
-	// direction theta;
-	// theta.theta_x = 30;
-	// theta.theta_y = 30;
-	// theta.theta_z = 30;
-	// rot_matrix r = rot_about_coord_axis(A, theta);
-	// r.Rx.print();
-	// r.Ry.print();
-	// r.Rz.print();
-
- 	return 0;
-}
