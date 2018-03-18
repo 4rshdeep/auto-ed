@@ -12,7 +12,7 @@ using namespace arma;
 
 
 // returns empty vector if can't read the file else a vector of nodes.
-vector<node> get_2d_graph(string filename="input.txt") {
+vector<node> get_3D_graph(string filename="input_3D.txt") {
     
     int size;
     // input stream for reading from a file
@@ -22,7 +22,7 @@ vector<node> get_2d_graph(string filename="input.txt") {
     // opening the input stream
     inFile.open(filename);
     if (!inFile) {
-        cout << "Unable to open file";
+        cout << "Unable to open file" ; 
         return v;
     }
 
@@ -56,6 +56,102 @@ vector<node> get_2d_graph(string filename="input.txt") {
     }
     inFile.close();
 
+    return v;
+}
+
+std::vector<node*> check_neighbours(int index,int size,vector<node*>[] adj){
+    bool flag = false;
+    std::vector<node*> ans;
+    for(int i=0; i<size; i++){
+        for(int iter=0; iter< static_cast<int>(adj[1].size()); iter++){
+            if( (adj[1])[iter] == (adj[0])[i] ){
+                flag = true;
+                break;
+            }
+        }
+        if(flag == false) continue;    
+        for(int iter=0; iter< static_cast<int>(adj[2].size())){
+            if( (adj[2])[iter] == (adj[0])[i] ){
+                flag = true;
+                break;
+            }
+        }        
+        if(flag == false) continue;                
+    }
+    return ans;
+}
+
+
+vector<node> get_2D_graph(string filename = "input_2D.txt"){
+
+    int size;
+    ifstream inFile;    // input stream for reading from a file
+    vector<node_labelled> v;
+    
+    // opening the input stream
+    inFile.open(filename);
+    if (!inFile) {
+        cout << "Unable to open file" ; 
+        return v;
+    }
+
+    for(int i=0 ; i<3 ; i++){
+        inFile >> size;
+        // file contains coordinates and edges
+        // input is labelled and has different descriptions for all the respective orthographic views
+        // XY plane comes first, then YZ plane and then the XZ plane.
+        int iter = size; 
+        while (iter > 0) {
+            if(i==0){
+                node n;
+                inFile >> n.coord.x;
+                inFile >> n.coord.y;
+             
+                v.push_back(n);
+                iter--;    
+            }
+            else if(i==1){
+                double tmp_y;
+                inFile >> tmp_y; 
+                if(v.[size-iter].coord.y - tmp_y > 1e-5 ){
+                    cout << "Invalid Input";
+                    return v;
+                }
+                else{
+                    inFile >> v.[size-iter].coord.z; 
+                }
+            }
+            else{
+                double tmp_x, tmp_z;
+                inFile >> tmp_z;
+                inFile >> tmp_x;
+                if ((v.[size-iter].coord.x - tmp_x > 1e-5) || (v.[size-iter].coord.z - tmp_z > 1e-5)) {
+                    cout << "Invalid Input";
+                    return v;
+                }
+            }
+
+            
+        }
+        std::vector<node*> adj[3];
+        int edges;
+        inFile >> edges;
+        int idx1;
+        int idx2;
+        for (int i = 0; i < edges; ++i)
+        {
+            inFile >> idx1;
+            inFile >> idx2;
+            adj[i].push_back(&v[idx2]);
+            adj[i].push_back(&v[idx1]);
+        }    
+
+    }
+
+    for(int j=0; j<size;j++){
+        v[j].adj_list = check_neighbours(j,size,adj);
+    }
+    inFile.close();
     return v;
 }
 
