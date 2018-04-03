@@ -70,7 +70,7 @@ std::vector<node*> check_neighbours(int index,int size,vector<node*>[] adj){
             }
         }
         if(flag == false) continue;    
-        for(int iter=0; iter< static_cast<int>(adj[2].size())){
+        for(int iter=0; iter< static_cast<int>(adj[2].size()); iter++){
             if( (adj[2])[iter] == (adj[0])[i] ){
                 flag = true;
                 break;
