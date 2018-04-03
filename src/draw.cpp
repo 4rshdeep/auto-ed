@@ -4,12 +4,6 @@
 // #include "input.cpp"
 #include "struct.h"
 
-#define PI 3.1415926536
-#define SIZE 200
-#define FACTOR 100
-
-const float STEP = 2*PI/SIZE;
-
 using namespace Qt;
 using namespace std;
 
@@ -77,8 +71,7 @@ int main(int argc, char *argv[])
         node n = v[iter];
         int x1 = n.coord.x;
         int y1 = n.coord.y;
-          cout << x1 << " " << y1 ;
-        //   int z1 = n.coord.z;
+        cout << x1 << " " << y1 ;
 
         for (int i = 0; i < static_cast<int>(n.adj_list.size()); ++i)
         {
