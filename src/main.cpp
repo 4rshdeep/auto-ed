@@ -1,15 +1,19 @@
 #include "threeD_to_ortho.cpp"
 
+using namespace std;
 void threeD_to_twoD() {
-	std::vector<node> v = get_2d_graph();
-    mat A = get_mx4_matrix(v);
-    A.print("Before ");
+	// cout << "Filename :" << endl;
+	cin >> filename;
+    graph g = get_3D_graph();
+//    mat A = get_mx4_matrix(v);
+    // A.print("Before ");
 
 	v = find_ortho(v);
+//    v contains vector of nodes.
 
-    A = graph_to_mat(v);
+//    A = graph_to_mat(v);
     cout << endl;
-    A.print("After");
+    // A.print("After");
 
     return;
 }

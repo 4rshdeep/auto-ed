@@ -12,18 +12,18 @@ using namespace arma;
 
 
 // returns empty vector if can't read the file else a vector of nodes.
-vector<node> get_3D_graph(string filename="input_3D.txt") {
-    
+graph get_3D_graph(string filename="input_3D.txt") {
+    graph g;
     int size;
     // input stream for reading from a file
     ifstream inFile;
     vector<node> v;
-    
+    vector<edge> e;
     // opening the input stream
     inFile.open(filename);
     if (!inFile) {
         cout << "Unable to open file" ; 
-        return v;
+        return g;
     }
 
     inFile >> size;
@@ -53,10 +53,16 @@ vector<node> get_3D_graph(string filename="input_3D.txt") {
         inFile >> idx2;
         v[idx1].adj_list.push_back(&v[idx2]);
         v[idx2].adj_list.push_back(&v[idx1]);
+
+        edge ed;
+        ed.node1 = &v[idx1];
+        ed.node2 = &v[idx2];
+        e.push_back(ed);
     }
     inFile.close();
-
-    return v;
+    g.nodes = v;
+    g.edges = e;
+    return g;
 }
 
 std::vector<node*> check_neighbours(int index,int size,vector<node*>* adj){
@@ -184,13 +190,13 @@ mat get_mx4_matrix(vector<node> v, int cols=4) {
     return A;
 }
 
-int main() {
-    std::vector<node> v = get_3D_graph();
-    check_graph(v);
-    mat A = get_mx4_matrix(v);
-    A.print();
-    return 0;
-}
+// int main() {
+//     std::vector<node> v = get_3D_graph();
+//     check_graph(v);
+//     mat A = get_mx4_matrix(v);
+//     A.print();
+//     return 0;
+// }
 
 
 

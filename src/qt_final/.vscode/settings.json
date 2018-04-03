@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"chrono": "cpp",
+		"limits": "cpp",
+		"algorithm": "cpp",
+		"ostream": "cpp"
+	}
+}
