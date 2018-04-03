@@ -6,7 +6,7 @@ void threeD_to_twoD() {
     A.print("Before ");
 
 	v = find_ortho(v);
-	
+
     A = graph_to_mat(v);
     cout << endl;
     A.print("After");
@@ -23,6 +23,6 @@ int main()
 	if(mode == 0) {
 		threeD_to_twoD();
 	}
-	
+
  	return 0;
 }

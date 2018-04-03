@@ -17,17 +17,17 @@ int main(int argc, char *argv[])
    QLabel l;
    QPicture pi;
    QPainter p(&pi);
-   
+
    p.setRenderHint(QPainter::Antialiasing);
    p.setPen(QPen(Qt::black, 5, Qt::SolidLine, Qt::RoundCap));
    // p.drawLine(0, 0, 200, 200);
-   
+
    // float x, y, prev_x=0, prev_y=0 ;
    p.drawLine(0, 0, 700, 0);
    p.drawLine(700, 0, 700, 700);
    p.drawLine(700, 700, 0, 700);
    p.drawLine(0, 700, 0, 0);
-   
+
    p.drawLine(10, 10, 490, 10);
    p.drawLine(490, 10, 490, 490);
    p.drawLine(490, 490, 10, 490);

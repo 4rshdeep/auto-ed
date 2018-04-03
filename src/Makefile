@@ -10,10 +10,10 @@ TARGET        = draw
 %.o: %.cpp
 	$(CXX) -c $< $(CXXFLAGS) $(INCPATH)
 
-$(TARGET):  $(OBJECTS)  
+$(TARGET):  $(OBJECTS)
 	$(CXX) $(LFLAGS) -o $@ $^ $(LIBS)
 
 .PHONY: clean
 
-clean: 
+clean:
 	rm -f *.o $(TARGET)

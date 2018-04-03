@@ -59,7 +59,7 @@ vector<node> get_3D_graph(string filename="input_3D.txt") {
     return v;
 }
 
-std::vector<node*> check_neighbours(int index,int size,vector<node*>[] adj){
+std::vector<node*> check_neighbours(int index,int size,vector<node*>* adj){
     bool flag = false;
     std::vector<node*> ans;
     for(int i=0; i<size; i++){
@@ -82,78 +82,78 @@ std::vector<node*> check_neighbours(int index,int size,vector<node*>[] adj){
 }
 
 
-vector<node> get_2D_graph(string filename = "input_2D.txt"){
+// vector<node> get_2D_graph(string filename = "input_2D.txt"){
 
-    int size;
-    ifstream inFile;    // input stream for reading from a file
-    vector<node_labelled> v;
+//     int size;
+//     ifstream inFile;    // input stream for reading from a file
+//     vector<node_labelled> v;
     
-    // opening the input stream
-    inFile.open(filename);
-    if (!inFile) {
-        cout << "Unable to open file" ; 
-        return v;
-    }
+//     // opening the input stream
+//     inFile.open(filename);
+//     if (!inFile) {
+//         cout << "Unable to open file" ; 
+//         return v;
+//     }
 
-    for(int i=0 ; i<3 ; i++){
-        inFile >> size;
-        // file contains coordinates and edges
-        // input is labelled and has different descriptions for all the respective orthographic views
-        // XY plane comes first, then YZ plane and then the XZ plane.
-        int iter = size; 
-        while (iter > 0) {
-            if(i==0){
-                node n;
-                inFile >> n.coord.x;
-                inFile >> n.coord.y;
+//     for(int i=0 ; i<3 ; i++){
+//         inFile >> size;
+//         // file contains coordinates and edges
+//         // input is labelled and has different descriptions for all the respective orthographic views
+//         // XY plane comes first, then YZ plane and then the XZ plane.
+//         int iter = size; 
+//         while (iter > 0) {
+//             if(i==0){
+//                 node n;
+//                 inFile >> n.coord.x;
+//                 inFile >> n.coord.y;
              
-                v.push_back(n);
-                iter--;    
-            }
-            else if(i==1){
-                double tmp_y;
-                inFile >> tmp_y; 
-                if(v.[size-iter].coord.y - tmp_y > 1e-5 ){
-                    cout << "Invalid Input";
-                    return v;
-                }
-                else{
-                    inFile >> v.[size-iter].coord.z; 
-                }
-            }
-            else{
-                double tmp_x, tmp_z;
-                inFile >> tmp_z;
-                inFile >> tmp_x;
-                if ((v.[size-iter].coord.x - tmp_x > 1e-5) || (v.[size-iter].coord.z - tmp_z > 1e-5)) {
-                    cout << "Invalid Input";
-                    return v;
-                }
-            }
+//                 v.push_back(n);
+//                 iter--;    
+//             }
+//             else if(i==1){
+//                 double tmp_y;
+//                 inFile >> tmp_y; 
+//                 if(v.[size-iter].coord.y - tmp_y > 1e-5 ){
+//                     cout << "Invalid Input";
+//                     return v;
+//                 }
+//                 else{
+//                     inFile >> v.[size-iter].coord.z; 
+//                 }
+//             }
+//             else{
+//                 double tmp_x, tmp_z;
+//                 inFile >> tmp_z;
+//                 inFile >> tmp_x;
+//                 if ((v.[size-iter].coord.x - tmp_x > 1e-5) || (v.[size-iter].coord.z - tmp_z > 1e-5)) {
+//                     cout << "Invalid Input";
+//                     return v;
+//                 }
+//             }
 
             
-        }
-        std::vector<node*> adj[3];
-        int edges;
-        inFile >> edges;
-        int idx1;
-        int idx2;
-        for (int i = 0; i < edges; ++i)
-        {
-            inFile >> idx1;
-            inFile >> idx2;
-            adj[i].push_back(&v[idx2]);
-            adj[i].push_back(&v[idx1]);
-        }    
+//         }
+//         std::vector<node*> adj[3];
+//         int edges;
+//         inFile >> edges;
+//         int idx1;
+//         int idx2;
+//         for (int i = 0; i < edges; ++i)
+//         {
+//             inFile >> idx1;
+//             inFile >> idx2;
+//             adj[i].push_back(&v[idx2]);
+//             adj[i].push_back(&v[idx1]);
+//         }    
 
-    }
+//     }
 
-    for(int j=0; j<size;j++){
-        v[j].adj_list = check_neighbours(j,size,adj);
-    }
-    inFile.close();
-    return v;
-}
+//     for(int j=0; j<size;j++){
+//         v[j].adj_list = check_neighbours(j,size,adj);
+//     }
+//     inFile.close();
+//     return v;
+// }
 
 void check_graph(vector<node> v) {
     //check whether it makes changes
@@ -184,13 +184,13 @@ mat get_mx4_matrix(vector<node> v, int cols=4) {
     return A;
 }
 
-// int main() {
-//     std::vector<node> v = get_2d_graph();
-//     // check_graph(v);
-//     mat A = get_mx4_matrix(v);
-//     A.print();
-//     return 0;
-// }
+int main() {
+    std::vector<node> v = get_3D_graph();
+    check_graph(v);
+    mat A = get_mx4_matrix(v);
+    A.print();
+    return 0;
+}
 
 
 
