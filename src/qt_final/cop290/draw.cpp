@@ -303,7 +303,7 @@ QPicture draw_xy(vector<edge> v)
 	cout << "fact " << fact << endl;
 	if (fact > 0)
 	{
-		fact = 250.0 / fact;
+        fact = 200.0 / fact;
 	}
 	cout << "fact " << fact << endl;
 	for (int iter = 0; iter < static_cast<int>(v.size()); iter++)

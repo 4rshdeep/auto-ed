@@ -75,7 +75,14 @@ void print_edges(vector<edge> v) {
 
 void MainWindow::on_pushButton_clicked()
 {
-    graph g = get_3D_graph("3dcube.txt");
+    QString qs = ui->t4->toPlainText();
+//    "3dcube.txt"
+    string s = qs.toStdString();
+//    std::string s = qs.toUtf8().constData();
+//    ui->l2->setText(QString::fromStdString(s));
+    cout << s;
+//    return;
+    graph g = get_3D_graph(s);
     vector<node> nodes = g.nodes;
     vector<edge> edges = g.edges;
     vector<pair_> edge_codes = g.edge_corr;
@@ -155,6 +162,7 @@ void MainWindow::on_pushButton_clicked()
     dir.b = 0;
     dir.c = 1;
     nodes = nodes_copy2;
+    vector<node> nodes_copy3(nodes_copy2);
     cout << "3\n";
     print_nodes(nodes);
     A = graph_to_mat(nodes);
@@ -183,68 +191,43 @@ void MainWindow::on_pushButton_clicked()
     //  clear edges
     e.clear();
 
-    // vector<node> a = get_3D_graph("draw.txt");
-    // threeView n = get_three_views("draw.txt");
-    //  coordinate av_coordinate = get_average(n.n1);
-    //  vector<node> nodes = translate_graph(n.n1, av_coordinate);
 
-    // vector<edge> v = n.e1;
+//    dir = get_dir_ratios();
+    QString t1 = ui->t1->toPlainText();
+    QString t2 = ui->t2->toPlainText();
+    QString t3 = ui->t3->toPlainText();
+    dir.a = t1.toInt();
+    dir.b = t2.toInt();
+    dir.c = t3.toInt();
 
-    // cout << "l1" << endl;
-    // QPicture pi = draw_views(v);
-    // ui->l1->setPicture(pi);
-    // ui->l1->show();
+//    string s = "Direction Ratios: "+to_string(dir.a) + " " + to_string(dir.b) + " " + to_string(dir.c);
+//    ui->l5->setText(QString::fromStdString(s));
+    nodes = nodes_copy3;
+    cout << "Required Projection\n";
+    print_nodes(nodes);
+    A = graph_to_mat(nodes);
+    A.print("Before");
+    A = find_rot(A, dir);
+    A = find_projection(A);
 
-    // cout << "l2" << endl;
-    // v = n.e2;
-    // pi = draw_views(v);
-    // ui->l2->setPicture(pi);
-    // ui->l2->show();
+    v = mat_to_graph(A, nodes);
+    A = graph_to_mat(v);
+    A.print("After");
 
-    // cout << "l3" << endl;
-    // v = n.e3;
-    // pi = draw_views(v);
-    // ui->l3->setPicture(pi);
-    // ui->l3->show();
-    // vector<node> a = get_3D_graph("draw.txt");
-    // threeView n = get_three_views("draw.txt");
+    for (int i = 0; i < static_cast<int>(edge_codes.size()); i++)
+    {
+        p = edge_codes[i];
+        edge e1;
+        e1.node1 = &v[p.a];
+        e1.node2 = &v[p.b];
+        e.push_back(e1);
+    }
 
-    // // print_nodes(n.n1);
-
-    // coordinate av_coordinate = get_average(n.n1);
-    // translate_graph(n.n1, av_coordinate);
-
-    // vector<edge> v = n.e1;
-    // cout << "l1" << endl;
-    // print_edges(n.e1);
-    // QPicture pi = draw_views(v);
-    // ui->l1->setPicture(pi);
-    // ui->l1->show();
-
-    // // n = get_three_views("draw.txt");
-
-    // av_coordinate = get_average(n.n2);
-    // translate_graph(n.n2, av_coordinate);
-    // cout << "l2" << endl;
-    // v = n.e2;
-    // print_edges(n.e2);
-    // pi = draw_views(v);
-    // ui->l2->setPicture(pi);
-    // ui->l2->show();
-
-    // // n = get_three_views("draw.txt");
-
-    // cout << "before";
-    // print_edges(n.e3);
-    // av_coordinate = get_average(n.n3);
-    // print_nodes(n.n3);
-    // cout << av_coordinate.x << " " << av_coordinate.y << " " << av_coordinate.z << "\n";
-    // translate_graph(n.n3, av_coordinate);
-    // print_nodes(n.n3);
-    // cout << "l3" << endl;
-    // v = n.e3;
-    // print_edges(n.e3);
-    // pi = draw_views(v);
-    // ui->l3->setPicture(pi);
-    // ui->l3->show();
+    av = get_average(v);
+    translate_graph(v, av);
+    pi = draw_xy(e);
+    ui->l4->setPicture(pi);
+    ui->l4->show();
+    //  clear edges
+    e.clear();
 }
