@@ -27,9 +27,8 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     draw.cpp \
-    ../../input.cpp \
-    ../../main.cpp \
-    ../../threeD_to_ortho.cpp
+    input.cpp \
+    threeD_to_ortho.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -37,3 +36,6 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+LIBS += \
+    -larmadillo

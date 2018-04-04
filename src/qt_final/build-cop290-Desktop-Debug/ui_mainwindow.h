@@ -78,7 +78,7 @@ public:
         l1->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         l2->setText(QApplication::translate("MainWindow", "TextLabel", 0));
         l3->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "3D_to_2D", 0));
     } // retranslateUi
 
 };

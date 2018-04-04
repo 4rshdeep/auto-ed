@@ -10,6 +10,11 @@ struct coordinate
     double z;
 };
 
+struct pair {
+	int a;
+	int b;
+};
+
 struct node
 {
     std::vector<node*> adj_list; // pointer to neighbours

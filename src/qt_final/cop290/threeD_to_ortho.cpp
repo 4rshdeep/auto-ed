@@ -5,6 +5,7 @@
 
 using namespace std;
 using namespace arma;
+#define PI 3.1415926536
 
 // class threeD_to_ortho
 // {

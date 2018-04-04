@@ -11,6 +11,7 @@ struct coordinate
     double z;
 };
 
+
 struct node
 {
     std::vector<node*> adj_list; // pointer to neighbours
@@ -23,6 +24,18 @@ struct edge
 	node *n2;
 };
 
+struct pair {
+	int a;
+	int b;
+};
+
+struct graph
+{
+	vector<node> nodes;
+	vector<edge> edges;
+	vector<pair> edge_corr;
+};
+
 struct threeView {
 	vector<node> n1;
     vector<edge> e1;
@@ -32,10 +45,10 @@ struct threeView {
     vector<edge> e3;
 };
 
-struct graph
-{
-	std::vector<node> g;
-};
+// struct graph
+// {
+// 	std::vector<node> g;
+// };
 
 struct direction
 {

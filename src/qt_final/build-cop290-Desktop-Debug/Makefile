@@ -36,7 +36,7 @@ DISTNAME      = cop2901.0.0
 DISTDIR = /media/ad/Area51/workspace/assignments/cop290/src/qt_final/build-cop290-Desktop-Debug/.tmp/cop2901.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/ad/anaconda3/lib
-LIBS          = $(SUBLIBS) -lQt5Widgets -L/home/ad/anaconda3/lib -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -larmadillo -lQt5Widgets -L/home/ad/anaconda3/lib -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -456,7 +456,9 @@ main.o: ../cop290/main.cpp ../cop290/mainwindow.h
 mainwindow.o: ../cop290/mainwindow.cpp ../cop290/mainwindow.h \
 		ui_mainwindow.h \
 		../cop290/draw.cpp \
-		../cop290/struct.h
+		../cop290/struct.h \
+		../cop290/threeD_to_ortho.cpp \
+		../cop290/input.cpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../cop290/mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
