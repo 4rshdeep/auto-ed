@@ -108,6 +108,18 @@ threeView get_three_views(string filename)
 	return tv;
 }
 
+void print_nodes(vector<node> v) {
+    for(int i = 0; i < static_cast<int>(v.size()); i++) {
+        cout << v[i].coord.x << " " << v[i].coord.y << " " << v[i].coord.z << " \n";
+    }
+}
+
+void print_edges(vector<edge> v) {
+    for(int iter = 0 ; iter < static_cast<int>(v.size()); ++iter) {
+        cout << v[iter].node1->coord.x << " " << v[iter].node1->coord.y << " " << v[iter].node2->coord.x << " " << v[iter].node2->coord.y << "\n";
+    }
+}
+
 coordinate get_average(vector<node> v)
 {
 	coordinate c;

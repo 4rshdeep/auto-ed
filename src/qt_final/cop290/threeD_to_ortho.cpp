@@ -186,3 +186,17 @@ vector<node> find_ortho(vector<node> graph){
 }
 
 
+void rotate_graph(vector<node> &v, direction theta, int x, int y, int z) {
+    rot_matrix r = rot_about_coord_axis(theta);
+    mat A = graph_to_mat(v);
+    if(x == 1) {
+        A = A*r.Rx;
+    }
+    if(y == 1) {
+        A = A*r.Ry;
+    }
+    if(z == 1) {
+        A = A*r.Rz;
+    }
+    v = mat_to_graph(A, v);
+}

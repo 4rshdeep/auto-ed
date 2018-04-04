@@ -18,6 +18,14 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_moveX_clicked();
+
+    void on_moveY_clicked();
+
+    void on_moveZ_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

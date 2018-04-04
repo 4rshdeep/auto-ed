@@ -5,6 +5,7 @@
 
 using namespace std;
 using namespace arma;
+#define PI 3.1415926536
 
 // class threeD_to_ortho
 // {
@@ -83,13 +84,12 @@ mat graph_to_mat(vector<node> nodes, int cols=4){
 	return A;
 }
 
-vector<node> mat_to_graph(mat A, vector<node> vec){
+void mat_to_graph(mat A, vector<node> &vec){
 	for (int i=0; i < static_cast<int>(vec.size()); ++i){
 		vec[i].coord.x = A(i, 0);
 		vec[i].coord.y = A(i, 1);
 		vec[i].coord.z = A(i, 2);
 	}
-	return vec;
 }
 
 // input is mx4 matrix and translation factor
@@ -185,3 +185,18 @@ vector<node> find_ortho(vector<node> graph){
 }
 
 
+// void rotate_graph(vector<node> &v, direction theta, int x, int y, int z) {
+//     rot_matrix r = rot_about_coord_axis(theta);
+//     mat A = graph_to_mat(v);
+//     if(x == 1) {
+//         A = A*r.Rx;
+//     }
+//     if(y == 1) {
+//         A = A*r.Ry;
+//     }
+//     if(z == 1) {
+//         A = A*r.Rz;
+//     }
+//     mat_to_graph(A, v);
+    
+// }
