@@ -69,27 +69,27 @@ graph get_3D_graph(string filename="input_3D.txt") {
     return g;
 }
 
-std::vector<node*> check_neighbours(int index,int size,vector<node*>* adj){
-    bool flag = false;
-    std::vector<node*> ans;
-    for(int i=0; i<size; i++){
-        for(int iter=0; iter< static_cast<int>(adj[1].size()); iter++){
-            if( (adj[1])[iter] == (adj[0])[i] ){
-                flag = true;
-                break;
-            }
-        }
-        if(flag == false) continue;
-        for(int iter=0; iter< static_cast<int>(adj[2].size()); iter++){
-            if( (adj[2])[iter] == (adj[0])[i] ){
-                flag = true;
-                break;
-            }
-        }
-        if(flag == false) continue;
-    }
-    return ans;
-}
+//std::vector<node*> check_neighbours(int index,int size,vector<node*>* adj){
+//    bool flag = false;
+//    std::vector<node*> ans;
+//    for(int i=0; i<size; i++){
+//        for(int iter=0; iter< static_cast<int>(adj[1].size()); iter++){
+//            if( (adj[1])[iter] == (adj[0])[i] ){
+//                flag = true;
+//                break;
+//            }
+//        }
+//        if(flag == false) continue;
+//        for(int iter=0; iter< static_cast<int>(adj[2].size()); iter++){
+//            if( (adj[2])[iter] == (adj[0])[i] ){
+//                flag = true;
+//                break;
+//            }
+//        }
+//        if(flag == false) continue;
+//    }
+//    return ans;
+//}
 
 
 // vector<node> get_2D_graph(string filename = "input_2D.txt"){
@@ -165,22 +165,22 @@ std::vector<node*> check_neighbours(int index,int size,vector<node*>* adj){
 //     return v;
 // }
 
-void check_graph(vector<node> v) {
-    //check whether it makes changes
-    v[0].coord.x = -1;
+//void check_graph(vector<node> v) {
+//    //check whether it makes changes
+//    v[0].coord.x = -1;
 
-    //  v.size() if of type unsigned -> size_t
-    for (size_t i = 0; i < v.size(); ++i)
-    {
-        node n = v[i];
-        cout << "Cordinates are " << n.coord.x << " " << n.coord.y << " " << n.coord.z ;
-        for (size_t j = 0; j < n.adj_list.size(); ++j)
-        {
-            cout << "  Neighbours are: " << (n.adj_list[j])->coord.x;
-        }
-        cout << endl;
-    }
-}
+//    //  v.size() if of type unsigned -> size_t
+//    for (size_t i = 0; i < v.size(); ++i)
+//    {
+//        node n = v[i];
+//        cout << "Cordinates are " << n.coord.x << " " << n.coord.y << " " << n.coord.z ;
+//        for (size_t j = 0; j < n.adj_list.size(); ++j)
+//        {
+//            cout << "  Neighbours are: " << (n.adj_list[j])->coord.x;
+//        }
+//        cout << endl;
+//    }
+//}
 
 mat get_mx4_matrix(vector<node> v, int cols=4) {
     mat A = zeros(v.size(), cols);

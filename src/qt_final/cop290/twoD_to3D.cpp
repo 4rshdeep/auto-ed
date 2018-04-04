@@ -12,7 +12,7 @@ vector<node> get_2D_graph(string filename){
     int size;
     ifstream inFile;    // input stream for reading from a file
     vector<node> v;
-    
+
     std::vector<node*> adj[3];
 
     cout << filename;
@@ -20,7 +20,7 @@ vector<node> get_2D_graph(string filename){
     // opening the input stream
     inFile.open(filename);
     if (!inFile) {
-        cout << "Unable to open file" ; 
+        cout << "Unable to open file" ;
         return v;
     }
 
@@ -30,26 +30,26 @@ vector<node> get_2D_graph(string filename){
         // file contains coordinates and edges
         // input is labelled and has different descriptions for all the respective orthographic views
         // XY plane comes first, then YZ plane and then the XZ plane.
-        int iter = size; 
+        int iter = size;
         for(iter = 0; iter < size; iter++) {
             if(i==0){
                 node n;
                 inFile >> n.coord.x;
                 inFile >> n.coord.y;
-                
+
 
 
                 v.push_back(n);
             }
             else if(i==1){
                 double tmp_y;
-                inFile >> tmp_y; 
+                inFile >> tmp_y;
                 if(v[iter].coord.y - tmp_y > 1e-5 ){
                     cout << "Invalid Input " << endl;
                     return v;
                 }
                 else{
-                    inFile >> v[iter].coord.z; 
+                    inFile >> v[iter].coord.z;
                 }
             }
             else{
@@ -62,7 +62,7 @@ vector<node> get_2D_graph(string filename){
                 }
             }
 
-            
+
         }
 
     }
@@ -111,7 +111,7 @@ vector<node> get_2D_graph(string filename){
                         // Third view
         //////////////////////////////////////////////
         inFile >> edges ;
-        // cout << "Edges for 3rd " << edges << endl;        
+        // cout << "Edges for 3rd " << edges << endl;
         for(int xx=0; xx<edges; xx++){
             inFile >> t1;
             inFile >> t2;
@@ -120,7 +120,7 @@ vector<node> get_2D_graph(string filename){
         }
 
         for(int xx=0; xx<size*size; xx++){
-            edge_set1[xx] = edge_set1[xx]*edge_set2[xx]*edge_set3[xx]; 
+            edge_set1[xx] = edge_set1[xx]*edge_set2[xx]*edge_set3[xx];
         }
 
 
@@ -145,7 +145,7 @@ vector<pair_> get_pair_2D(string filename){
     // opening the input stream
     inFile.open(filename);
     if (!inFile) {
-        cout << "Unable to open file" ; 
+        cout << "Unable to open file" ;
         return v;
     }
 
@@ -201,11 +201,11 @@ vector<pair_> get_pair_2D(string filename){
         }
 
         for(int xx=0; xx<size*size; xx++){
-            edge_set1[xx] = (edge_set1[xx])*(edge_set2[xx])*(edge_set3[xx]); 
+            edge_set1[xx] = (edge_set1[xx])*(edge_set2[xx])*(edge_set3[xx]);
         }
 
         vector<pair_> ans;
-        
+
         for(int k=0; k<size-1; k++){
             for(int l=k+1; l<size; l++){
                 pair_ p;
@@ -237,19 +237,19 @@ void check_graph(vector<node> v) {
     }
 }
 
-int main(int argc, char const *argv[])
-{
-    string fname = "input_2D_cube.txt";
-    std::vector<node> v = get_2D_graph(fname);
+//int main(int argc, char const *argv[])
+//{
+//    string fname = "input_2D_cube.txt";
+//    std::vector<node> v = get_2D_graph(fname);
 
-    check_graph(v);
-    std::vector<pair_> vec = get_pair_2D(fname);
+//    check_graph(v);
+//    std::vector<pair_> vec = get_pair_2D(fname);
 
-    cout << "pairs \n";
-    for (int i = 0; i < static_cast<int>(vec.size()); ++i)
-    {
-        cout << vec[i].a << " " << vec[i].b << endl;
-    }
+//    cout << "pairs \n";
+//    for (int i = 0; i < static_cast<int>(vec.size()); ++i)
+//    {
+//        cout << vec[i].a << " " << vec[i].b << endl;
+//    }
 
-    return 0;
-}
+//    return 0;
+//}

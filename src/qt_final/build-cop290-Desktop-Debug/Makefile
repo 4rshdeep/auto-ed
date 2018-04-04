@@ -458,7 +458,8 @@ mainwindow.o: ../cop290/mainwindow.cpp ../cop290/mainwindow.h \
 		../cop290/draw.cpp \
 		../cop290/struct.h \
 		../cop290/threeD_to_ortho.cpp \
-		../cop290/input.cpp
+		../cop290/input.cpp \
+		../cop290/twoD_to3D.cpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../cop290/mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
