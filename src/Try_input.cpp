@@ -316,14 +316,14 @@ int main() {
 //     int size;
 //     ifstream inFile;    // input stream for reading from a file
 //     vector<node> v;
-    
+
 //     std::vector<node*> adj[3];
 
-    
+
 //     // opening the input stream
 //     inFile.open(filename);
 //     if (!inFile) {
-//         cout << "Unable to open file" ; 
+//         cout << "Unable to open file" ;
 //         return v;
 //     }
 
@@ -333,26 +333,26 @@ int main() {
 //         // file contains coordinates and edges
 //         // input is labelled and has different descriptions for all the respective orthographic views
 //         // XY plane comes first, then YZ plane and then the XZ plane.
-//         int iter = size; 
+//         int iter = size;
 //         for(iter = 0; iter < size; iter++) {
 //             if(i==0){
 //                 node n;
 //                 inFile >> n.coord.x;
 //                 inFile >> n.coord.y;
-                
+
 
 
 //                 v.push_back(n);
 //             }
 //             else if(i==1){
 //                 double tmp_y;
-//                 inFile >> tmp_y; 
+//                 inFile >> tmp_y;
 //                 if(v[iter].coord.y - tmp_y > 1e-5 ){
 //                     cout << "Invalid Input " << endl;
 //                     return v;
 //                 }
 //                 else{
-//                     inFile >> v[iter].coord.z; 
+//                     inFile >> v[iter].coord.z;
 //                 }
 //             }
 //             else{
@@ -365,7 +365,7 @@ int main() {
 //                 }
 //             }
 
-            
+
 //         }
 
 //     }
@@ -414,7 +414,7 @@ int main() {
 //                         // Third view
 //         //////////////////////////////////////////////
 //         inFile >> edges ;
-//         // cout << "Edges for 3rd " << edges << endl;        
+//         // cout << "Edges for 3rd " << edges << endl;
 //         for(int xx=0; xx<edges; xx++){
 //             inFile >> t1;
 //             inFile >> t2;
@@ -423,7 +423,7 @@ int main() {
 //         }
 
 //         for(int xx=0; xx<size*size; xx++){
-//             edge_set1[xx] = edge_set1[xx]*edge_set2[xx]*edge_set3[xx]; 
+//             edge_set1[xx] = edge_set1[xx]*edge_set2[xx]*edge_set3[xx];
 //         }
 
 
@@ -448,7 +448,7 @@ int main() {
 //     // opening the input stream
 //     inFile.open(filename);
 //     if (!inFile) {
-//         cout << "Unable to open file" ; 
+//         cout << "Unable to open file" ;
 //         return v;
 //     }
 
@@ -504,11 +504,11 @@ int main() {
 //         }
 
 //         for(int xx=0; xx<size*size; xx++){
-//             edge_set1[xx] = (edge_set1[xx])*(edge_set2[xx])*(edge_set3[xx]); 
+//             edge_set1[xx] = (edge_set1[xx])*(edge_set2[xx])*(edge_set3[xx]);
 //         }
 
 //         vector<pair_> ans;
-        
+
 //         for(int k=0; k<size-1; k++){
 //             for(int l=k+1; l<size; l++){
 //                 pair_ p;
