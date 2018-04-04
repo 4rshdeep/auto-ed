@@ -51,9 +51,6 @@ void translate_graph(vector<node> &v, coordinate c)
 
 void MainWindow::on_pushButton_clicked()
 {
-    // remove this
-    ui->t4->setText("3dxcube.txt");
-
     mode = 0;
     QString qs = ui->t4->toPlainText();
     string s = qs.toStdString();
@@ -61,6 +58,7 @@ void MainWindow::on_pushButton_clicked()
 
     if (g.nodes.size()==0) {
         ui->l1->setText("File Not Found");
+        ui->t4->setText("3dcube.txt");
         return;
     }
     vector<node> nodes = g.nodes;
@@ -209,15 +207,12 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
     mode = 1;
-
-    // remove this
-    ui->t4->setText("input_2D_cube.txt");
-
     QString qs = ui->t4->toPlainText();
     string fname = qs.toStdString();
     std::vector<node> v = get_2D_graph(fname);
     if(v.size()==0) {
         ui->l1->setText("File Not Found");
+        ui->t4->setText("input_2D_cube.txt");
         return;
     }
     copy(v.begin(), v.end(), back_inserter(node_1));
@@ -228,14 +223,10 @@ void MainWindow::on_pushButton_2_clicked()
     pair_ p;
     vector<edge> e;
 
-    // dir_ratios dir = get_dir_ratios();
-    QString t1 = ui->t1->toPlainText();
-    QString t2 = ui->t2->toPlainText();
-    QString t3 = ui->t3->toPlainText();
     dir_ratios dir;
-    dir.a = t1.toInt();
-    dir.b = t2.toInt();
-    dir.c = t3.toInt();
+    dir.a = 1;
+    dir.b = 0;
+    dir.c = 0;
     mat A = graph_to_mat(v);
     A.print("Before");
     A = find_rot(A, dir);
@@ -257,10 +248,108 @@ void MainWindow::on_pushButton_2_clicked()
     coordinate av = get_average(v);
     translate_graph(v, av);
     QPicture pi = draw_xy(e);
+    ui->l1->setPicture(pi);
+    ui->l1->show();
+    //  clear edges
+    e.clear();
+
+    // view 2
+    dir.a = 0;
+    dir.b = 1;
+    dir.c = 0;
+
+    v = get_2D_graph(fname);
+    A = graph_to_mat(v);
+    A.print("Before");
+    A = find_rot(A, dir);
+    A = find_projection(A);
+
+    v = mat_to_graph(A, v);
+    A = graph_to_mat(v);
+    A.print("After");
+
+    for (int i = 0; i < static_cast<int>(edge_codes.size()); i++)
+    {
+        p = edge_codes[i];
+        edge e1;
+        e1.node1 = &v[p.a];
+        e1.node2 = &v[p.b];
+        e.push_back(e1);
+    }
+
+    av = get_average(v);
+    translate_graph(v, av);
+    pi = draw_xy(e);
+    ui->l2->setPicture(pi);
+    ui->l2->show();
+    //  clear edges
+    e.clear();
+
+    // 3rd view
+    dir.a = 0;
+    dir.b = 0;
+    dir.c = 1;
+    v = get_2D_graph(fname);
+    A = graph_to_mat(v);
+    A.print("Before");
+    A = find_rot(A, dir);
+    A = find_projection(A);
+
+    v = mat_to_graph(A, v);
+    A = graph_to_mat(v);
+    A.print("After");
+
+    for (int i = 0; i < static_cast<int>(edge_codes.size()); i++)
+    {
+        p = edge_codes[i];
+        edge e1;
+        e1.node1 = &v[p.a];
+        e1.node2 = &v[p.b];
+        e.push_back(e1);
+    }
+
+    av = get_average(v);
+    translate_graph(v, av);
+    pi = draw_xy(e);
     ui->l3->setPicture(pi);
     ui->l3->show();
     //  clear edges
     e.clear();
+
+    QString t1 = ui->t1->toPlainText();
+    QString t2 = ui->t2->toPlainText();
+    QString t3 = ui->t3->toPlainText();
+
+    dir.a = t1.toInt();
+    dir.b = t2.toInt();
+    dir.c = t3.toInt();
+    v = get_2D_graph(fname);
+    A = graph_to_mat(v);
+    A.print("Before");
+    A = find_rot(A, dir);
+    A = find_projection(A);
+
+    v = mat_to_graph(A, v);
+    A = graph_to_mat(v);
+    A.print("After");
+
+    for (int i = 0; i < static_cast<int>(edge_codes.size()); i++)
+    {
+        p = edge_codes[i];
+        edge e1;
+        e1.node1 = &v[p.a];
+        e1.node2 = &v[p.b];
+        e.push_back(e1);
+    }
+
+    av = get_average(v);
+    translate_graph(v, av);
+    pi = draw_xy(e);
+    ui->l4->setPicture(pi);
+    ui->l4->show();
+    //  clear edges
+    e.clear();
+
 }
 
 void MainWindow::on_moveX_clicked()
