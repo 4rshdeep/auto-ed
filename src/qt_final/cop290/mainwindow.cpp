@@ -10,6 +10,8 @@
 
 using namespace std;
 using namespace Qt;
+vector<node> nodeRot;
+
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
                                           ui(new Ui::MainWindow)
@@ -61,17 +63,6 @@ void translate_graph(vector<node> &v, coordinate c)
 }
 
 
-void print_nodes(vector<node> v) {
-    for(int i = 0; i < static_cast<int>(v.size()); i++) {
-        cout << v[i].coord.x << " " << v[i].coord.y << " " << v[i].coord.z << " \n";
-    }
-}
-
-void print_edges(vector<edge> v) {
-    for(int iter = 0 ; iter < static_cast<int>(v.size()); ++iter) {
-        cout << v[iter].node1->coord.x << " " << v[iter].node1->coord.y << " " << v[iter].node2->coord.x << " " << v[iter].node2->coord.y << "\n";
-    }
-}
 
 void MainWindow::on_pushButton_clicked()
 {
@@ -83,10 +74,14 @@ void MainWindow::on_pushButton_clicked()
     cout << s;
 //    return;
     graph g = get_3D_graph(s);
+    if (g.nodes.size()==0) {
+        ui->l1->setText("File Not Found");
+        return;
+    }
     vector<node> nodes = g.nodes;
     vector<edge> edges = g.edges;
     vector<pair_> edge_codes = g.edge_corr;
-
+    copy(nodes.begin(), nodes.end(), back_inserter(nodeRot));
     vector<node> nodes_copy(nodes);
 
     dir_ratios dir;
@@ -199,7 +194,7 @@ void MainWindow::on_pushButton_clicked()
     dir.a = t1.toInt();
     dir.b = t2.toInt();
     dir.c = t3.toInt();
-
+    cout << dir.a << " " << dir.b << " " << dir.c << endl;
 //    string s = "Direction Ratios: "+to_string(dir.a) + " " + to_string(dir.b) + " " + to_string(dir.c);
 //    ui->l5->setText(QString::fromStdString(s));
     nodes = nodes_copy3;
@@ -230,4 +225,161 @@ void MainWindow::on_pushButton_clicked()
     ui->l4->show();
     //  clear edges
     e.clear();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+
+}
+
+
+void MainWindow::on_moveX_clicked()
+{
+    QString qs = ui->t4->toPlainText();
+    string s = qs.toStdString();
+    graph g = get_3D_graph(s);
+    if (g.nodes.size()==0) {
+        ui->l1->setText("File Not Found");
+        return;
+    }
+    vector<node> nodes = g.nodes;
+    vector<pair_> edge_codes = g.edge_corr;
+    QString t1 = ui->t1->toPlainText();
+    QString t2 = ui->t2->toPlainText();
+    QString t3 = ui->t3->toPlainText();
+    dir_ratios dir;
+    dir.a = t1.toInt();
+    dir.b = t2.toInt();
+    dir.c = t3.toInt();
+    direction d;
+    d.theta_x = 10;
+    rotate_graph(nodeRot, d, 1, 0, 0);
+
+    mat A = graph_to_mat(nodeRot);
+    A.print("Before");
+    A = find_rot(A, dir);
+    A = find_projection(A);
+
+    vector<node> v = mat_to_graph(A, nodeRot);
+    A = graph_to_mat(v);
+    A.print("After");
+    vector<edge> e;
+    pair_ p;
+    for (int i = 0; i < static_cast<int>(edge_codes.size()); i++)
+    {
+        p = edge_codes[i];
+        edge e1;
+        e1.node1 = &v[p.a];
+        e1.node2 = &v[p.b];
+        e.push_back(e1);
+    }
+
+    coordinate av = get_average(v);
+    translate_graph(v, av);
+    QPicture pi = draw_xy(e);
+    ui->l4->setPicture(pi);
+    ui->l4->show();
+    //  clear edges
+    e.clear();
+}
+
+void MainWindow::on_moveY_clicked()
+{
+    QString qs = ui->t4->toPlainText();
+    string s = qs.toStdString();
+    graph g = get_3D_graph(s);
+    if (g.nodes.size()==0) {
+        ui->l1->setText("File Not Found");
+        return;
+    }
+    vector<node> nodes = g.nodes;
+    vector<pair_> edge_codes = g.edge_corr;
+    QString t1 = ui->t1->toPlainText();
+    QString t2 = ui->t2->toPlainText();
+    QString t3 = ui->t3->toPlainText();
+    dir_ratios dir;
+    dir.a = t1.toInt();
+    dir.b = t2.toInt();
+    dir.c = t3.toInt();
+    direction d;
+    d.theta_y = 10;
+    rotate_graph(nodeRot, d, 0, 1, 0);
+
+    mat A = graph_to_mat(nodeRot);
+    A.print("Before");
+    A = find_rot(A, dir);
+    A = find_projection(A);
+
+    vector<node> v = mat_to_graph(A, nodeRot);
+    A = graph_to_mat(v);
+    A.print("After");
+    vector<edge> e;
+    pair_ p;
+    for (int i = 0; i < static_cast<int>(edge_codes.size()); i++)
+    {
+        p = edge_codes[i];
+        edge e1;
+        e1.node1 = &v[p.a];
+        e1.node2 = &v[p.b];
+        e.push_back(e1);
+    }
+
+    coordinate av = get_average(v);
+    translate_graph(v, av);
+    QPicture pi = draw_xy(e);
+    ui->l4->setPicture(pi);
+    ui->l4->show();
+    //  clear edges
+    e.clear();
+}
+
+void MainWindow::on_moveZ_clicked()
+{
+    QString qs = ui->t4->toPlainText();
+    string s = qs.toStdString();
+    graph g = get_3D_graph(s);
+    if (g.nodes.size()==0) {
+        ui->l1->setText("File Not Found");
+        return;
+    }
+    vector<node> nodes = g.nodes;
+    vector<pair_> edge_codes = g.edge_corr;
+    QString t1 = ui->t1->toPlainText();
+    QString t2 = ui->t2->toPlainText();
+    QString t3 = ui->t3->toPlainText();
+    dir_ratios dir;
+    dir.a = t1.toInt();
+    dir.b = t2.toInt();
+    dir.c = t3.toInt();
+    direction d;
+    d.theta_y = 10;
+    rotate_graph(nodeRot, d, 0, 0, 1);
+
+    mat A = graph_to_mat(nodeRot);
+    A.print("Before");
+    A = find_rot(A, dir);
+    A = find_projection(A);
+
+    vector<node> v = mat_to_graph(A, nodeRot);
+    A = graph_to_mat(v);
+    A.print("After");
+    vector<edge> e;
+    pair_ p;
+    for (int i = 0; i < static_cast<int>(edge_codes.size()); i++)
+    {
+        p = edge_codes[i];
+        edge e1;
+        e1.node1 = &v[p.a];
+        e1.node2 = &v[p.b];
+        e.push_back(e1);
+    }
+
+    coordinate av = get_average(v);
+    translate_graph(v, av);
+    QPicture pi = draw_xy(e);
+    ui->l4->setPicture(pi);
+    ui->l4->show();
+    //  clear edges
+    e.clear();
+
 }
