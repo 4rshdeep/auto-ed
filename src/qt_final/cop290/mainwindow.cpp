@@ -7,6 +7,7 @@
 #include <armadillo>
 #include "draw.cpp"
 #include "threeD_to_ortho.cpp"
+#include "twoD_to3D.cpp"
 
 using namespace std;
 using namespace Qt;
@@ -23,25 +24,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-//void threeD_to_twoD()
-//{
-
-//    // cout << "Filename :" << endl;
-//    cin >> filename;
-//    std::vector<node> v = get_3D_graph();
-//    mat A = get_mx4_matrix(v);
-//    // A.print("Before ");
-
-//    v = find_ortho(v);
-
-//    A = graph_to_mat(v);
-//    cout << endl;
-//    // A.print("After");
-
-//    return;
-//}
-
 
 coordinate add_coord(coordinate c1, coordinate c2)
 {

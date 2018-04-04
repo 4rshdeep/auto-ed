@@ -28,7 +28,8 @@ SOURCES += \
         mainwindow.cpp \
     draw.cpp \
     input.cpp \
-    threeD_to_ortho.cpp
+    threeD_to_ortho.cpp \
+    twoD_to3D.cpp
 
 HEADERS += \
         mainwindow.h \
