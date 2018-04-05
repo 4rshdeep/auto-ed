@@ -1,5 +1,5 @@
 # Automating Engineering Drawing
-This repository hosts the mathematical modelling, functional model, documentation for automating engineering drawing.
+This repository hosts the mathematical modelling, functional model, documentation for automating engineering drawing made as part of the course [COP290: Design Practices in CS](www.cse.iitd.ac.in/~suban/COP290/semII-2017-2018/)
 
 The package has the following functionalities:
 * Given the 3D model description it can generate projections on to any cross section or cutting plane.
