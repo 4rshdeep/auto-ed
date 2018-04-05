@@ -8,10 +8,10 @@ The package has the following functionalities:
 ## How to run?
 Run the following in the terminal
   ```
-  qmake
-  make
-  cd bin
-  ./autoed
+  > qmake
+  > make
+  > cd bin
+  > ./autoed
   ```
 
 
