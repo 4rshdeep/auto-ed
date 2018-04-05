@@ -9,6 +9,9 @@ using namespace std;
 using namespace arma;
 
 vector<node> get_2D_graph(string filename){
+    /*! Reads the 2D input from a file given as an argument.
+    *   Converts the input into a graph and returns the graph.
+    */
     int size;
     ifstream inFile;    // input stream for reading from a file
     vector<node> v;
@@ -138,6 +141,9 @@ vector<node> get_2D_graph(string filename){
 }
 
 vector<pair_> get_pair_2D(string filename){
+    /*! Reads the 2D input from a file given as an argument.
+    *   Returns all pairs of vertices that have an edge between them according to the input in the file.
+    */
     int size;
     ifstream inFile;    // input stream for reading from a file
     vector<pair_> v;

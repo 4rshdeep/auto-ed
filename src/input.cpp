@@ -11,6 +11,9 @@ using namespace arma;
 
 // returns empty vector if can't read the file else a vector of nodes.
 graph get_3D_graph(string filename="input_3D.txt") {
+    /*! Reads the 3D input from a file given as an argument.
+    *   Converts the input into a graph and returns the graph.
+    */
     graph g;
     int size;
     // input stream for reading from a file
@@ -68,6 +71,9 @@ graph get_3D_graph(string filename="input_3D.txt") {
 }
 
 mat get_mx4_matrix(vector<node> v, int cols=4) {
+    /*! Takes a graph as an input.
+    *   Converts the graph into a 4X4 coordinate matrix as specified in the mathematical model.
+    */
     mat A = zeros(v.size(), cols);
     for (int i = 0; i < static_cast<int>(v.size()); ++i)
     {
