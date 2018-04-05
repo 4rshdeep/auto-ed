@@ -1,0 +1,123 @@
+\hypertarget{threeD__to__ortho_8cpp}{}\section{three\+D\+\_\+to\+\_\+ortho.\+cpp File Reference}
+\label{threeD__to__ortho_8cpp}\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$armadillo$>$}\newline
+{\ttfamily \#include \char`\"{}input.\+cpp\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for three\+D\+\_\+to\+\_\+ortho.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{threeD__to__ortho_8cpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{threeD__to__ortho_8cpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{threeD__to__ortho_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI}~3.\+1415926536
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+dir\+\_\+ratios \hyperlink{threeD__to__ortho_8cpp_a42f9a16ee1fb5f0b3db37d7025ae8fb4}{get\+\_\+dir\+\_\+ratios} ()
+\item 
+mat \hyperlink{threeD__to__ortho_8cpp_a8420d58e0454a5d63fdb1d74ef96d270}{graph\+\_\+to\+\_\+mat} (vector$<$ node $>$ nodes, int cols=4)
+\item 
+vector$<$ node $>$ \hyperlink{threeD__to__ortho_8cpp_a6293222d57d26a387793e397a0418b31}{mat\+\_\+to\+\_\+graph} (mat A, vector$<$ node $>$ vec)
+\item 
+mat \hyperlink{threeD__to__ortho_8cpp_a0f52d843a3641070bfa5443bcc3966d7}{translate\+\_\+graph} (mat A, coordinate t\+\_\+factor)
+\item 
+rot\+\_\+matrix \hyperlink{threeD__to__ortho_8cpp_a221fd906c7bf89ca0a820709d0734f23}{rot\+\_\+about\+\_\+coord\+\_\+axis} (direction theta)
+\item 
+mat \hyperlink{threeD__to__ortho_8cpp_acd70b7328b74ddc50dc03870b7e3a6ed}{find\+\_\+rot} (mat A, dir\+\_\+ratios d)
+\item 
+mat \hyperlink{threeD__to__ortho_8cpp_a50ff42487e337cc300dddef30e476cc0}{find\+\_\+projection} (mat A)
+\item 
+vector$<$ node $>$ \hyperlink{threeD__to__ortho_8cpp_a3ced4e2119422236523faa8fcdd68acb}{find\+\_\+ortho} (vector$<$ node $>$ graph)
+\item 
+void \hyperlink{threeD__to__ortho_8cpp_a87e17a4e0a3335783284b821f184a923}{rotate\+\_\+graph} (vector$<$ node $>$ \&v, direction theta, int x, int y, int z)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{threeD__to__ortho_8cpp_a598a3330b3c21701223ee0ca14316eca}\label{threeD__to__ortho_8cpp_a598a3330b3c21701223ee0ca14316eca}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!PI@{PI}}
+\index{PI@{PI}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#define PI~3.\+1415926536}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{threeD__to__ortho_8cpp_a3ced4e2119422236523faa8fcdd68acb}\label{threeD__to__ortho_8cpp_a3ced4e2119422236523faa8fcdd68acb}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!find\+\_\+ortho@{find\+\_\+ortho}}
+\index{find\+\_\+ortho@{find\+\_\+ortho}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{find\+\_\+ortho()}{find\_ortho()}}
+{\footnotesize\ttfamily vector$<$node$>$ find\+\_\+ortho (\begin{DoxyParamCaption}\item[{vector$<$ node $>$}]{graph }\end{DoxyParamCaption})}
+
+Takes the graph whose projection is required to be taken as an argument. Then asks the user about the direction ratios of the desired line of sight. Then converts the graph to a matrix. Finds the transitions to be done. Applies the transitions to the coordinate matrx. Converts the matrix back to a graph and returns it.\mbox{\Hypertarget{threeD__to__ortho_8cpp_a50ff42487e337cc300dddef30e476cc0}\label{threeD__to__ortho_8cpp_a50ff42487e337cc300dddef30e476cc0}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!find\+\_\+projection@{find\+\_\+projection}}
+\index{find\+\_\+projection@{find\+\_\+projection}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{find\+\_\+projection()}{find\_projection()}}
+{\footnotesize\ttfamily mat find\+\_\+projection (\begin{DoxyParamCaption}\item[{mat}]{A }\end{DoxyParamCaption})}
+
+Returns the projection of the graph after applying all the required transitions using z axis as the line-\/of-\/sight.\mbox{\Hypertarget{threeD__to__ortho_8cpp_acd70b7328b74ddc50dc03870b7e3a6ed}\label{threeD__to__ortho_8cpp_acd70b7328b74ddc50dc03870b7e3a6ed}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!find\+\_\+rot@{find\+\_\+rot}}
+\index{find\+\_\+rot@{find\+\_\+rot}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{find\+\_\+rot()}{find\_rot()}}
+{\footnotesize\ttfamily mat find\+\_\+rot (\begin{DoxyParamCaption}\item[{mat}]{A,  }\item[{dir\+\_\+ratios}]{d }\end{DoxyParamCaption})}
+
+Takes two inputs
+\begin{DoxyItemize}
+\item The matrix A which has to translated
+\item The direction ratios of the direction which has to become the line of sight for taking the projections. This function calls the function rot\+\_\+about\+\_\+coord\+\_\+axis to get the rotation matrices and then multiplies the matrices with the coordinate matrix. It returns the coordinate matrix after multiplying it with the rotation matrices.
+\end{DoxyItemize}\mbox{\Hypertarget{threeD__to__ortho_8cpp_a42f9a16ee1fb5f0b3db37d7025ae8fb4}\label{threeD__to__ortho_8cpp_a42f9a16ee1fb5f0b3db37d7025ae8fb4}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!get\+\_\+dir\+\_\+ratios@{get\+\_\+dir\+\_\+ratios}}
+\index{get\+\_\+dir\+\_\+ratios@{get\+\_\+dir\+\_\+ratios}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+dir\+\_\+ratios()}{get\_dir\_ratios()}}
+{\footnotesize\ttfamily dir\+\_\+ratios get\+\_\+dir\+\_\+ratios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Asks the user for the direction along which it is desired to take the projection.\mbox{\Hypertarget{threeD__to__ortho_8cpp_a8420d58e0454a5d63fdb1d74ef96d270}\label{threeD__to__ortho_8cpp_a8420d58e0454a5d63fdb1d74ef96d270}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!graph\+\_\+to\+\_\+mat@{graph\+\_\+to\+\_\+mat}}
+\index{graph\+\_\+to\+\_\+mat@{graph\+\_\+to\+\_\+mat}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{graph\+\_\+to\+\_\+mat()}{graph\_to\_mat()}}
+{\footnotesize\ttfamily mat graph\+\_\+to\+\_\+mat (\begin{DoxyParamCaption}\item[{vector$<$ node $>$}]{nodes,  }\item[{int}]{cols = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+Takes a graph as an input. Converts the graph into a 4\+X4 coordinate matrix as specified in the mathematical model.\mbox{\Hypertarget{threeD__to__ortho_8cpp_a6293222d57d26a387793e397a0418b31}\label{threeD__to__ortho_8cpp_a6293222d57d26a387793e397a0418b31}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!mat\+\_\+to\+\_\+graph@{mat\+\_\+to\+\_\+graph}}
+\index{mat\+\_\+to\+\_\+graph@{mat\+\_\+to\+\_\+graph}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{mat\+\_\+to\+\_\+graph()}{mat\_to\_graph()}}
+{\footnotesize\ttfamily vector$<$node$>$ mat\+\_\+to\+\_\+graph (\begin{DoxyParamCaption}\item[{mat}]{A,  }\item[{vector$<$ node $>$}]{vec }\end{DoxyParamCaption})}
+
+Takes a coordinate matrix as an input. Converts 4\+X4 coordinate matrix to the graph which would lead to constriuction of this matrix.\mbox{\Hypertarget{threeD__to__ortho_8cpp_a221fd906c7bf89ca0a820709d0734f23}\label{threeD__to__ortho_8cpp_a221fd906c7bf89ca0a820709d0734f23}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!rot\+\_\+about\+\_\+coord\+\_\+axis@{rot\+\_\+about\+\_\+coord\+\_\+axis}}
+\index{rot\+\_\+about\+\_\+coord\+\_\+axis@{rot\+\_\+about\+\_\+coord\+\_\+axis}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{rot\+\_\+about\+\_\+coord\+\_\+axis()}{rot\_about\_coord\_axis()}}
+{\footnotesize\ttfamily rot\+\_\+matrix rot\+\_\+about\+\_\+coord\+\_\+axis (\begin{DoxyParamCaption}\item[{direction}]{theta }\end{DoxyParamCaption})}
+
+Takes the direction ratios as the input It returns the rotation matrices which are to be multiplied to the coordinate matrix so as to make the Z axis coincide with the given direction theta. It returns a struct of rot\+\_\+matrix type which contains the three rotation matrices namely Rx, Ry and Rz.\mbox{\Hypertarget{threeD__to__ortho_8cpp_a87e17a4e0a3335783284b821f184a923}\label{threeD__to__ortho_8cpp_a87e17a4e0a3335783284b821f184a923}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!rotate\+\_\+graph@{rotate\+\_\+graph}}
+\index{rotate\+\_\+graph@{rotate\+\_\+graph}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{rotate\+\_\+graph()}{rotate\_graph()}}
+{\footnotesize\ttfamily void rotate\+\_\+graph (\begin{DoxyParamCaption}\item[{vector$<$ node $>$ \&}]{v,  }\item[{direction}]{theta,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+Rotate the given graph about axis (X, Y or Z axis) depending on the input x, y and z Finsd the rotations matrix for the given direction theta and applies only those whose corresponding input is 1. For Rx, x is to be 1. For Ry, y is to be 1. For Rz, z is to be 1.\mbox{\Hypertarget{threeD__to__ortho_8cpp_a0f52d843a3641070bfa5443bcc3966d7}\label{threeD__to__ortho_8cpp_a0f52d843a3641070bfa5443bcc3966d7}} 
+\index{three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}!translate\+\_\+graph@{translate\+\_\+graph}}
+\index{translate\+\_\+graph@{translate\+\_\+graph}!three\+D\+\_\+to\+\_\+ortho.\+cpp@{three\+D\+\_\+to\+\_\+ortho.\+cpp}}
+\subsubsection{\texorpdfstring{translate\+\_\+graph()}{translate\_graph()}}
+{\footnotesize\ttfamily mat translate\+\_\+graph (\begin{DoxyParamCaption}\item[{mat}]{A,  }\item[{coordinate}]{t\+\_\+factor }\end{DoxyParamCaption})}
+
+Takes two inputs
+\begin{DoxyItemize}
+\item The matrix A (for the corresponding graph) which has to translated
+\item The coordinate t\+\_\+factor of the point that would become the origin in the translated system. This function makes multiple calls to the function translate\+\_\+coordinate for all the vertices of the input graph.
+\end{DoxyItemize}

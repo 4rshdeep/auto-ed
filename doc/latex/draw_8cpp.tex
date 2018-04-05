@@ -1,0 +1,141 @@
+\hypertarget{draw_8cpp}{}\section{draw.\+cpp File Reference}
+\label{draw_8cpp}\index{draw.\+cpp@{draw.\+cpp}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$Qt\+Core$>$}\newline
+{\ttfamily \#include $<$Qt\+Gui$>$}\newline
+{\ttfamily \#include \char`\"{}include/struct.\+h\char`\"{}}\newline
+Include dependency graph for draw.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{draw_8cpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{draw_8cpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+three\+View \hyperlink{draw_8cpp_a969d6b40b0869b06f8cfded66c9b4719}{get\+\_\+three\+\_\+views} (string filename)
+\item 
+void \hyperlink{draw_8cpp_ab0fc9fff71b1111ac7a1430b062c0d9d}{print\+\_\+nodes} (vector$<$ node $>$ v)
+\item 
+void \hyperlink{draw_8cpp_a2ee335a43fbd0ba4663095611edd021d}{print\+\_\+edges} (vector$<$ edge $>$ v)
+\item 
+coordinate \hyperlink{draw_8cpp_a6b1da8a3461f46770e2c8666f32ebe51}{get\+\_\+average} (vector$<$ node $>$ v)
+\item 
+int \hyperlink{draw_8cpp_ac1a707c12c57b7cbf3ef84308a298acb}{get\+\_\+max\+\_\+y} (vector$<$ edge $>$ v)
+\item 
+int \hyperlink{draw_8cpp_aec887c68a3a59f16763fb16330e80185}{get\+\_\+max\+\_\+x} (vector$<$ edge $>$ v)
+\item 
+int \hyperlink{draw_8cpp_a15cf00bb6773d72a8a740ecce84ad95e}{get\+\_\+min\+\_\+x} (vector$<$ edge $>$ v)
+\item 
+int \hyperlink{draw_8cpp_a7337d85eb762ca8735b9be6520b25e62}{get\+\_\+min\+\_\+y} (vector$<$ edge $>$ v)
+\item 
+int \hyperlink{draw_8cpp_a911f1943b4548fcec0048ef7b786050e}{get\+\_\+min\+\_\+z} (vector$<$ edge $>$ v)
+\item 
+int \hyperlink{draw_8cpp_aa4c9ace07665494ea060c8b74a6fde2b}{get\+\_\+max\+\_\+z} (vector$<$ edge $>$ v)
+\item 
+Q\+Picture \hyperlink{draw_8cpp_a64dcf14345b66c2a69a13d8a374426de}{draw\+\_\+views} (vector$<$ edge $>$ v)
+\item 
+Q\+Picture \hyperlink{draw_8cpp_a7c3da4110b99906ffdeb8686942c0dda}{draw\+\_\+xy} (vector$<$ edge $>$ v)
+\item 
+Q\+Picture \hyperlink{draw_8cpp_a4efbb5676dd85c462f4f558a28af0893}{draw\+\_\+yz} (vector$<$ edge $>$ v)
+\item 
+Q\+Picture \hyperlink{draw_8cpp_a3105a48af84b6c7fadd10e7a5b7772c4}{draw\+\_\+xz} (vector$<$ edge $>$ v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{draw_8cpp_a64dcf14345b66c2a69a13d8a374426de}\label{draw_8cpp_a64dcf14345b66c2a69a13d8a374426de}} 
+\index{draw.\+cpp@{draw.\+cpp}!draw\+\_\+views@{draw\+\_\+views}}
+\index{draw\+\_\+views@{draw\+\_\+views}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+\_\+views()}{draw\_views()}}
+{\footnotesize\ttfamily Q\+Picture draw\+\_\+views (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Takes a graph as an input. Renders view from the same graph.\mbox{\Hypertarget{draw_8cpp_a7c3da4110b99906ffdeb8686942c0dda}\label{draw_8cpp_a7c3da4110b99906ffdeb8686942c0dda}} 
+\index{draw.\+cpp@{draw.\+cpp}!draw\+\_\+xy@{draw\+\_\+xy}}
+\index{draw\+\_\+xy@{draw\+\_\+xy}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+\_\+xy()}{draw\_xy()}}
+{\footnotesize\ttfamily Q\+Picture draw\+\_\+xy (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Takes a graph description (vector of nodes) as and input. Draws the XY coordinates of this graph.\mbox{\Hypertarget{draw_8cpp_a3105a48af84b6c7fadd10e7a5b7772c4}\label{draw_8cpp_a3105a48af84b6c7fadd10e7a5b7772c4}} 
+\index{draw.\+cpp@{draw.\+cpp}!draw\+\_\+xz@{draw\+\_\+xz}}
+\index{draw\+\_\+xz@{draw\+\_\+xz}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+\_\+xz()}{draw\_xz()}}
+{\footnotesize\ttfamily Q\+Picture draw\+\_\+xz (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Takes a graph description (vector of nodes) as and input. Draws the XZ coordinates of this graph.\mbox{\Hypertarget{draw_8cpp_a4efbb5676dd85c462f4f558a28af0893}\label{draw_8cpp_a4efbb5676dd85c462f4f558a28af0893}} 
+\index{draw.\+cpp@{draw.\+cpp}!draw\+\_\+yz@{draw\+\_\+yz}}
+\index{draw\+\_\+yz@{draw\+\_\+yz}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+\_\+yz()}{draw\_yz()}}
+{\footnotesize\ttfamily Q\+Picture draw\+\_\+yz (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Takes a graph description (vector of nodes) as and input. Draws the YZ coordinates of this graph.\mbox{\Hypertarget{draw_8cpp_a6b1da8a3461f46770e2c8666f32ebe51}\label{draw_8cpp_a6b1da8a3461f46770e2c8666f32ebe51}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+average@{get\+\_\+average}}
+\index{get\+\_\+average@{get\+\_\+average}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+average()}{get\_average()}}
+{\footnotesize\ttfamily coordinate get\+\_\+average (\begin{DoxyParamCaption}\item[{vector$<$ node $>$}]{v }\end{DoxyParamCaption})}
+
+Returns a coordinate average of the coordinates of all the nodes in a vector of nodes.\mbox{\Hypertarget{draw_8cpp_aec887c68a3a59f16763fb16330e80185}\label{draw_8cpp_aec887c68a3a59f16763fb16330e80185}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+max\+\_\+x@{get\+\_\+max\+\_\+x}}
+\index{get\+\_\+max\+\_\+x@{get\+\_\+max\+\_\+x}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+x()}{get\_max\_x()}}
+{\footnotesize\ttfamily int get\+\_\+max\+\_\+x (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that gets maximum x coordinate of a node in a vector of edges.\mbox{\Hypertarget{draw_8cpp_ac1a707c12c57b7cbf3ef84308a298acb}\label{draw_8cpp_ac1a707c12c57b7cbf3ef84308a298acb}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+max\+\_\+y@{get\+\_\+max\+\_\+y}}
+\index{get\+\_\+max\+\_\+y@{get\+\_\+max\+\_\+y}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+y()}{get\_max\_y()}}
+{\footnotesize\ttfamily int get\+\_\+max\+\_\+y (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that gets maximum y coordinate of a node in a vector of edges.\mbox{\Hypertarget{draw_8cpp_aa4c9ace07665494ea060c8b74a6fde2b}\label{draw_8cpp_aa4c9ace07665494ea060c8b74a6fde2b}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+max\+\_\+z@{get\+\_\+max\+\_\+z}}
+\index{get\+\_\+max\+\_\+z@{get\+\_\+max\+\_\+z}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+max\+\_\+z()}{get\_max\_z()}}
+{\footnotesize\ttfamily int get\+\_\+max\+\_\+z (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that gets maximum z coordinate of a node in a vector of edges.\mbox{\Hypertarget{draw_8cpp_a15cf00bb6773d72a8a740ecce84ad95e}\label{draw_8cpp_a15cf00bb6773d72a8a740ecce84ad95e}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+min\+\_\+x@{get\+\_\+min\+\_\+x}}
+\index{get\+\_\+min\+\_\+x@{get\+\_\+min\+\_\+x}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+min\+\_\+x()}{get\_min\_x()}}
+{\footnotesize\ttfamily int get\+\_\+min\+\_\+x (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that gets minimum x coordinate of a node in a vector of edges.\mbox{\Hypertarget{draw_8cpp_a7337d85eb762ca8735b9be6520b25e62}\label{draw_8cpp_a7337d85eb762ca8735b9be6520b25e62}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+min\+\_\+y@{get\+\_\+min\+\_\+y}}
+\index{get\+\_\+min\+\_\+y@{get\+\_\+min\+\_\+y}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+min\+\_\+y()}{get\_min\_y()}}
+{\footnotesize\ttfamily int get\+\_\+min\+\_\+y (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that gets minimum y coordinate of a node in a vector of edges.\mbox{\Hypertarget{draw_8cpp_a911f1943b4548fcec0048ef7b786050e}\label{draw_8cpp_a911f1943b4548fcec0048ef7b786050e}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+min\+\_\+z@{get\+\_\+min\+\_\+z}}
+\index{get\+\_\+min\+\_\+z@{get\+\_\+min\+\_\+z}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+min\+\_\+z()}{get\_min\_z()}}
+{\footnotesize\ttfamily int get\+\_\+min\+\_\+z (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that gets minimum z coordinate of a node in a vector of edges.\mbox{\Hypertarget{draw_8cpp_a969d6b40b0869b06f8cfded66c9b4719}\label{draw_8cpp_a969d6b40b0869b06f8cfded66c9b4719}} 
+\index{draw.\+cpp@{draw.\+cpp}!get\+\_\+three\+\_\+views@{get\+\_\+three\+\_\+views}}
+\index{get\+\_\+three\+\_\+views@{get\+\_\+three\+\_\+views}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+three\+\_\+views()}{get\_three\_views()}}
+{\footnotesize\ttfamily three\+View get\+\_\+three\+\_\+views (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+
+Reads the 2D input from a file given as an argument. Converts the input into a graph and returns the graph of three orthographic views\mbox{\Hypertarget{draw_8cpp_a2ee335a43fbd0ba4663095611edd021d}\label{draw_8cpp_a2ee335a43fbd0ba4663095611edd021d}} 
+\index{draw.\+cpp@{draw.\+cpp}!print\+\_\+edges@{print\+\_\+edges}}
+\index{print\+\_\+edges@{print\+\_\+edges}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{print\+\_\+edges()}{print\_edges()}}
+{\footnotesize\ttfamily void print\+\_\+edges (\begin{DoxyParamCaption}\item[{vector$<$ edge $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that prints coordinates of two nodes that make up an edge in a vector of edges.\mbox{\Hypertarget{draw_8cpp_ab0fc9fff71b1111ac7a1430b062c0d9d}\label{draw_8cpp_ab0fc9fff71b1111ac7a1430b062c0d9d}} 
+\index{draw.\+cpp@{draw.\+cpp}!print\+\_\+nodes@{print\+\_\+nodes}}
+\index{print\+\_\+nodes@{print\+\_\+nodes}!draw.\+cpp@{draw.\+cpp}}
+\subsubsection{\texorpdfstring{print\+\_\+nodes()}{print\_nodes()}}
+{\footnotesize\ttfamily void print\+\_\+nodes (\begin{DoxyParamCaption}\item[{vector$<$ node $>$}]{v }\end{DoxyParamCaption})}
+
+Helper function that prints coordinates of a node in a vector of nodes.
