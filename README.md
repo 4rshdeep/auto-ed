@@ -8,7 +8,6 @@ The package has the following functionalities:
 ## How to run?
 Run the following in the terminal
   ```
-  cd
   qmake
   make
   cd bin
