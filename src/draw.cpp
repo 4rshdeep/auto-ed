@@ -311,7 +311,7 @@ QPicture draw_xy(vector<edge> v)
 	QPainter p(&pi);
 	p.setRenderHint(QPainter::Antialiasing);
 	p.setPen(QPen(Qt::black, 5, Qt::SolidLine, Qt::RoundCap));
-	p.drawLine(-150, -150, -150, -150);
+	// p.drawLine(-150, -150, -150, -150);
 	cout << "fact " << fact << endl;
 	if (fact > 0)
 	{
@@ -343,7 +343,7 @@ QPicture draw_yz(vector<edge> v)
 	QPainter p(&pi);
 	p.setRenderHint(QPainter::Antialiasing);
 	p.setPen(QPen(Qt::black, 5, Qt::SolidLine, Qt::RoundCap));
-	p.drawLine(-150, -150, -150, -150);
+	// p.drawLine(-150, -150, -150, -150);
 	cout << "fact " << fact << endl;
 
 	if (fact > 0)
@@ -376,7 +376,7 @@ QPicture draw_xz(vector<edge> v)
     QPainter p(&pi);
 	p.setRenderHint(QPainter::Antialiasing);
 	p.setPen(QPen(Qt::black, 5, Qt::SolidLine, Qt::RoundCap));
-	p.drawLine(-150, -150, -150, -150);
+	// p.drawLine(-150, -150, -150, -150);
 	cout << "fact " << fact << endl;
 
 	if (fact > 0)

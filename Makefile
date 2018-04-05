@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -std=gnu++0x -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -isystem /home/ad/anaconda3/include/qt -isystem /home/ad/anaconda3/include/qt/QtWidgets -isystem /home/ad/anaconda3/include/qt/QtGui -isystem /home/ad/anaconda3/include/qt/QtCore -Ibuild/moc -Ibuild/uic -I/home/ad/anaconda3/mkspecs/linux-g++
+INCPATH       = -I. -I../../anaconda3/include/qt -I../../anaconda3/include/qt/QtWidgets -I../../anaconda3/include/qt/QtGui -I../../anaconda3/include/qt/QtCore -Ibuild/moc -Ibuild/uic -I../../anaconda3/mkspecs/linux-g++
 QMAKE         = /home/ad/anaconda3/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = autoed1.0.0
-DISTDIR = /media/ad/Area51/workspace/assignments/cop290/build/obj/autoed1.0.0
+DISTDIR = /home/ad/cop290_git/auto-ed/build/obj/autoed1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/home/ad/anaconda3/lib
 LIBS          = $(SUBLIBS) -larmadillo -lQt5Widgets -L/home/ad/anaconda3/lib -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -53,108 +53,108 @@ SOURCES       = src/main.cpp \
 OBJECTS       = build/obj/main.o \
 		build/obj/mainwindow.o \
 		build/obj/moc_mainwindow.o
-DIST          = /home/ad/anaconda3/mkspecs/features/spec_pre.prf \
-		/home/ad/anaconda3/mkspecs/common/unix.conf \
-		/home/ad/anaconda3/mkspecs/common/linux.conf \
-		/home/ad/anaconda3/mkspecs/common/sanitize.conf \
-		/home/ad/anaconda3/mkspecs/common/gcc-base.conf \
-		/home/ad/anaconda3/mkspecs/common/gcc-base-unix.conf \
-		/home/ad/anaconda3/mkspecs/common/g++-base.conf \
-		/home/ad/anaconda3/mkspecs/common/g++-unix.conf \
-		/home/ad/anaconda3/mkspecs/qconfig.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_bluetooth.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_clucene_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_concurrent.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_concurrent_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_core.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_core_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_dbus.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_dbus_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_designer.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_designer_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_gui.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_gui_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_help.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_help_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimedia.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimedia_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_network.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_network_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_nfc.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_nfc_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_opengl.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_opengl_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_openglextensions.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_platformsupport_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_printsupport.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_printsupport_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qml.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qml_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qmltest.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qmltest_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quick.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quick_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quickwidgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_script.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_script_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_scripttools.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_scripttools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_sql.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_sql_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_svg.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_svg_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_testlib.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_testlib_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_uiplugin.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_uitools.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_uitools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webchannel.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webchannel_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkit.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkit_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkitwidgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_websockets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_websockets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_widgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_widgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_x11extras.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_x11extras_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xml.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xml_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		/home/ad/anaconda3/mkspecs/features/qt_functions.prf \
-		/home/ad/anaconda3/mkspecs/features/qt_config.prf \
-		/home/ad/anaconda3/mkspecs/linux-g++/qmake.conf \
-		/home/ad/anaconda3/mkspecs/features/spec_post.prf \
-		/home/ad/anaconda3/mkspecs/features/exclusive_builds.prf \
-		/home/ad/anaconda3/mkspecs/features/default_pre.prf \
-		/home/ad/anaconda3/mkspecs/features/resolve_config.prf \
-		/home/ad/anaconda3/mkspecs/features/default_post.prf \
-		/home/ad/anaconda3/mkspecs/features/warn_on.prf \
-		/home/ad/anaconda3/mkspecs/features/qt.prf \
-		/home/ad/anaconda3/mkspecs/features/resources.prf \
-		/home/ad/anaconda3/mkspecs/features/moc.prf \
-		/home/ad/anaconda3/mkspecs/features/unix/opengl.prf \
-		/home/ad/anaconda3/mkspecs/features/uic.prf \
-		/home/ad/anaconda3/mkspecs/features/unix/thread.prf \
-		/home/ad/anaconda3/mkspecs/features/file_copies.prf \
-		/home/ad/anaconda3/mkspecs/features/testcase_targets.prf \
-		/home/ad/anaconda3/mkspecs/features/exceptions.prf \
-		/home/ad/anaconda3/mkspecs/features/yacc.prf \
-		/home/ad/anaconda3/mkspecs/features/lex.prf \
+DIST          = ../../anaconda3/mkspecs/features/spec_pre.prf \
+		../../anaconda3/mkspecs/common/unix.conf \
+		../../anaconda3/mkspecs/common/linux.conf \
+		../../anaconda3/mkspecs/common/sanitize.conf \
+		../../anaconda3/mkspecs/common/gcc-base.conf \
+		../../anaconda3/mkspecs/common/gcc-base-unix.conf \
+		../../anaconda3/mkspecs/common/g++-base.conf \
+		../../anaconda3/mkspecs/common/g++-unix.conf \
+		../../anaconda3/mkspecs/qconfig.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_bluetooth.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_clucene_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_concurrent.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_core.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_core_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_dbus.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_designer.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_designer_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_gui.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_gui_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_help.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_help_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimedia.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimedia_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_network.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_network_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_nfc.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_nfc_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_opengl.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_openglextensions.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_platformsupport_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_printsupport.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qml.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qml_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qmltest.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quick.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quick_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_script.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_script_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_scripttools.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_scripttools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_sql.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_sql_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_svg.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_svg_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_testlib.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_uitools.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webchannel.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webchannel_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkit.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkit_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkitwidgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_websockets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_websockets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_widgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_x11extras.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_x11extras_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xml.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xml_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		../../anaconda3/mkspecs/features/qt_functions.prf \
+		../../anaconda3/mkspecs/features/qt_config.prf \
+		../../anaconda3/mkspecs/linux-g++/qmake.conf \
+		../../anaconda3/mkspecs/features/spec_post.prf \
+		../../anaconda3/mkspecs/features/exclusive_builds.prf \
+		../../anaconda3/mkspecs/features/default_pre.prf \
+		../../anaconda3/mkspecs/features/resolve_config.prf \
+		../../anaconda3/mkspecs/features/default_post.prf \
+		../../anaconda3/mkspecs/features/warn_on.prf \
+		../../anaconda3/mkspecs/features/qt.prf \
+		../../anaconda3/mkspecs/features/resources.prf \
+		../../anaconda3/mkspecs/features/moc.prf \
+		../../anaconda3/mkspecs/features/unix/opengl.prf \
+		../../anaconda3/mkspecs/features/uic.prf \
+		../../anaconda3/mkspecs/features/unix/thread.prf \
+		../../anaconda3/mkspecs/features/file_copies.prf \
+		../../anaconda3/mkspecs/features/testcase_targets.prf \
+		../../anaconda3/mkspecs/features/exceptions.prf \
+		../../anaconda3/mkspecs/features/yacc.prf \
+		../../anaconda3/mkspecs/features/lex.prf \
 		autoed.pro include/mainwindow.h \
 		include/struct.h src/main.cpp \
 		src/mainwindow.cpp
@@ -170,219 +170,219 @@ $(TARGET): build/uic/ui_mainwindow.h $(OBJECTS)
 	@test -d bin/ || mkdir -p bin/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: autoed.pro /home/ad/anaconda3/mkspecs/linux-g++/qmake.conf /home/ad/anaconda3/mkspecs/features/spec_pre.prf \
-		/home/ad/anaconda3/mkspecs/common/unix.conf \
-		/home/ad/anaconda3/mkspecs/common/linux.conf \
-		/home/ad/anaconda3/mkspecs/common/sanitize.conf \
-		/home/ad/anaconda3/mkspecs/common/gcc-base.conf \
-		/home/ad/anaconda3/mkspecs/common/gcc-base-unix.conf \
-		/home/ad/anaconda3/mkspecs/common/g++-base.conf \
-		/home/ad/anaconda3/mkspecs/common/g++-unix.conf \
-		/home/ad/anaconda3/mkspecs/qconfig.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_bluetooth.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_bluetooth_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_bootstrap_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_clucene_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_concurrent.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_concurrent_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_core.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_core_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_dbus.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_dbus_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_designer.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_designer_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_designercomponents_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_gui.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_gui_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_help.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_help_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimedia.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimedia_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimediawidgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_network.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_network_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_nfc.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_nfc_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_opengl.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_opengl_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_openglextensions.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_openglextensions_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_platformsupport_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_printsupport.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_printsupport_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qml.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qml_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qmldevtools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qmltest.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qmltest_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quick.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quick_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quickparticles_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quickwidgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_quickwidgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_script.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_script_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_scripttools.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_scripttools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_sql.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_sql_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_svg.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_svg_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_testlib.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_testlib_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_uiplugin.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_uitools.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_uitools_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webchannel.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webchannel_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkit.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkit_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkitwidgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_websockets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_websockets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_widgets.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_widgets_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_x11extras.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_x11extras_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xml.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xml_private.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xmlpatterns.pri \
-		/home/ad/anaconda3/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		/home/ad/anaconda3/mkspecs/features/qt_functions.prf \
-		/home/ad/anaconda3/mkspecs/features/qt_config.prf \
-		/home/ad/anaconda3/mkspecs/linux-g++/qmake.conf \
-		/home/ad/anaconda3/mkspecs/features/spec_post.prf \
-		/home/ad/anaconda3/mkspecs/features/exclusive_builds.prf \
-		/home/ad/anaconda3/mkspecs/features/default_pre.prf \
-		/home/ad/anaconda3/mkspecs/features/resolve_config.prf \
-		/home/ad/anaconda3/mkspecs/features/default_post.prf \
-		/home/ad/anaconda3/mkspecs/features/warn_on.prf \
-		/home/ad/anaconda3/mkspecs/features/qt.prf \
-		/home/ad/anaconda3/mkspecs/features/resources.prf \
-		/home/ad/anaconda3/mkspecs/features/moc.prf \
-		/home/ad/anaconda3/mkspecs/features/unix/opengl.prf \
-		/home/ad/anaconda3/mkspecs/features/uic.prf \
-		/home/ad/anaconda3/mkspecs/features/unix/thread.prf \
-		/home/ad/anaconda3/mkspecs/features/file_copies.prf \
-		/home/ad/anaconda3/mkspecs/features/testcase_targets.prf \
-		/home/ad/anaconda3/mkspecs/features/exceptions.prf \
-		/home/ad/anaconda3/mkspecs/features/yacc.prf \
-		/home/ad/anaconda3/mkspecs/features/lex.prf \
+Makefile: autoed.pro ../../anaconda3/mkspecs/linux-g++/qmake.conf ../../anaconda3/mkspecs/features/spec_pre.prf \
+		../../anaconda3/mkspecs/common/unix.conf \
+		../../anaconda3/mkspecs/common/linux.conf \
+		../../anaconda3/mkspecs/common/sanitize.conf \
+		../../anaconda3/mkspecs/common/gcc-base.conf \
+		../../anaconda3/mkspecs/common/gcc-base-unix.conf \
+		../../anaconda3/mkspecs/common/g++-base.conf \
+		../../anaconda3/mkspecs/common/g++-unix.conf \
+		../../anaconda3/mkspecs/qconfig.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_bluetooth.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_clucene_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_concurrent.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_concurrent_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_core.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_core_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_dbus.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_dbus_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_designer.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_designer_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_designercomponents_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_gui.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_gui_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_help.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_help_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimedia.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimedia_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_network.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_network_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_nfc.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_nfc_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_opengl.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_opengl_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_openglextensions.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_openglextensions_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_platformsupport_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_printsupport.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_printsupport_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qml.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qml_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qmldevtools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qmltest.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qmltest_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quick.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quick_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quickparticles_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quickwidgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_script.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_script_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_scripttools.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_scripttools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_sql.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_sql_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_svg.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_svg_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_testlib.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_testlib_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_uiplugin.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_uitools.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_uitools_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webchannel.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webchannel_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkit.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkit_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkitwidgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_websockets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_websockets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_widgets.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_widgets_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_x11extras.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_x11extras_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xml.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xml_private.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xmlpatterns.pri \
+		../../anaconda3/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
+		../../anaconda3/mkspecs/features/qt_functions.prf \
+		../../anaconda3/mkspecs/features/qt_config.prf \
+		../../anaconda3/mkspecs/linux-g++/qmake.conf \
+		../../anaconda3/mkspecs/features/spec_post.prf \
+		../../anaconda3/mkspecs/features/exclusive_builds.prf \
+		../../anaconda3/mkspecs/features/default_pre.prf \
+		../../anaconda3/mkspecs/features/resolve_config.prf \
+		../../anaconda3/mkspecs/features/default_post.prf \
+		../../anaconda3/mkspecs/features/warn_on.prf \
+		../../anaconda3/mkspecs/features/qt.prf \
+		../../anaconda3/mkspecs/features/resources.prf \
+		../../anaconda3/mkspecs/features/moc.prf \
+		../../anaconda3/mkspecs/features/unix/opengl.prf \
+		../../anaconda3/mkspecs/features/uic.prf \
+		../../anaconda3/mkspecs/features/unix/thread.prf \
+		../../anaconda3/mkspecs/features/file_copies.prf \
+		../../anaconda3/mkspecs/features/testcase_targets.prf \
+		../../anaconda3/mkspecs/features/exceptions.prf \
+		../../anaconda3/mkspecs/features/yacc.prf \
+		../../anaconda3/mkspecs/features/lex.prf \
 		autoed.pro \
-		/home/ad/anaconda3/lib/libQt5Widgets.prl \
-		/home/ad/anaconda3/lib/libQt5Gui.prl \
-		/home/ad/anaconda3/lib/libQt5Core.prl
+		../../anaconda3/lib/libQt5Widgets.prl \
+		../../anaconda3/lib/libQt5Gui.prl \
+		../../anaconda3/lib/libQt5Core.prl
 	$(QMAKE) -o Makefile autoed.pro
-/home/ad/anaconda3/mkspecs/features/spec_pre.prf:
-/home/ad/anaconda3/mkspecs/common/unix.conf:
-/home/ad/anaconda3/mkspecs/common/linux.conf:
-/home/ad/anaconda3/mkspecs/common/sanitize.conf:
-/home/ad/anaconda3/mkspecs/common/gcc-base.conf:
-/home/ad/anaconda3/mkspecs/common/gcc-base-unix.conf:
-/home/ad/anaconda3/mkspecs/common/g++-base.conf:
-/home/ad/anaconda3/mkspecs/common/g++-unix.conf:
-/home/ad/anaconda3/mkspecs/qconfig.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_bluetooth.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_bluetooth_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_bootstrap_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_clucene_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_concurrent.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_concurrent_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_core.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_core_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_dbus.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_dbus_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_designer.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_designer_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_designercomponents_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_gui.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_gui_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_help.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_help_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_multimedia.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_multimedia_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_multimediawidgets.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_network.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_network_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_nfc.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_nfc_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_opengl.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_opengl_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_openglextensions.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_openglextensions_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_platformsupport_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_printsupport.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_printsupport_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_qml.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_qml_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_qmldevtools_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_qmltest.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_qmltest_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_quick.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_quick_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_quickparticles_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_quickwidgets.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_quickwidgets_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_script.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_script_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_scripttools.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_scripttools_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_sql.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_sql_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_svg.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_svg_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_testlib.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_testlib_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_uiplugin.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_uitools.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_uitools_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_webchannel.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_webchannel_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_webkit.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_webkit_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_webkitwidgets.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_webkitwidgets_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_websockets.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_websockets_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_widgets.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_widgets_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_x11extras.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_x11extras_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_xml.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_xml_private.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_xmlpatterns.pri:
-/home/ad/anaconda3/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
-/home/ad/anaconda3/mkspecs/features/qt_functions.prf:
-/home/ad/anaconda3/mkspecs/features/qt_config.prf:
-/home/ad/anaconda3/mkspecs/linux-g++/qmake.conf:
-/home/ad/anaconda3/mkspecs/features/spec_post.prf:
-/home/ad/anaconda3/mkspecs/features/exclusive_builds.prf:
-/home/ad/anaconda3/mkspecs/features/default_pre.prf:
-/home/ad/anaconda3/mkspecs/features/resolve_config.prf:
-/home/ad/anaconda3/mkspecs/features/default_post.prf:
-/home/ad/anaconda3/mkspecs/features/warn_on.prf:
-/home/ad/anaconda3/mkspecs/features/qt.prf:
-/home/ad/anaconda3/mkspecs/features/resources.prf:
-/home/ad/anaconda3/mkspecs/features/moc.prf:
-/home/ad/anaconda3/mkspecs/features/unix/opengl.prf:
-/home/ad/anaconda3/mkspecs/features/uic.prf:
-/home/ad/anaconda3/mkspecs/features/unix/thread.prf:
-/home/ad/anaconda3/mkspecs/features/file_copies.prf:
-/home/ad/anaconda3/mkspecs/features/testcase_targets.prf:
-/home/ad/anaconda3/mkspecs/features/exceptions.prf:
-/home/ad/anaconda3/mkspecs/features/yacc.prf:
-/home/ad/anaconda3/mkspecs/features/lex.prf:
+../../anaconda3/mkspecs/features/spec_pre.prf:
+../../anaconda3/mkspecs/common/unix.conf:
+../../anaconda3/mkspecs/common/linux.conf:
+../../anaconda3/mkspecs/common/sanitize.conf:
+../../anaconda3/mkspecs/common/gcc-base.conf:
+../../anaconda3/mkspecs/common/gcc-base-unix.conf:
+../../anaconda3/mkspecs/common/g++-base.conf:
+../../anaconda3/mkspecs/common/g++-unix.conf:
+../../anaconda3/mkspecs/qconfig.pri:
+../../anaconda3/mkspecs/modules/qt_lib_bluetooth.pri:
+../../anaconda3/mkspecs/modules/qt_lib_bluetooth_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_bootstrap_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_clucene_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_concurrent.pri:
+../../anaconda3/mkspecs/modules/qt_lib_concurrent_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_core.pri:
+../../anaconda3/mkspecs/modules/qt_lib_core_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_dbus.pri:
+../../anaconda3/mkspecs/modules/qt_lib_dbus_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_designer.pri:
+../../anaconda3/mkspecs/modules/qt_lib_designer_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_designercomponents_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_gui.pri:
+../../anaconda3/mkspecs/modules/qt_lib_gui_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_help.pri:
+../../anaconda3/mkspecs/modules/qt_lib_help_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_multimedia.pri:
+../../anaconda3/mkspecs/modules/qt_lib_multimedia_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_multimediawidgets.pri:
+../../anaconda3/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_network.pri:
+../../anaconda3/mkspecs/modules/qt_lib_network_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_nfc.pri:
+../../anaconda3/mkspecs/modules/qt_lib_nfc_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_opengl.pri:
+../../anaconda3/mkspecs/modules/qt_lib_opengl_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_openglextensions.pri:
+../../anaconda3/mkspecs/modules/qt_lib_openglextensions_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_platformsupport_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_printsupport.pri:
+../../anaconda3/mkspecs/modules/qt_lib_printsupport_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_qml.pri:
+../../anaconda3/mkspecs/modules/qt_lib_qml_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_qmldevtools_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_qmltest.pri:
+../../anaconda3/mkspecs/modules/qt_lib_qmltest_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_quick.pri:
+../../anaconda3/mkspecs/modules/qt_lib_quick_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_quickparticles_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_quickwidgets.pri:
+../../anaconda3/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_script.pri:
+../../anaconda3/mkspecs/modules/qt_lib_script_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_scripttools.pri:
+../../anaconda3/mkspecs/modules/qt_lib_scripttools_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_sql.pri:
+../../anaconda3/mkspecs/modules/qt_lib_sql_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_svg.pri:
+../../anaconda3/mkspecs/modules/qt_lib_svg_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_testlib.pri:
+../../anaconda3/mkspecs/modules/qt_lib_testlib_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_uiplugin.pri:
+../../anaconda3/mkspecs/modules/qt_lib_uitools.pri:
+../../anaconda3/mkspecs/modules/qt_lib_uitools_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_webchannel.pri:
+../../anaconda3/mkspecs/modules/qt_lib_webchannel_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_webkit.pri:
+../../anaconda3/mkspecs/modules/qt_lib_webkit_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_webkitwidgets.pri:
+../../anaconda3/mkspecs/modules/qt_lib_webkitwidgets_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_websockets.pri:
+../../anaconda3/mkspecs/modules/qt_lib_websockets_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_widgets.pri:
+../../anaconda3/mkspecs/modules/qt_lib_widgets_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_x11extras.pri:
+../../anaconda3/mkspecs/modules/qt_lib_x11extras_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_xml.pri:
+../../anaconda3/mkspecs/modules/qt_lib_xml_private.pri:
+../../anaconda3/mkspecs/modules/qt_lib_xmlpatterns.pri:
+../../anaconda3/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
+../../anaconda3/mkspecs/features/qt_functions.prf:
+../../anaconda3/mkspecs/features/qt_config.prf:
+../../anaconda3/mkspecs/linux-g++/qmake.conf:
+../../anaconda3/mkspecs/features/spec_post.prf:
+../../anaconda3/mkspecs/features/exclusive_builds.prf:
+../../anaconda3/mkspecs/features/default_pre.prf:
+../../anaconda3/mkspecs/features/resolve_config.prf:
+../../anaconda3/mkspecs/features/default_post.prf:
+../../anaconda3/mkspecs/features/warn_on.prf:
+../../anaconda3/mkspecs/features/qt.prf:
+../../anaconda3/mkspecs/features/resources.prf:
+../../anaconda3/mkspecs/features/moc.prf:
+../../anaconda3/mkspecs/features/unix/opengl.prf:
+../../anaconda3/mkspecs/features/uic.prf:
+../../anaconda3/mkspecs/features/unix/thread.prf:
+../../anaconda3/mkspecs/features/file_copies.prf:
+../../anaconda3/mkspecs/features/testcase_targets.prf:
+../../anaconda3/mkspecs/features/exceptions.prf:
+../../anaconda3/mkspecs/features/yacc.prf:
+../../anaconda3/mkspecs/features/lex.prf:
 autoed.pro:
-/home/ad/anaconda3/lib/libQt5Widgets.prl:
-/home/ad/anaconda3/lib/libQt5Gui.prl:
-/home/ad/anaconda3/lib/libQt5Core.prl:
+../../anaconda3/lib/libQt5Widgets.prl:
+../../anaconda3/lib/libQt5Gui.prl:
+../../anaconda3/lib/libQt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile autoed.pro
 
@@ -427,8 +427,115 @@ compiler_rcc_clean:
 compiler_moc_header_make_all: build/moc/moc_mainwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) build/moc/moc_mainwindow.cpp
-build/moc/moc_mainwindow.cpp: include/mainwindow.h
-	/home/ad/anaconda3/bin/moc $(DEFINES) -I/home/ad/anaconda3/mkspecs/linux-g++ -I/media/ad/Area51/workspace/assignments/cop290 -I/home/ad/anaconda3/include/qt -I/home/ad/anaconda3/include/qt/QtWidgets -I/home/ad/anaconda3/include/qt/QtGui -I/home/ad/anaconda3/include/qt/QtCore -I/home/ad/anaconda3/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include -I/home/ad/anaconda3/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed -I/home/ad/anaconda3/gcc/include/c++ -I/home/ad/anaconda3/gcc/include/c++/x86_64-unknown-linux-gnu -I/home/ad/anaconda3/gcc/include/c++/backward -I/home/ad/anaconda3/include -I/usr/include include/mainwindow.h -o build/moc/moc_mainwindow.cpp
+build/moc/moc_mainwindow.cpp: ../../anaconda3/include/qt/QtWidgets/QMainWindow \
+		../../anaconda3/include/qt/QtWidgets/qmainwindow.h \
+		../../anaconda3/include/qt/QtWidgets/qwidget.h \
+		../../anaconda3/include/qt/QtGui/qwindowdefs.h \
+		../../anaconda3/include/qt/QtCore/qglobal.h \
+		../../anaconda3/include/qt/QtCore/qconfig.h \
+		../../anaconda3/include/qt/QtCore/qfeatures.h \
+		../../anaconda3/include/qt/QtCore/qsystemdetection.h \
+		../../anaconda3/include/qt/QtCore/qprocessordetection.h \
+		../../anaconda3/include/qt/QtCore/qcompilerdetection.h \
+		../../anaconda3/include/qt/QtCore/qtypeinfo.h \
+		../../anaconda3/include/qt/QtCore/qtypetraits.h \
+		../../anaconda3/include/qt/QtCore/qisenum.h \
+		../../anaconda3/include/qt/QtCore/qsysinfo.h \
+		../../anaconda3/include/qt/QtCore/qlogging.h \
+		../../anaconda3/include/qt/QtCore/qflags.h \
+		../../anaconda3/include/qt/QtCore/qatomic.h \
+		../../anaconda3/include/qt/QtCore/qbasicatomic.h \
+		../../anaconda3/include/qt/QtCore/qatomic_bootstrap.h \
+		../../anaconda3/include/qt/QtCore/qgenericatomic.h \
+		../../anaconda3/include/qt/QtCore/qatomic_cxx11.h \
+		../../anaconda3/include/qt/QtCore/qatomic_gcc.h \
+		../../anaconda3/include/qt/QtCore/qatomic_msvc.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv7.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv6.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv5.h \
+		../../anaconda3/include/qt/QtCore/qatomic_ia64.h \
+		../../anaconda3/include/qt/QtCore/qatomic_x86.h \
+		../../anaconda3/include/qt/QtCore/qatomic_unix.h \
+		../../anaconda3/include/qt/QtCore/qglobalstatic.h \
+		../../anaconda3/include/qt/QtCore/qmutex.h \
+		../../anaconda3/include/qt/QtCore/qnumeric.h \
+		../../anaconda3/include/qt/QtCore/qversiontagging.h \
+		../../anaconda3/include/qt/QtCore/qobjectdefs.h \
+		../../anaconda3/include/qt/QtCore/qnamespace.h \
+		../../anaconda3/include/qt/QtCore/qobjectdefs_impl.h \
+		../../anaconda3/include/qt/QtGui/qwindowdefs_win.h \
+		../../anaconda3/include/qt/QtCore/qobject.h \
+		../../anaconda3/include/qt/QtCore/qstring.h \
+		../../anaconda3/include/qt/QtCore/qchar.h \
+		../../anaconda3/include/qt/QtCore/qbytearray.h \
+		../../anaconda3/include/qt/QtCore/qrefcount.h \
+		../../anaconda3/include/qt/QtCore/qarraydata.h \
+		../../anaconda3/include/qt/QtCore/qstringbuilder.h \
+		../../anaconda3/include/qt/QtCore/qlist.h \
+		../../anaconda3/include/qt/QtCore/qalgorithms.h \
+		../../anaconda3/include/qt/QtCore/qiterator.h \
+		../../anaconda3/include/qt/QtCore/qhashfunctions.h \
+		../../anaconda3/include/qt/QtCore/qpair.h \
+		../../anaconda3/include/qt/QtCore/qbytearraylist.h \
+		../../anaconda3/include/qt/QtCore/qstringlist.h \
+		../../anaconda3/include/qt/QtCore/qregexp.h \
+		../../anaconda3/include/qt/QtCore/qstringmatcher.h \
+		../../anaconda3/include/qt/QtCore/qcoreevent.h \
+		../../anaconda3/include/qt/QtCore/qscopedpointer.h \
+		../../anaconda3/include/qt/QtCore/qmetatype.h \
+		../../anaconda3/include/qt/QtCore/qvarlengtharray.h \
+		../../anaconda3/include/qt/QtCore/qcontainerfwd.h \
+		../../anaconda3/include/qt/QtCore/qobject_impl.h \
+		../../anaconda3/include/qt/QtCore/qmargins.h \
+		../../anaconda3/include/qt/QtGui/qpaintdevice.h \
+		../../anaconda3/include/qt/QtCore/qrect.h \
+		../../anaconda3/include/qt/QtCore/qsize.h \
+		../../anaconda3/include/qt/QtCore/qpoint.h \
+		../../anaconda3/include/qt/QtGui/qpalette.h \
+		../../anaconda3/include/qt/QtGui/qcolor.h \
+		../../anaconda3/include/qt/QtGui/qrgb.h \
+		../../anaconda3/include/qt/QtGui/qrgba64.h \
+		../../anaconda3/include/qt/QtGui/qbrush.h \
+		../../anaconda3/include/qt/QtCore/qvector.h \
+		../../anaconda3/include/qt/QtGui/qmatrix.h \
+		../../anaconda3/include/qt/QtGui/qpolygon.h \
+		../../anaconda3/include/qt/QtGui/qregion.h \
+		../../anaconda3/include/qt/QtCore/qdatastream.h \
+		../../anaconda3/include/qt/QtCore/qiodevice.h \
+		../../anaconda3/include/qt/QtCore/qline.h \
+		../../anaconda3/include/qt/QtGui/qtransform.h \
+		../../anaconda3/include/qt/QtGui/qpainterpath.h \
+		../../anaconda3/include/qt/QtGui/qimage.h \
+		../../anaconda3/include/qt/QtGui/qpixelformat.h \
+		../../anaconda3/include/qt/QtGui/qpixmap.h \
+		../../anaconda3/include/qt/QtCore/qsharedpointer.h \
+		../../anaconda3/include/qt/QtCore/qshareddata.h \
+		../../anaconda3/include/qt/QtCore/qhash.h \
+		../../anaconda3/include/qt/QtCore/qsharedpointer_impl.h \
+		../../anaconda3/include/qt/QtGui/qfont.h \
+		../../anaconda3/include/qt/QtGui/qfontmetrics.h \
+		../../anaconda3/include/qt/QtGui/qfontinfo.h \
+		../../anaconda3/include/qt/QtWidgets/qsizepolicy.h \
+		../../anaconda3/include/qt/QtGui/qcursor.h \
+		../../anaconda3/include/qt/QtGui/qkeysequence.h \
+		../../anaconda3/include/qt/QtGui/qevent.h \
+		../../anaconda3/include/qt/QtCore/qvariant.h \
+		../../anaconda3/include/qt/QtCore/qmap.h \
+		../../anaconda3/include/qt/QtCore/qdebug.h \
+		../../anaconda3/include/qt/QtCore/qtextstream.h \
+		../../anaconda3/include/qt/QtCore/qlocale.h \
+		../../anaconda3/include/qt/QtCore/qset.h \
+		../../anaconda3/include/qt/QtCore/qcontiguouscache.h \
+		../../anaconda3/include/qt/QtCore/qurl.h \
+		../../anaconda3/include/qt/QtCore/qurlquery.h \
+		../../anaconda3/include/qt/QtCore/qfile.h \
+		../../anaconda3/include/qt/QtCore/qfiledevice.h \
+		../../anaconda3/include/qt/QtGui/qvector2d.h \
+		../../anaconda3/include/qt/QtGui/qtouchdevice.h \
+		../../anaconda3/include/qt/QtWidgets/qtabwidget.h \
+		../../anaconda3/include/qt/QtGui/qicon.h \
+		include/mainwindow.h
+	/home/ad/anaconda3/bin/moc $(DEFINES) -I/home/ad/anaconda3/mkspecs/linux-g++ -I/home/ad/cop290_git/auto-ed -I/home/ad/anaconda3/include/qt -I/home/ad/anaconda3/include/qt/QtWidgets -I/home/ad/anaconda3/include/qt/QtGui -I/home/ad/anaconda3/include/qt/QtCore -I/home/ad/anaconda3/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include -I/home/ad/anaconda3/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed -I/home/ad/anaconda3/gcc/include/c++ -I/home/ad/anaconda3/gcc/include/c++/x86_64-unknown-linux-gnu -I/home/ad/anaconda3/gcc/include/c++/backward -I/home/ad/anaconda3/include -I/usr/include include/mainwindow.h -o build/moc/moc_mainwindow.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -448,11 +555,441 @@ compiler_clean: compiler_moc_header_clean compiler_uic_clean
 
 ####### Compile
 
-build/obj/main.o: src/main.cpp include/mainwindow.h
+build/obj/main.o: src/main.cpp include/mainwindow.h \
+		../../anaconda3/include/qt/QtWidgets/QMainWindow \
+		../../anaconda3/include/qt/QtWidgets/qmainwindow.h \
+		../../anaconda3/include/qt/QtWidgets/qwidget.h \
+		../../anaconda3/include/qt/QtGui/qwindowdefs.h \
+		../../anaconda3/include/qt/QtCore/qglobal.h \
+		../../anaconda3/include/qt/QtCore/qconfig.h \
+		../../anaconda3/include/qt/QtCore/qfeatures.h \
+		../../anaconda3/include/qt/QtCore/qsystemdetection.h \
+		../../anaconda3/include/qt/QtCore/qprocessordetection.h \
+		../../anaconda3/include/qt/QtCore/qcompilerdetection.h \
+		../../anaconda3/include/qt/QtCore/qtypeinfo.h \
+		../../anaconda3/include/qt/QtCore/qtypetraits.h \
+		../../anaconda3/include/qt/QtCore/qisenum.h \
+		../../anaconda3/include/qt/QtCore/qsysinfo.h \
+		../../anaconda3/include/qt/QtCore/qlogging.h \
+		../../anaconda3/include/qt/QtCore/qflags.h \
+		../../anaconda3/include/qt/QtCore/qatomic.h \
+		../../anaconda3/include/qt/QtCore/qbasicatomic.h \
+		../../anaconda3/include/qt/QtCore/qatomic_bootstrap.h \
+		../../anaconda3/include/qt/QtCore/qgenericatomic.h \
+		../../anaconda3/include/qt/QtCore/qatomic_cxx11.h \
+		../../anaconda3/include/qt/QtCore/qatomic_gcc.h \
+		../../anaconda3/include/qt/QtCore/qatomic_msvc.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv7.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv6.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv5.h \
+		../../anaconda3/include/qt/QtCore/qatomic_ia64.h \
+		../../anaconda3/include/qt/QtCore/qatomic_x86.h \
+		../../anaconda3/include/qt/QtCore/qatomic_unix.h \
+		../../anaconda3/include/qt/QtCore/qglobalstatic.h \
+		../../anaconda3/include/qt/QtCore/qmutex.h \
+		../../anaconda3/include/qt/QtCore/qnumeric.h \
+		../../anaconda3/include/qt/QtCore/qversiontagging.h \
+		../../anaconda3/include/qt/QtCore/qobjectdefs.h \
+		../../anaconda3/include/qt/QtCore/qnamespace.h \
+		../../anaconda3/include/qt/QtCore/qobjectdefs_impl.h \
+		../../anaconda3/include/qt/QtGui/qwindowdefs_win.h \
+		../../anaconda3/include/qt/QtCore/qobject.h \
+		../../anaconda3/include/qt/QtCore/qstring.h \
+		../../anaconda3/include/qt/QtCore/qchar.h \
+		../../anaconda3/include/qt/QtCore/qbytearray.h \
+		../../anaconda3/include/qt/QtCore/qrefcount.h \
+		../../anaconda3/include/qt/QtCore/qarraydata.h \
+		../../anaconda3/include/qt/QtCore/qstringbuilder.h \
+		../../anaconda3/include/qt/QtCore/qlist.h \
+		../../anaconda3/include/qt/QtCore/qalgorithms.h \
+		../../anaconda3/include/qt/QtCore/qiterator.h \
+		../../anaconda3/include/qt/QtCore/qhashfunctions.h \
+		../../anaconda3/include/qt/QtCore/qpair.h \
+		../../anaconda3/include/qt/QtCore/qbytearraylist.h \
+		../../anaconda3/include/qt/QtCore/qstringlist.h \
+		../../anaconda3/include/qt/QtCore/qregexp.h \
+		../../anaconda3/include/qt/QtCore/qstringmatcher.h \
+		../../anaconda3/include/qt/QtCore/qcoreevent.h \
+		../../anaconda3/include/qt/QtCore/qscopedpointer.h \
+		../../anaconda3/include/qt/QtCore/qmetatype.h \
+		../../anaconda3/include/qt/QtCore/qvarlengtharray.h \
+		../../anaconda3/include/qt/QtCore/qcontainerfwd.h \
+		../../anaconda3/include/qt/QtCore/qobject_impl.h \
+		../../anaconda3/include/qt/QtCore/qmargins.h \
+		../../anaconda3/include/qt/QtGui/qpaintdevice.h \
+		../../anaconda3/include/qt/QtCore/qrect.h \
+		../../anaconda3/include/qt/QtCore/qsize.h \
+		../../anaconda3/include/qt/QtCore/qpoint.h \
+		../../anaconda3/include/qt/QtGui/qpalette.h \
+		../../anaconda3/include/qt/QtGui/qcolor.h \
+		../../anaconda3/include/qt/QtGui/qrgb.h \
+		../../anaconda3/include/qt/QtGui/qrgba64.h \
+		../../anaconda3/include/qt/QtGui/qbrush.h \
+		../../anaconda3/include/qt/QtCore/qvector.h \
+		../../anaconda3/include/qt/QtGui/qmatrix.h \
+		../../anaconda3/include/qt/QtGui/qpolygon.h \
+		../../anaconda3/include/qt/QtGui/qregion.h \
+		../../anaconda3/include/qt/QtCore/qdatastream.h \
+		../../anaconda3/include/qt/QtCore/qiodevice.h \
+		../../anaconda3/include/qt/QtCore/qline.h \
+		../../anaconda3/include/qt/QtGui/qtransform.h \
+		../../anaconda3/include/qt/QtGui/qpainterpath.h \
+		../../anaconda3/include/qt/QtGui/qimage.h \
+		../../anaconda3/include/qt/QtGui/qpixelformat.h \
+		../../anaconda3/include/qt/QtGui/qpixmap.h \
+		../../anaconda3/include/qt/QtCore/qsharedpointer.h \
+		../../anaconda3/include/qt/QtCore/qshareddata.h \
+		../../anaconda3/include/qt/QtCore/qhash.h \
+		../../anaconda3/include/qt/QtCore/qsharedpointer_impl.h \
+		../../anaconda3/include/qt/QtGui/qfont.h \
+		../../anaconda3/include/qt/QtGui/qfontmetrics.h \
+		../../anaconda3/include/qt/QtGui/qfontinfo.h \
+		../../anaconda3/include/qt/QtWidgets/qsizepolicy.h \
+		../../anaconda3/include/qt/QtGui/qcursor.h \
+		../../anaconda3/include/qt/QtGui/qkeysequence.h \
+		../../anaconda3/include/qt/QtGui/qevent.h \
+		../../anaconda3/include/qt/QtCore/qvariant.h \
+		../../anaconda3/include/qt/QtCore/qmap.h \
+		../../anaconda3/include/qt/QtCore/qdebug.h \
+		../../anaconda3/include/qt/QtCore/qtextstream.h \
+		../../anaconda3/include/qt/QtCore/qlocale.h \
+		../../anaconda3/include/qt/QtCore/qset.h \
+		../../anaconda3/include/qt/QtCore/qcontiguouscache.h \
+		../../anaconda3/include/qt/QtCore/qurl.h \
+		../../anaconda3/include/qt/QtCore/qurlquery.h \
+		../../anaconda3/include/qt/QtCore/qfile.h \
+		../../anaconda3/include/qt/QtCore/qfiledevice.h \
+		../../anaconda3/include/qt/QtGui/qvector2d.h \
+		../../anaconda3/include/qt/QtGui/qtouchdevice.h \
+		../../anaconda3/include/qt/QtWidgets/qtabwidget.h \
+		../../anaconda3/include/qt/QtGui/qicon.h \
+		../../anaconda3/include/qt/QtWidgets/QApplication \
+		../../anaconda3/include/qt/QtWidgets/qapplication.h \
+		../../anaconda3/include/qt/QtCore/qcoreapplication.h \
+		../../anaconda3/include/qt/QtCore/qeventloop.h \
+		../../anaconda3/include/qt/QtWidgets/qdesktopwidget.h \
+		../../anaconda3/include/qt/QtGui/qguiapplication.h \
+		../../anaconda3/include/qt/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/obj/main.o src/main.cpp
 
 build/obj/mainwindow.o: src/mainwindow.cpp include/mainwindow.h \
+		../../anaconda3/include/qt/QtWidgets/QMainWindow \
+		../../anaconda3/include/qt/QtWidgets/qmainwindow.h \
+		../../anaconda3/include/qt/QtWidgets/qwidget.h \
+		../../anaconda3/include/qt/QtGui/qwindowdefs.h \
+		../../anaconda3/include/qt/QtCore/qglobal.h \
+		../../anaconda3/include/qt/QtCore/qconfig.h \
+		../../anaconda3/include/qt/QtCore/qfeatures.h \
+		../../anaconda3/include/qt/QtCore/qsystemdetection.h \
+		../../anaconda3/include/qt/QtCore/qprocessordetection.h \
+		../../anaconda3/include/qt/QtCore/qcompilerdetection.h \
+		../../anaconda3/include/qt/QtCore/qtypeinfo.h \
+		../../anaconda3/include/qt/QtCore/qtypetraits.h \
+		../../anaconda3/include/qt/QtCore/qisenum.h \
+		../../anaconda3/include/qt/QtCore/qsysinfo.h \
+		../../anaconda3/include/qt/QtCore/qlogging.h \
+		../../anaconda3/include/qt/QtCore/qflags.h \
+		../../anaconda3/include/qt/QtCore/qatomic.h \
+		../../anaconda3/include/qt/QtCore/qbasicatomic.h \
+		../../anaconda3/include/qt/QtCore/qatomic_bootstrap.h \
+		../../anaconda3/include/qt/QtCore/qgenericatomic.h \
+		../../anaconda3/include/qt/QtCore/qatomic_cxx11.h \
+		../../anaconda3/include/qt/QtCore/qatomic_gcc.h \
+		../../anaconda3/include/qt/QtCore/qatomic_msvc.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv7.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv6.h \
+		../../anaconda3/include/qt/QtCore/qatomic_armv5.h \
+		../../anaconda3/include/qt/QtCore/qatomic_ia64.h \
+		../../anaconda3/include/qt/QtCore/qatomic_x86.h \
+		../../anaconda3/include/qt/QtCore/qatomic_unix.h \
+		../../anaconda3/include/qt/QtCore/qglobalstatic.h \
+		../../anaconda3/include/qt/QtCore/qmutex.h \
+		../../anaconda3/include/qt/QtCore/qnumeric.h \
+		../../anaconda3/include/qt/QtCore/qversiontagging.h \
+		../../anaconda3/include/qt/QtCore/qobjectdefs.h \
+		../../anaconda3/include/qt/QtCore/qnamespace.h \
+		../../anaconda3/include/qt/QtCore/qobjectdefs_impl.h \
+		../../anaconda3/include/qt/QtGui/qwindowdefs_win.h \
+		../../anaconda3/include/qt/QtCore/qobject.h \
+		../../anaconda3/include/qt/QtCore/qstring.h \
+		../../anaconda3/include/qt/QtCore/qchar.h \
+		../../anaconda3/include/qt/QtCore/qbytearray.h \
+		../../anaconda3/include/qt/QtCore/qrefcount.h \
+		../../anaconda3/include/qt/QtCore/qarraydata.h \
+		../../anaconda3/include/qt/QtCore/qstringbuilder.h \
+		../../anaconda3/include/qt/QtCore/qlist.h \
+		../../anaconda3/include/qt/QtCore/qalgorithms.h \
+		../../anaconda3/include/qt/QtCore/qiterator.h \
+		../../anaconda3/include/qt/QtCore/qhashfunctions.h \
+		../../anaconda3/include/qt/QtCore/qpair.h \
+		../../anaconda3/include/qt/QtCore/qbytearraylist.h \
+		../../anaconda3/include/qt/QtCore/qstringlist.h \
+		../../anaconda3/include/qt/QtCore/qregexp.h \
+		../../anaconda3/include/qt/QtCore/qstringmatcher.h \
+		../../anaconda3/include/qt/QtCore/qcoreevent.h \
+		../../anaconda3/include/qt/QtCore/qscopedpointer.h \
+		../../anaconda3/include/qt/QtCore/qmetatype.h \
+		../../anaconda3/include/qt/QtCore/qvarlengtharray.h \
+		../../anaconda3/include/qt/QtCore/qcontainerfwd.h \
+		../../anaconda3/include/qt/QtCore/qobject_impl.h \
+		../../anaconda3/include/qt/QtCore/qmargins.h \
+		../../anaconda3/include/qt/QtGui/qpaintdevice.h \
+		../../anaconda3/include/qt/QtCore/qrect.h \
+		../../anaconda3/include/qt/QtCore/qsize.h \
+		../../anaconda3/include/qt/QtCore/qpoint.h \
+		../../anaconda3/include/qt/QtGui/qpalette.h \
+		../../anaconda3/include/qt/QtGui/qcolor.h \
+		../../anaconda3/include/qt/QtGui/qrgb.h \
+		../../anaconda3/include/qt/QtGui/qrgba64.h \
+		../../anaconda3/include/qt/QtGui/qbrush.h \
+		../../anaconda3/include/qt/QtCore/qvector.h \
+		../../anaconda3/include/qt/QtGui/qmatrix.h \
+		../../anaconda3/include/qt/QtGui/qpolygon.h \
+		../../anaconda3/include/qt/QtGui/qregion.h \
+		../../anaconda3/include/qt/QtCore/qdatastream.h \
+		../../anaconda3/include/qt/QtCore/qiodevice.h \
+		../../anaconda3/include/qt/QtCore/qline.h \
+		../../anaconda3/include/qt/QtGui/qtransform.h \
+		../../anaconda3/include/qt/QtGui/qpainterpath.h \
+		../../anaconda3/include/qt/QtGui/qimage.h \
+		../../anaconda3/include/qt/QtGui/qpixelformat.h \
+		../../anaconda3/include/qt/QtGui/qpixmap.h \
+		../../anaconda3/include/qt/QtCore/qsharedpointer.h \
+		../../anaconda3/include/qt/QtCore/qshareddata.h \
+		../../anaconda3/include/qt/QtCore/qhash.h \
+		../../anaconda3/include/qt/QtCore/qsharedpointer_impl.h \
+		../../anaconda3/include/qt/QtGui/qfont.h \
+		../../anaconda3/include/qt/QtGui/qfontmetrics.h \
+		../../anaconda3/include/qt/QtGui/qfontinfo.h \
+		../../anaconda3/include/qt/QtWidgets/qsizepolicy.h \
+		../../anaconda3/include/qt/QtGui/qcursor.h \
+		../../anaconda3/include/qt/QtGui/qkeysequence.h \
+		../../anaconda3/include/qt/QtGui/qevent.h \
+		../../anaconda3/include/qt/QtCore/qvariant.h \
+		../../anaconda3/include/qt/QtCore/qmap.h \
+		../../anaconda3/include/qt/QtCore/qdebug.h \
+		../../anaconda3/include/qt/QtCore/qtextstream.h \
+		../../anaconda3/include/qt/QtCore/qlocale.h \
+		../../anaconda3/include/qt/QtCore/qset.h \
+		../../anaconda3/include/qt/QtCore/qcontiguouscache.h \
+		../../anaconda3/include/qt/QtCore/qurl.h \
+		../../anaconda3/include/qt/QtCore/qurlquery.h \
+		../../anaconda3/include/qt/QtCore/qfile.h \
+		../../anaconda3/include/qt/QtCore/qfiledevice.h \
+		../../anaconda3/include/qt/QtGui/qvector2d.h \
+		../../anaconda3/include/qt/QtGui/qtouchdevice.h \
+		../../anaconda3/include/qt/QtWidgets/qtabwidget.h \
+		../../anaconda3/include/qt/QtGui/qicon.h \
 		build/uic/ui_mainwindow.h \
+		../../anaconda3/include/qt/QtCore/QtCore \
+		../../anaconda3/include/qt/QtCore/QtCoreDepends \
+		../../anaconda3/include/qt/QtCore/qabstractanimation.h \
+		../../anaconda3/include/qt/QtCore/qanimationgroup.h \
+		../../anaconda3/include/qt/QtCore/qparallelanimationgroup.h \
+		../../anaconda3/include/qt/QtCore/qpauseanimation.h \
+		../../anaconda3/include/qt/QtCore/qpropertyanimation.h \
+		../../anaconda3/include/qt/QtCore/qvariantanimation.h \
+		../../anaconda3/include/qt/QtCore/qeasingcurve.h \
+		../../anaconda3/include/qt/QtCore/qsequentialanimationgroup.h \
+		../../anaconda3/include/qt/QtCore/qtextcodec.h \
+		../../anaconda3/include/qt/QtCore/qendian.h \
+		../../anaconda3/include/qt/QtCore/qlibraryinfo.h \
+		../../anaconda3/include/qt/QtCore/qdatetime.h \
+		../../anaconda3/include/qt/QtCore/qbuffer.h \
+		../../anaconda3/include/qt/QtCore/qdir.h \
+		../../anaconda3/include/qt/QtCore/qfileinfo.h \
+		../../anaconda3/include/qt/QtCore/qdiriterator.h \
+		../../anaconda3/include/qt/QtCore/qfileselector.h \
+		../../anaconda3/include/qt/QtCore/QObject \
+		../../anaconda3/include/qt/QtCore/QStringList \
+		../../anaconda3/include/qt/QtCore/qfilesystemwatcher.h \
+		../../anaconda3/include/qt/QtCore/qlockfile.h \
+		../../anaconda3/include/qt/QtCore/qloggingcategory.h \
+		../../anaconda3/include/qt/QtCore/qprocess.h \
+		../../anaconda3/include/qt/QtCore/qresource.h \
+		../../anaconda3/include/qt/QtCore/qsavefile.h \
+		../../anaconda3/include/qt/QtCore/qsettings.h \
+		../../anaconda3/include/qt/QtCore/qstandardpaths.h \
+		../../anaconda3/include/qt/QtCore/qstorageinfo.h \
+		../../anaconda3/include/qt/QtCore/qtemporarydir.h \
+		../../anaconda3/include/qt/QtCore/QScopedPointer \
+		../../anaconda3/include/qt/QtCore/qtemporaryfile.h \
+		../../anaconda3/include/qt/QtCore/qabstractitemmodel.h \
+		../../anaconda3/include/qt/QtCore/qabstractproxymodel.h \
+		../../anaconda3/include/qt/QtCore/qidentityproxymodel.h \
+		../../anaconda3/include/qt/QtCore/qitemselectionmodel.h \
+		../../anaconda3/include/qt/QtCore/qsortfilterproxymodel.h \
+		../../anaconda3/include/qt/QtCore/qstringlistmodel.h \
+		../../anaconda3/include/qt/QtCore/qjsonarray.h \
+		../../anaconda3/include/qt/QtCore/qjsonvalue.h \
+		../../anaconda3/include/qt/QtCore/qjsondocument.h \
+		../../anaconda3/include/qt/QtCore/qjsonobject.h \
+		../../anaconda3/include/qt/QtCore/qabstracteventdispatcher.h \
+		../../anaconda3/include/qt/QtCore/qeventloop.h \
+		../../anaconda3/include/qt/QtCore/qabstractnativeeventfilter.h \
+		../../anaconda3/include/qt/QtCore/qbasictimer.h \
+		../../anaconda3/include/qt/QtCore/qcoreapplication.h \
+		../../anaconda3/include/qt/QtCore/qmath.h \
+		../../anaconda3/include/qt/QtCore/qmetaobject.h \
+		../../anaconda3/include/qt/QtCore/qmimedata.h \
+		../../anaconda3/include/qt/QtCore/qobjectcleanuphandler.h \
+		../../anaconda3/include/qt/QtCore/qpointer.h \
+		../../anaconda3/include/qt/QtCore/qsharedmemory.h \
+		../../anaconda3/include/qt/QtCore/qsignalmapper.h \
+		../../anaconda3/include/qt/QtCore/qsocketnotifier.h \
+		../../anaconda3/include/qt/QtCore/qsystemsemaphore.h \
+		../../anaconda3/include/qt/QtCore/qtimer.h \
+		../../anaconda3/include/qt/QtCore/qtranslator.h \
+		../../anaconda3/include/qt/QtCore/qwineventnotifier.h \
+		../../anaconda3/include/qt/QtCore/qmimedatabase.h \
+		../../anaconda3/include/qt/QtCore/qmimetype.h \
+		../../anaconda3/include/qt/QtCore/qfactoryinterface.h \
+		../../anaconda3/include/qt/QtCore/qlibrary.h \
+		../../anaconda3/include/qt/QtCore/qplugin.h \
+		../../anaconda3/include/qt/QtCore/qpluginloader.h \
+		../../anaconda3/include/qt/QtCore/quuid.h \
+		../../anaconda3/include/qt/QtCore/qabstractstate.h \
+		../../anaconda3/include/qt/QtCore/qabstracttransition.h \
+		../../anaconda3/include/qt/QtCore/qeventtransition.h \
+		../../anaconda3/include/qt/QtCore/qfinalstate.h \
+		../../anaconda3/include/qt/QtCore/qhistorystate.h \
+		../../anaconda3/include/qt/QtCore/qsignaltransition.h \
+		../../anaconda3/include/qt/QtCore/qstate.h \
+		../../anaconda3/include/qt/QtCore/qstatemachine.h \
+		../../anaconda3/include/qt/QtCore/qexception.h \
+		../../anaconda3/include/qt/QtCore/qfuture.h \
+		../../anaconda3/include/qt/QtCore/qfutureinterface.h \
+		../../anaconda3/include/qt/QtCore/qrunnable.h \
+		../../anaconda3/include/qt/QtCore/qresultstore.h \
+		../../anaconda3/include/qt/QtCore/qfuturesynchronizer.h \
+		../../anaconda3/include/qt/QtCore/qfuturewatcher.h \
+		../../anaconda3/include/qt/QtCore/qreadwritelock.h \
+		../../anaconda3/include/qt/QtCore/qsemaphore.h \
+		../../anaconda3/include/qt/QtCore/qthread.h \
+		../../anaconda3/include/qt/QtCore/qthreadpool.h \
+		../../anaconda3/include/qt/QtCore/qthreadstorage.h \
+		../../anaconda3/include/qt/QtCore/qwaitcondition.h \
+		../../anaconda3/include/qt/QtCore/qarraydataops.h \
+		../../anaconda3/include/qt/QtCore/qarraydatapointer.h \
+		../../anaconda3/include/qt/QtCore/qbitarray.h \
+		../../anaconda3/include/qt/QtCore/qbytearraymatcher.h \
+		../../anaconda3/include/qt/QtCore/qcache.h \
+		../../anaconda3/include/qt/QtCore/qcollator.h \
+		../../anaconda3/include/qt/QtCore/qcommandlineoption.h \
+		../../anaconda3/include/qt/QtCore/qcommandlineparser.h \
+		../../anaconda3/include/qt/QtCore/qcryptographichash.h \
+		../../anaconda3/include/qt/QtCore/qelapsedtimer.h \
+		../../anaconda3/include/qt/QtCore/qlinkedlist.h \
+		../../anaconda3/include/qt/QtCore/qmessageauthenticationcode.h \
+		../../anaconda3/include/qt/QtCore/qqueue.h \
+		../../anaconda3/include/qt/QtCore/qregularexpression.h \
+		../../anaconda3/include/qt/QtCore/qscopedvaluerollback.h \
+		../../anaconda3/include/qt/QtCore/qstack.h \
+		../../anaconda3/include/qt/QtCore/qtextboundaryfinder.h \
+		../../anaconda3/include/qt/QtCore/qtimeline.h \
+		../../anaconda3/include/qt/QtCore/qtimezone.h \
+		../../anaconda3/include/qt/QtCore/qversionnumber.h \
+		../../anaconda3/include/qt/QtCore/qxmlstream.h \
+		../../anaconda3/include/qt/QtCore/qtcoreversion.h \
+		../../anaconda3/include/qt/QtGui/QtGui \
+		../../anaconda3/include/qt/QtGui/QtGuiDepends \
+		../../anaconda3/include/qt/QtGui/qaccessible.h \
+		../../anaconda3/include/qt/QtGui/qaccessiblebridge.h \
+		../../anaconda3/include/qt/QtGui/qaccessibleobject.h \
+		../../anaconda3/include/qt/QtGui/qaccessibleplugin.h \
+		../../anaconda3/include/qt/QtGui/qbitmap.h \
+		../../anaconda3/include/qt/QtGui/qiconengine.h \
+		../../anaconda3/include/qt/QtGui/qiconengineplugin.h \
+		../../anaconda3/include/qt/QtGui/qimageiohandler.h \
+		../../anaconda3/include/qt/QtGui/qimagereader.h \
+		../../anaconda3/include/qt/QtGui/qimagewriter.h \
+		../../anaconda3/include/qt/QtGui/qmovie.h \
+		../../anaconda3/include/qt/QtGui/qpicture.h \
+		../../anaconda3/include/qt/QtGui/qpictureformatplugin.h \
+		../../anaconda3/include/qt/QtGui/qpixmapcache.h \
+		../../anaconda3/include/qt/QtGui/qstandarditemmodel.h \
+		../../anaconda3/include/qt/QtGui/qclipboard.h \
+		../../anaconda3/include/qt/QtGui/qdrag.h \
+		../../anaconda3/include/qt/QtGui/qgenericplugin.h \
+		../../anaconda3/include/qt/QtGui/qgenericpluginfactory.h \
+		../../anaconda3/include/qt/QtGui/qguiapplication.h \
+		../../anaconda3/include/qt/QtGui/qinputmethod.h \
+		../../anaconda3/include/qt/QtGui/qoffscreensurface.h \
+		../../anaconda3/include/qt/QtGui/qsurface.h \
+		../../anaconda3/include/qt/QtGui/qsurfaceformat.h \
+		../../anaconda3/include/qt/QtGui/qopenglcontext.h \
+		../../anaconda3/include/qt/QtGui/QSurfaceFormat \
+		../../anaconda3/include/qt/QtGui/qopengl.h \
+		../../anaconda3/include/qt/QtCore/qt_windows.h \
+		../../anaconda3/include/qt/QtGui/qopengles2ext.h \
+		../../anaconda3/include/qt/QtGui/qopenglext.h \
+		../../anaconda3/include/qt/QtGui/qopenglversionfunctions.h \
+		../../anaconda3/include/qt/QtGui/qopenglwindow.h \
+		../../anaconda3/include/qt/QtGui/QPaintDeviceWindow \
+		../../anaconda3/include/qt/QtGui/qpaintdevicewindow.h \
+		../../anaconda3/include/qt/QtGui/QWindow \
+		../../anaconda3/include/qt/QtGui/qwindow.h \
+		../../anaconda3/include/qt/QtCore/QEvent \
+		../../anaconda3/include/qt/QtCore/QMargins \
+		../../anaconda3/include/qt/QtCore/QRect \
+		../../anaconda3/include/qt/QtGui/QPaintDevice \
+		../../anaconda3/include/qt/QtGui/QOpenGLContext \
+		../../anaconda3/include/qt/QtGui/QImage \
+		../../anaconda3/include/qt/QtGui/qrasterwindow.h \
+		../../anaconda3/include/qt/QtGui/qscreen.h \
+		../../anaconda3/include/qt/QtCore/QList \
+		../../anaconda3/include/qt/QtCore/QSize \
+		../../anaconda3/include/qt/QtCore/QSizeF \
+		../../anaconda3/include/qt/QtGui/QTransform \
+		../../anaconda3/include/qt/QtGui/qsessionmanager.h \
+		../../anaconda3/include/qt/QtGui/qstylehints.h \
+		../../anaconda3/include/qt/QtGui/qgenericmatrix.h \
+		../../anaconda3/include/qt/QtGui/qmatrix4x4.h \
+		../../anaconda3/include/qt/QtGui/qvector3d.h \
+		../../anaconda3/include/qt/QtGui/qvector4d.h \
+		../../anaconda3/include/qt/QtGui/qquaternion.h \
+		../../anaconda3/include/qt/QtGui/qopenglbuffer.h \
+		../../anaconda3/include/qt/QtGui/qopengldebug.h \
+		../../anaconda3/include/qt/QtGui/qopenglextrafunctions.h \
+		../../anaconda3/include/qt/QtGui/qopenglfunctions.h \
+		../../anaconda3/include/qt/QtGui/qopenglframebufferobject.h \
+		../../anaconda3/include/qt/QtGui/qopenglpaintdevice.h \
+		../../anaconda3/include/qt/QtGui/qopenglpixeltransferoptions.h \
+		../../anaconda3/include/qt/QtCore/QSharedDataPointer \
+		../../anaconda3/include/qt/QtGui/qopenglshaderprogram.h \
+		../../anaconda3/include/qt/QtGui/qopengltexture.h \
+		../../anaconda3/include/qt/QtGui/qopengltimerquery.h \
+		../../anaconda3/include/qt/QtGui/qopenglvertexarrayobject.h \
+		../../anaconda3/include/qt/QtGui/qbackingstore.h \
+		../../anaconda3/include/qt/QtGui/qpagedpaintdevice.h \
+		../../anaconda3/include/qt/QtGui/qpagelayout.h \
+		../../anaconda3/include/qt/QtGui/qpagesize.h \
+		../../anaconda3/include/qt/QtGui/qpaintengine.h \
+		../../anaconda3/include/qt/QtGui/qpainter.h \
+		../../anaconda3/include/qt/QtGui/qtextoption.h \
+		../../anaconda3/include/qt/QtGui/qpen.h \
+		../../anaconda3/include/qt/QtGui/qpdfwriter.h \
+		../../anaconda3/include/qt/QtGui/qabstracttextdocumentlayout.h \
+		../../anaconda3/include/qt/QtGui/qtextlayout.h \
+		../../anaconda3/include/qt/QtGui/qtextformat.h \
+		../../anaconda3/include/qt/QtGui/qglyphrun.h \
+		../../anaconda3/include/qt/QtGui/qrawfont.h \
+		../../anaconda3/include/qt/QtGui/qfontdatabase.h \
+		../../anaconda3/include/qt/QtGui/qtextcursor.h \
+		../../anaconda3/include/qt/QtGui/qtextdocument.h \
+		../../anaconda3/include/qt/QtGui/qstatictext.h \
+		../../anaconda3/include/qt/QtGui/qsyntaxhighlighter.h \
+		../../anaconda3/include/qt/QtGui/qtextobject.h \
+		../../anaconda3/include/qt/QtGui/qtextdocumentfragment.h \
+		../../anaconda3/include/qt/QtGui/qtextdocumentwriter.h \
+		../../anaconda3/include/qt/QtGui/qtextlist.h \
+		../../anaconda3/include/qt/QtGui/qtexttable.h \
+		../../anaconda3/include/qt/QtGui/qdesktopservices.h \
+		../../anaconda3/include/qt/QtGui/qvalidator.h \
+		../../anaconda3/include/qt/QtGui/qtguiversion.h \
+		../../anaconda3/include/qt/QtWidgets/QLabel \
+		../../anaconda3/include/qt/QtWidgets/qlabel.h \
+		../../anaconda3/include/qt/QtWidgets/qframe.h \
 		src/draw.cpp \
 		include/struct.h \
 		src/threeD_to_ortho.cpp \
