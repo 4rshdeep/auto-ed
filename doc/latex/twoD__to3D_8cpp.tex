@@ -5,7 +5,7 @@
 {\ttfamily \#include $<$iomanip$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$armadillo$>$}\newline
-{\ttfamily \#include \char`\"{}include/struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
 Include dependency graph for two\+D\+\_\+to3\+D.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -25,11 +25,11 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-vector$<$ node $>$ \hyperlink{twoD__to3D_8cpp_ab227b999265cfd25b8de2ed7849b44ec}{get\+\_\+2\+D\+\_\+graph} (string filename)
+vector$<$ \hyperlink{structnode}{node} $>$ \hyperlink{twoD__to3D_8cpp_ab227b999265cfd25b8de2ed7849b44ec}{get\+\_\+2\+D\+\_\+graph} (string filename)
 \item 
-vector$<$ pair\+\_\+ $>$ \hyperlink{twoD__to3D_8cpp_aa5a4d7bb445505454118a3e5972556cc}{get\+\_\+pair\+\_\+2D} (string filename)
+vector$<$ \hyperlink{structpair__}{pair\+\_\+} $>$ \hyperlink{twoD__to3D_8cpp_aa5a4d7bb445505454118a3e5972556cc}{get\+\_\+pair\+\_\+2D} (string filename)
 \item 
-void \hyperlink{twoD__to3D_8cpp_a0653f9d40a0a80b4296347e603c68f06}{check\+\_\+graph} (vector$<$ node $>$ v)
+void \hyperlink{twoD__to3D_8cpp_a0653f9d40a0a80b4296347e603c68f06}{check\+\_\+graph} (vector$<$ \hyperlink{structnode}{node} $>$ v)
 \end{DoxyCompactItemize}
 
 
@@ -38,18 +38,18 @@ void \hyperlink{twoD__to3D_8cpp_a0653f9d40a0a80b4296347e603c68f06}{check\+\_\+gr
 \index{two\+D\+\_\+to3\+D.\+cpp@{two\+D\+\_\+to3\+D.\+cpp}!check\+\_\+graph@{check\+\_\+graph}}
 \index{check\+\_\+graph@{check\+\_\+graph}!two\+D\+\_\+to3\+D.\+cpp@{two\+D\+\_\+to3\+D.\+cpp}}
 \subsubsection{\texorpdfstring{check\+\_\+graph()}{check\_graph()}}
-{\footnotesize\ttfamily void check\+\_\+graph (\begin{DoxyParamCaption}\item[{vector$<$ node $>$}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void check\+\_\+graph (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{structnode}{node} $>$}]{v }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{twoD__to3D_8cpp_ab227b999265cfd25b8de2ed7849b44ec}\label{twoD__to3D_8cpp_ab227b999265cfd25b8de2ed7849b44ec}} 
 \index{two\+D\+\_\+to3\+D.\+cpp@{two\+D\+\_\+to3\+D.\+cpp}!get\+\_\+2\+D\+\_\+graph@{get\+\_\+2\+D\+\_\+graph}}
 \index{get\+\_\+2\+D\+\_\+graph@{get\+\_\+2\+D\+\_\+graph}!two\+D\+\_\+to3\+D.\+cpp@{two\+D\+\_\+to3\+D.\+cpp}}
 \subsubsection{\texorpdfstring{get\+\_\+2\+D\+\_\+graph()}{get\_2D\_graph()}}
-{\footnotesize\ttfamily vector$<$node$>$ get\+\_\+2\+D\+\_\+graph (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$\hyperlink{structnode}{node}$>$ get\+\_\+2\+D\+\_\+graph (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
 
 Reads the 2D input from a file given as an argument. Converts the input into a graph and returns the graph.\mbox{\Hypertarget{twoD__to3D_8cpp_aa5a4d7bb445505454118a3e5972556cc}\label{twoD__to3D_8cpp_aa5a4d7bb445505454118a3e5972556cc}} 
 \index{two\+D\+\_\+to3\+D.\+cpp@{two\+D\+\_\+to3\+D.\+cpp}!get\+\_\+pair\+\_\+2D@{get\+\_\+pair\+\_\+2D}}
 \index{get\+\_\+pair\+\_\+2D@{get\+\_\+pair\+\_\+2D}!two\+D\+\_\+to3\+D.\+cpp@{two\+D\+\_\+to3\+D.\+cpp}}
 \subsubsection{\texorpdfstring{get\+\_\+pair\+\_\+2\+D()}{get\_pair\_2D()}}
-{\footnotesize\ttfamily vector$<$pair\+\_\+$>$ get\+\_\+pair\+\_\+2D (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily vector$<$\hyperlink{structpair__}{pair\+\_\+}$>$ get\+\_\+pair\+\_\+2D (\begin{DoxyParamCaption}\item[{string}]{filename }\end{DoxyParamCaption})}
 
 Reads the 2D input from a file given as an argument. Returns all pairs of vertices that have an edge between them according to the input in the file.

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['check_5fgraph',['check_graph',['../twoD__to3D_8cpp.html#a0653f9d40a0a80b4296347e603c68f06',1,'twoD_to3D.cpp']]]
+  ['b',['b',['../structpair__.html#a1ede8bd28d7cadae8ddf1ff155482737',1,'pair_::b()'],['../structdir__ratios.html#a4e945589b5a219e39542121995e2799b',1,'dir_ratios::b()']]]
 ];

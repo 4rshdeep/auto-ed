@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['node_5f0',['node_0',['../mainwindow_8cpp.html#aa6e24f1884cfd5ab7e958502b7bdfc9c',1,'mainwindow.cpp']]],
-  ['node_5f1',['node_1',['../mainwindow_8cpp.html#a4669e1732c1b71378283bd700c9ea947',1,'mainwindow.cpp']]]
+  ['c',['c',['../structdir__ratios.html#ab8485b7011be5c94b3050fd52b1b591d',1,'dir_ratios']]],
+  ['coord',['coord',['../structnode.html#ae4b98bb198d6e90c7095620e0b79dfb3',1,'node']]]
 ];

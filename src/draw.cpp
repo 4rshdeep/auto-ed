@@ -1,7 +1,7 @@
 #include <math.h>
 #include <QtCore>
 #include <QtGui>
-#include "include/struct.h"
+#include "struct.h"
 
 using namespace Qt;
 using namespace std;

@@ -5,7 +5,7 @@
 {\ttfamily \#include $<$iomanip$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$armadillo$>$}\newline
-{\ttfamily \#include \char`\"{}include/struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
 Include dependency graph for input.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -25,9 +25,9 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-graph \hyperlink{input_8cpp_a0cc06af05bb805fba84d372efc4c247e}{get\+\_\+3\+D\+\_\+graph} (string filename=\char`\"{}input\+\_\+3\+D.\+txt\char`\"{})
+\hyperlink{structgraph}{graph} \hyperlink{input_8cpp_a0cc06af05bb805fba84d372efc4c247e}{get\+\_\+3\+D\+\_\+graph} (string filename=\char`\"{}input\+\_\+3\+D.\+txt\char`\"{})
 \item 
-mat \hyperlink{input_8cpp_a80d750ad6a6d88be3e402910c4e7438d}{get\+\_\+mx4\+\_\+matrix} (vector$<$ node $>$ v, int cols=4)
+mat \hyperlink{input_8cpp_a80d750ad6a6d88be3e402910c4e7438d}{get\+\_\+mx4\+\_\+matrix} (vector$<$ \hyperlink{structnode}{node} $>$ v, int cols=4)
 \end{DoxyCompactItemize}
 
 
@@ -36,12 +36,12 @@ mat \hyperlink{input_8cpp_a80d750ad6a6d88be3e402910c4e7438d}{get\+\_\+mx4\+\_\+m
 \index{input.\+cpp@{input.\+cpp}!get\+\_\+3\+D\+\_\+graph@{get\+\_\+3\+D\+\_\+graph}}
 \index{get\+\_\+3\+D\+\_\+graph@{get\+\_\+3\+D\+\_\+graph}!input.\+cpp@{input.\+cpp}}
 \subsubsection{\texorpdfstring{get\+\_\+3\+D\+\_\+graph()}{get\_3D\_graph()}}
-{\footnotesize\ttfamily graph get\+\_\+3\+D\+\_\+graph (\begin{DoxyParamCaption}\item[{string}]{filename = {\ttfamily \char`\"{}input\+\_\+3D.txt\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{structgraph}{graph} get\+\_\+3\+D\+\_\+graph (\begin{DoxyParamCaption}\item[{string}]{filename = {\ttfamily \char`\"{}input\+\_\+3D.txt\char`\"{}} }\end{DoxyParamCaption})}
 
 Reads the 3D input from a file given as an argument. Converts the input into a graph and returns the graph.\mbox{\Hypertarget{input_8cpp_a80d750ad6a6d88be3e402910c4e7438d}\label{input_8cpp_a80d750ad6a6d88be3e402910c4e7438d}} 
 \index{input.\+cpp@{input.\+cpp}!get\+\_\+mx4\+\_\+matrix@{get\+\_\+mx4\+\_\+matrix}}
 \index{get\+\_\+mx4\+\_\+matrix@{get\+\_\+mx4\+\_\+matrix}!input.\+cpp@{input.\+cpp}}
 \subsubsection{\texorpdfstring{get\+\_\+mx4\+\_\+matrix()}{get\_mx4\_matrix()}}
-{\footnotesize\ttfamily mat get\+\_\+mx4\+\_\+matrix (\begin{DoxyParamCaption}\item[{vector$<$ node $>$}]{v,  }\item[{int}]{cols = {\ttfamily 4} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily mat get\+\_\+mx4\+\_\+matrix (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{structnode}{node} $>$}]{v,  }\item[{int}]{cols = {\ttfamily 4} }\end{DoxyParamCaption})}
 
 Takes a graph as an input. Converts the graph into a 4\+X4 coordinate matrix as specified in the mathematical model.

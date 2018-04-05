@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <fstream>
 #include <armadillo>
-#include "include/struct.h"
+#include "struct.h"
 
 using namespace std;
 using namespace arma;

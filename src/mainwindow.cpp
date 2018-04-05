@@ -1,5 +1,5 @@
-#include "include/mainwindow.h"
-// #include "include/ui_mainwindow.h"
+#include "mainwindow.h"
+// #include "ui_mainwindow.h"
 #include <ui_mainwindow.h>
 #include <bits/stdc++.h>
 #include <QtCore>

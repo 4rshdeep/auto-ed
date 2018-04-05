@@ -7,7 +7,9 @@
 
 using namespace arma;
 using namespace std;
-
+/*! 
+ * A structure to represent 3d coordinate
+  */
 struct coordinate
 {
     double x;
@@ -15,30 +17,47 @@ struct coordinate
     double z;
 };
 
+/*! 
+ * structure for node of a graph which has coordinates as well as an adjacency list
+ */
 struct node
 {
     std::vector<node *> adj_list; // pointer to neighbours
     coordinate coord;
 };
 
+/*! 
+ * structure for edge in a graph with reference to nodes at its endpoints 
+ */
 struct edge
 {
     node *node1;
     node *node2;
 };
 
+/*! 
+ * structure used for a representing a pair of integers
+ */
 struct pair_
 {
     int a;
     int b;
 };
 
+/*! 
+ * structure for a graph with a vector of nodes, edges and edge correspondence which 
+ * stores indexes of nodes which have a edge between them
+ */
 struct graph
 {
     vector<node> nodes;
     vector<edge> edges;
     vector<pair_> edge_corr;
 };
+
+/*! 
+ * structure for three orthographic views
+ */
 
 struct threeView
 {
@@ -50,10 +69,9 @@ struct threeView
     vector<edge> e3;
 };
 
-// struct graph
-// {
-// 	std::vector<node> g;
-// };
+/*! 
+ * structure for representing direction
+ */
 
 struct direction
 {
@@ -62,6 +80,9 @@ struct direction
     double theta_z;
 };
 
+/*! 
+ * structure for representing rotation matrix
+ */
 struct rot_matrix
 {
     mat Rx;
@@ -69,6 +90,9 @@ struct rot_matrix
     mat Rz;
 };
 
+/*! 
+ * structure for storing direction ratios
+ */
 struct dir_ratios
 {
     double a;

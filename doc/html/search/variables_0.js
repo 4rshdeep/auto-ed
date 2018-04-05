@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['edge_5fcodes_5f1',['edge_codes_1',['../mainwindow_8cpp.html#aced65cd5401c7676b35463d289953b02',1,'mainwindow.cpp']]]
+  ['a',['a',['../structpair__.html#a34b3976aedfeaae0572bf95f1f3ac47f',1,'pair_::a()'],['../structdir__ratios.html#a8cd0b45dd30ce975c1b2d7482fba81ac',1,'dir_ratios::a()']]],
+  ['adj_5flist',['adj_list',['../structnode.html#a6bed0ac4a22ac88cc7a22ee8fd5353ec',1,'node']]]
 ];

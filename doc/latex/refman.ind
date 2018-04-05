@@ -1,150 +1,271 @@
 \begin{theindex}
 
+  \item {$\sim$\+Main\+Window}
+    \subitem {Main\+Window}, \hyperpage{19}
+
+  \indexspace
+
+  \item {a}
+    \subitem {dir\+\_\+ratios}, \hyperpage{13}
+    \subitem {pair\+\_\+}, \hyperpage{22}
   \item {add\+\_\+coord}
-    \subitem {mainwindow.\+cpp}, \hyperpage{9}
+    \subitem {mainwindow.\+cpp}, \hyperpage{34}
+  \item {adj\+\_\+list}
+    \subitem {node}, \hyperpage{20}
 
   \indexspace
 
+  \item {b}
+    \subitem {dir\+\_\+ratios}, \hyperpage{13}
+    \subitem {pair\+\_\+}, \hyperpage{22}
+
+  \indexspace
+
+  \item {c}
+    \subitem {dir\+\_\+ratios}, \hyperpage{13}
   \item {check\+\_\+graph}
-    \subitem {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{14}
+    \subitem {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{41}
+  \item {coord}
+    \subitem {node}, \hyperpage{21}
+  \item {coordinate}, \hyperpage{11}
+    \subitem {x}, \hyperpage{12}
+    \subitem {y}, \hyperpage{12}
+    \subitem {z}, \hyperpage{12}
 
   \indexspace
 
-  \item {draw.\+cpp}, \hyperpage{3}
-    \subitem {draw\+\_\+views}, \hyperpage{4}
-    \subitem {draw\+\_\+xy}, \hyperpage{4}
-    \subitem {draw\+\_\+xz}, \hyperpage{4}
-    \subitem {draw\+\_\+yz}, \hyperpage{4}
-    \subitem {get\+\_\+average}, \hyperpage{4}
-    \subitem {get\+\_\+max\+\_\+x}, \hyperpage{5}
-    \subitem {get\+\_\+max\+\_\+y}, \hyperpage{5}
-    \subitem {get\+\_\+max\+\_\+z}, \hyperpage{5}
-    \subitem {get\+\_\+min\+\_\+x}, \hyperpage{5}
-    \subitem {get\+\_\+min\+\_\+y}, \hyperpage{5}
-    \subitem {get\+\_\+min\+\_\+z}, \hyperpage{5}
-    \subitem {get\+\_\+three\+\_\+views}, \hyperpage{5}
-    \subitem {print\+\_\+edges}, \hyperpage{6}
-    \subitem {print\+\_\+nodes}, \hyperpage{6}
+  \item {dir\+\_\+ratios}, \hyperpage{12}
+    \subitem {a}, \hyperpage{13}
+    \subitem {b}, \hyperpage{13}
+    \subitem {c}, \hyperpage{13}
+  \item {direction}, \hyperpage{14}
+    \subitem {theta\+\_\+x}, \hyperpage{14}
+    \subitem {theta\+\_\+y}, \hyperpage{14}
+    \subitem {theta\+\_\+z}, \hyperpage{15}
+  \item {draw.\+cpp}, \hyperpage{27}
+    \subitem {draw\+\_\+views}, \hyperpage{28}
+    \subitem {draw\+\_\+xy}, \hyperpage{28}
+    \subitem {draw\+\_\+xz}, \hyperpage{28}
+    \subitem {draw\+\_\+yz}, \hyperpage{29}
+    \subitem {get\+\_\+average}, \hyperpage{29}
+    \subitem {get\+\_\+max\+\_\+x}, \hyperpage{29}
+    \subitem {get\+\_\+max\+\_\+y}, \hyperpage{29}
+    \subitem {get\+\_\+max\+\_\+z}, \hyperpage{29}
+    \subitem {get\+\_\+min\+\_\+x}, \hyperpage{29}
+    \subitem {get\+\_\+min\+\_\+y}, \hyperpage{29}
+    \subitem {get\+\_\+min\+\_\+z}, \hyperpage{30}
+    \subitem {get\+\_\+three\+\_\+views}, \hyperpage{30}
+    \subitem {print\+\_\+edges}, \hyperpage{30}
+    \subitem {print\+\_\+nodes}, \hyperpage{30}
   \item {draw\+\_\+views}
-    \subitem {draw.\+cpp}, \hyperpage{4}
+    \subitem {draw.\+cpp}, \hyperpage{28}
   \item {draw\+\_\+xy}
-    \subitem {draw.\+cpp}, \hyperpage{4}
+    \subitem {draw.\+cpp}, \hyperpage{28}
   \item {draw\+\_\+xz}
-    \subitem {draw.\+cpp}, \hyperpage{4}
+    \subitem {draw.\+cpp}, \hyperpage{28}
   \item {draw\+\_\+yz}
-    \subitem {draw.\+cpp}, \hyperpage{4}
+    \subitem {draw.\+cpp}, \hyperpage{29}
 
   \indexspace
 
+  \item {e1}
+    \subitem {three\+View}, \hyperpage{25}
+  \item {e2}
+    \subitem {three\+View}, \hyperpage{25}
+  \item {e3}
+    \subitem {three\+View}, \hyperpage{25}
+  \item {edge}, \hyperpage{15}
+    \subitem {node1}, \hyperpage{17}
+    \subitem {node2}, \hyperpage{17}
   \item {edge\+\_\+codes\+\_\+1}
-    \subitem {mainwindow.\+cpp}, \hyperpage{9}
+    \subitem {mainwindow.\+cpp}, \hyperpage{34}
+  \item {edge\+\_\+corr}
+    \subitem {graph}, \hyperpage{18}
+  \item {edges}
+    \subitem {graph}, \hyperpage{18}
 
   \indexspace
 
   \item {find\+\_\+ortho}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{11}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{38}
   \item {find\+\_\+projection}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{12}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{38}
   \item {find\+\_\+rot}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{12}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{38}
 
   \indexspace
 
   \item {get\+\_\+2\+D\+\_\+graph}
-    \subitem {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{14}
+    \subitem {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{41}
   \item {get\+\_\+3\+D\+\_\+graph}
-    \subitem {input.\+cpp}, \hyperpage{7}
+    \subitem {input.\+cpp}, \hyperpage{32}
   \item {get\+\_\+average}
-    \subitem {draw.\+cpp}, \hyperpage{4}
+    \subitem {draw.\+cpp}, \hyperpage{29}
   \item {get\+\_\+dir\+\_\+ratios}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{12}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{38}
   \item {get\+\_\+max\+\_\+x}
-    \subitem {draw.\+cpp}, \hyperpage{5}
+    \subitem {draw.\+cpp}, \hyperpage{29}
   \item {get\+\_\+max\+\_\+y}
-    \subitem {draw.\+cpp}, \hyperpage{5}
+    \subitem {draw.\+cpp}, \hyperpage{29}
   \item {get\+\_\+max\+\_\+z}
-    \subitem {draw.\+cpp}, \hyperpage{5}
+    \subitem {draw.\+cpp}, \hyperpage{29}
   \item {get\+\_\+min\+\_\+x}
-    \subitem {draw.\+cpp}, \hyperpage{5}
+    \subitem {draw.\+cpp}, \hyperpage{29}
   \item {get\+\_\+min\+\_\+y}
-    \subitem {draw.\+cpp}, \hyperpage{5}
+    \subitem {draw.\+cpp}, \hyperpage{29}
   \item {get\+\_\+min\+\_\+z}
-    \subitem {draw.\+cpp}, \hyperpage{5}
+    \subitem {draw.\+cpp}, \hyperpage{30}
   \item {get\+\_\+mx4\+\_\+matrix}
-    \subitem {input.\+cpp}, \hyperpage{7}
+    \subitem {input.\+cpp}, \hyperpage{32}
   \item {get\+\_\+pair\+\_\+2D}
-    \subitem {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{15}
+    \subitem {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{41}
   \item {get\+\_\+three\+\_\+views}
-    \subitem {draw.\+cpp}, \hyperpage{5}
+    \subitem {draw.\+cpp}, \hyperpage{30}
+  \item {graph}, \hyperpage{17}
+    \subitem {edge\+\_\+corr}, \hyperpage{18}
+    \subitem {edges}, \hyperpage{18}
+    \subitem {nodes}, \hyperpage{18}
   \item {graph\+\_\+to\+\_\+mat}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{12}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{39}
 
   \indexspace
 
-  \item {input.\+cpp}, \hyperpage{6}
-    \subitem {get\+\_\+3\+D\+\_\+graph}, \hyperpage{7}
-    \subitem {get\+\_\+mx4\+\_\+matrix}, \hyperpage{7}
+  \item {input.\+cpp}, \hyperpage{31}
+    \subitem {get\+\_\+3\+D\+\_\+graph}, \hyperpage{32}
+    \subitem {get\+\_\+mx4\+\_\+matrix}, \hyperpage{32}
 
   \indexspace
 
   \item {main}
-    \subitem {main.\+cpp}, \hyperpage{8}
-  \item {main.\+cpp}, \hyperpage{8}
-    \subitem {main}, \hyperpage{8}
-  \item {mainwindow.\+cpp}, \hyperpage{8}
-    \subitem {add\+\_\+coord}, \hyperpage{9}
-    \subitem {edge\+\_\+codes\+\_\+1}, \hyperpage{9}
-    \subitem {mode}, \hyperpage{10}
-    \subitem {node\+\_\+0}, \hyperpage{10}
-    \subitem {node\+\_\+1}, \hyperpage{10}
-    \subitem {translate\+\_\+graph}, \hyperpage{9}
+    \subitem {main.\+cpp}, \hyperpage{33}
+  \item {main.\+cpp}, \hyperpage{32}
+    \subitem {main}, \hyperpage{33}
+  \item {Main\+Window}, \hyperpage{18}
+    \subitem {$\sim$\+Main\+Window}, \hyperpage{19}
+    \subitem {Main\+Window}, \hyperpage{19}
+  \item {mainwindow.\+cpp}, \hyperpage{33}
+    \subitem {add\+\_\+coord}, \hyperpage{34}
+    \subitem {edge\+\_\+codes\+\_\+1}, \hyperpage{34}
+    \subitem {mode}, \hyperpage{34}
+    \subitem {node\+\_\+0}, \hyperpage{34}
+    \subitem {node\+\_\+1}, \hyperpage{34}
+    \subitem {translate\+\_\+graph}, \hyperpage{34}
+  \item {mainwindow.\+h}, \hyperpage{35}
   \item {mat\+\_\+to\+\_\+graph}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{12}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{39}
   \item {mode}
-    \subitem {mainwindow.\+cpp}, \hyperpage{10}
+    \subitem {mainwindow.\+cpp}, \hyperpage{34}
 
   \indexspace
 
+  \item {n1}
+    \subitem {three\+View}, \hyperpage{25}
+  \item {n2}
+    \subitem {three\+View}, \hyperpage{25}
+  \item {n3}
+    \subitem {three\+View}, \hyperpage{25}
+  \item {node}, \hyperpage{20}
+    \subitem {adj\+\_\+list}, \hyperpage{20}
+    \subitem {coord}, \hyperpage{21}
+  \item {node1}
+    \subitem {edge}, \hyperpage{17}
+  \item {node2}
+    \subitem {edge}, \hyperpage{17}
   \item {node\+\_\+0}
-    \subitem {mainwindow.\+cpp}, \hyperpage{10}
+    \subitem {mainwindow.\+cpp}, \hyperpage{34}
   \item {node\+\_\+1}
-    \subitem {mainwindow.\+cpp}, \hyperpage{10}
+    \subitem {mainwindow.\+cpp}, \hyperpage{34}
+  \item {nodes}
+    \subitem {graph}, \hyperpage{18}
 
   \indexspace
 
+  \item {pair\+\_\+}, \hyperpage{21}
+    \subitem {a}, \hyperpage{22}
+    \subitem {b}, \hyperpage{22}
   \item {PI}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{11}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{38}
   \item {print\+\_\+edges}
-    \subitem {draw.\+cpp}, \hyperpage{6}
+    \subitem {draw.\+cpp}, \hyperpage{30}
   \item {print\+\_\+nodes}
-    \subitem {draw.\+cpp}, \hyperpage{6}
+    \subitem {draw.\+cpp}, \hyperpage{30}
+
+  \indexspace
+
+  \item {Q\+Main\+Window}, \hyperpage{22}
 
   \indexspace
 
   \item {rot\+\_\+about\+\_\+coord\+\_\+axis}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{13}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{39}
+  \item {rot\+\_\+matrix}, \hyperpage{23}
+    \subitem {Rx}, \hyperpage{24}
+    \subitem {Ry}, \hyperpage{24}
+    \subitem {Rz}, \hyperpage{24}
   \item {rotate\+\_\+graph}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{13}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{39}
+  \item {Rx}
+    \subitem {rot\+\_\+matrix}, \hyperpage{24}
+  \item {Ry}
+    \subitem {rot\+\_\+matrix}, \hyperpage{24}
+  \item {Rz}
+    \subitem {rot\+\_\+matrix}, \hyperpage{24}
 
   \indexspace
 
-  \item {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{10}
-    \subitem {find\+\_\+ortho}, \hyperpage{11}
-    \subitem {find\+\_\+projection}, \hyperpage{12}
-    \subitem {find\+\_\+rot}, \hyperpage{12}
-    \subitem {get\+\_\+dir\+\_\+ratios}, \hyperpage{12}
-    \subitem {graph\+\_\+to\+\_\+mat}, \hyperpage{12}
-    \subitem {mat\+\_\+to\+\_\+graph}, \hyperpage{12}
-    \subitem {PI}, \hyperpage{11}
-    \subitem {rot\+\_\+about\+\_\+coord\+\_\+axis}, \hyperpage{13}
-    \subitem {rotate\+\_\+graph}, \hyperpage{13}
-    \subitem {translate\+\_\+graph}, \hyperpage{13}
+  \item {struct.\+h}, \hyperpage{36}
+
+  \indexspace
+
+  \item {theta\+\_\+x}
+    \subitem {direction}, \hyperpage{14}
+  \item {theta\+\_\+y}
+    \subitem {direction}, \hyperpage{14}
+  \item {theta\+\_\+z}
+    \subitem {direction}, \hyperpage{15}
+  \item {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{37}
+    \subitem {find\+\_\+ortho}, \hyperpage{38}
+    \subitem {find\+\_\+projection}, \hyperpage{38}
+    \subitem {find\+\_\+rot}, \hyperpage{38}
+    \subitem {get\+\_\+dir\+\_\+ratios}, \hyperpage{38}
+    \subitem {graph\+\_\+to\+\_\+mat}, \hyperpage{39}
+    \subitem {mat\+\_\+to\+\_\+graph}, \hyperpage{39}
+    \subitem {PI}, \hyperpage{38}
+    \subitem {rot\+\_\+about\+\_\+coord\+\_\+axis}, \hyperpage{39}
+    \subitem {rotate\+\_\+graph}, \hyperpage{39}
+    \subitem {translate\+\_\+graph}, \hyperpage{39}
+  \item {three\+View}, \hyperpage{24}
+    \subitem {e1}, \hyperpage{25}
+    \subitem {e2}, \hyperpage{25}
+    \subitem {e3}, \hyperpage{25}
+    \subitem {n1}, \hyperpage{25}
+    \subitem {n2}, \hyperpage{25}
+    \subitem {n3}, \hyperpage{25}
   \item {translate\+\_\+graph}
-    \subitem {mainwindow.\+cpp}, \hyperpage{9}
-    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{13}
-  \item {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{14}
-    \subitem {check\+\_\+graph}, \hyperpage{14}
-    \subitem {get\+\_\+2\+D\+\_\+graph}, \hyperpage{14}
-    \subitem {get\+\_\+pair\+\_\+2D}, \hyperpage{15}
+    \subitem {mainwindow.\+cpp}, \hyperpage{34}
+    \subitem {three\+D\+\_\+to\+\_\+ortho.\+cpp}, \hyperpage{39}
+  \item {two\+D\+\_\+to3\+D.\+cpp}, \hyperpage{40}
+    \subitem {check\+\_\+graph}, \hyperpage{41}
+    \subitem {get\+\_\+2\+D\+\_\+graph}, \hyperpage{41}
+    \subitem {get\+\_\+pair\+\_\+2D}, \hyperpage{41}
+
+  \indexspace
+
+  \item {Ui}, \hyperpage{9}
+
+  \indexspace
+
+  \item {x}
+    \subitem {coordinate}, \hyperpage{12}
+
+  \indexspace
+
+  \item {y}
+    \subitem {coordinate}, \hyperpage{12}
+
+  \indexspace
+
+  \item {z}
+    \subitem {coordinate}, \hyperpage{12}
 
 \end{theindex}
