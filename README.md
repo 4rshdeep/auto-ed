@@ -7,11 +7,13 @@ The package has the following functionalities:
 
 ## How to run?
 Run the following in the terminal
-```cd source_code/
+`
+cd source_code/
   qmake
   make
   cd bin
-  ./autoed```
+  ./autoed
+`
 
 ## Input File Format
 * For 3D to 2D
