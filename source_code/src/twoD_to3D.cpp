@@ -236,20 +236,3 @@ void check_graph(vector<node> v) {
         cout << endl;
     }
 }
-
-//int main(int argc, char const *argv[])
-//{
-//    string fname = "input_2D_cube.txt";
-//    std::vector<node> v = get_2D_graph(fname);
-
-//    check_graph(v);
-//    std::vector<pair_> vec = get_pair_2D(fname);
-
-//    cout << "pairs \n";
-//    for (int i = 0; i < static_cast<int>(vec.size()); ++i)
-//    {
-//        cout << vec[i].a << " " << vec[i].b << endl;
-//    }
-
-//    return 0;
-//}
