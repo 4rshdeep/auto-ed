@@ -8,6 +8,9 @@ using namespace std;
 
 threeView get_three_views(string filename)
 {
+	/*! Reads the 2D input from a file given as an argument.
+    *   Converts the input into a graph and returns the graph of three orthographic views
+    */
 	threeView tv;
 
 	int size, edges, idx1, idx2, iter;
@@ -109,12 +112,16 @@ threeView get_three_views(string filename)
 }
 
 void print_nodes(vector<node> v) {
+	/*! Helper function that prints coordinates of a node in a vector of nodes.
+    */
     for(int i = 0; i < static_cast<int>(v.size()); i++) {
         cout << v[i].coord.x << " " << v[i].coord.y << " " << v[i].coord.z << " \n";
     }
 }
 
 void print_edges(vector<edge> v) {
+	/*! Helper function that prints coordinates of two nodes that make up an edge in a vector of edges.
+    */
     for(int iter = 0 ; iter < static_cast<int>(v.size()); ++iter) {
         cout << v[iter].node1->coord.x << " " << v[iter].node1->coord.y << " " << v[iter].node2->coord.x << " " << v[iter].node2->coord.y << "\n";
     }
@@ -122,6 +129,8 @@ void print_edges(vector<edge> v) {
 
 coordinate get_average(vector<node> v)
 {
+	/*! Returns a coordinate average of the coordinates of all the nodes in a vector of nodes.
+    */
 	coordinate c;
 	c.x = 0;
     c.y = 0;
@@ -148,6 +157,8 @@ coordinate get_average(vector<node> v)
 
 int get_max_y(vector<edge> v)
 {
+	/*!	Helper function that gets maximum y coordinate of a node in a vector of edges.
+	*/
 	int max = v[0].node1->coord.y;
 	int temp1, temp2;
 	for (int i = 0; i < static_cast<int>(v.size()); i++)
@@ -168,6 +179,8 @@ int get_max_y(vector<edge> v)
 
 int get_max_x(vector<edge> v)
 {
+	/*!	Helper function that gets maximum x coordinate of a node in a vector of edges.
+	*/
 	int max = v[0].node1->coord.x;
 	int temp1, temp2;
 	for (int i = 0; i < static_cast<int>(v.size()); i++)
@@ -188,6 +201,8 @@ int get_max_x(vector<edge> v)
 
 int get_min_x(vector<edge> v)
 {
+	/*!	Helper function that gets minimum x coordinate of a node in a vector of edges.
+	*/
 	int min = v[0].node1->coord.x;
 	int temp1, temp2;
 	for (int i = 0; i < static_cast<int>(v.size()); i++)
@@ -208,6 +223,8 @@ int get_min_x(vector<edge> v)
 
 int get_min_y(vector<edge> v)
 {
+	/*!	Helper function that gets minimum y coordinate of a node in a vector of edges.
+	*/
 	int min = v[0].node1->coord.y;
 	int temp1, temp2;
 	for (int i = 0; i < static_cast<int>(v.size()); i++)
@@ -228,6 +245,8 @@ int get_min_y(vector<edge> v)
 
 int get_min_z(vector<edge> v)
 {
+	/*!	Helper function that gets minimum z coordinate of a node in a vector of edges.
+	*/
 	int min = v[0].node1->coord.z;
 	int temp1, temp2;
 	for (int i = 0; i < static_cast<int>(v.size()); i++)
@@ -248,6 +267,8 @@ int get_min_z(vector<edge> v)
 
 int get_max_z(vector<edge> v)
 {
+	/*!	Helper function that gets maximum z coordinate of a node in a vector of edges.
+	*/
 	int max = v[0].node1->coord.z;
 	int temp1, temp2;
 	for (int i = 0; i < static_cast<int>(v.size()); i++)
@@ -268,6 +289,9 @@ int get_max_z(vector<edge> v)
 
 QPicture draw_views(vector<edge> v)
 {
+	/*!	Takes a graph as an input.
+	*	Renders view from the same graph. 
+	*/
 	int x1 = get_max_x(v);
 	int y1 = get_max_y(v);
 	int x2 = get_min_x(v);
@@ -300,6 +324,9 @@ QPicture draw_views(vector<edge> v)
 
 QPicture draw_xy(vector<edge> v)
 {
+	/*!	Takes a graph description (vector of nodes) as and input.
+	*	Draws the XY coordinates of this graph.
+	*/
 	int x1 = get_max_x(v);
 	int y1 = get_max_y(v);
 	int x2 = get_min_x(v);
@@ -332,6 +359,9 @@ QPicture draw_xy(vector<edge> v)
 
 QPicture draw_yz(vector<edge> v)
 {
+	/*!	Takes a graph description (vector of nodes) as and input.
+	*	Draws the YZ coordinates of this graph.
+	*/
 	int z1 = get_max_z(v);
 	int y1 = get_max_y(v);
 	int z2 = get_min_z(v);
@@ -365,6 +395,9 @@ QPicture draw_yz(vector<edge> v)
 
 QPicture draw_xz(vector<edge> v)
 {
+	/*!	Takes a graph description (vector of nodes) as and input.
+	*	Draws the XZ coordinates of this graph.
+	*/
 	int z1 = get_max_z(v);
 	int x1 = get_max_y(v);
 	int z2 = get_min_z(v);

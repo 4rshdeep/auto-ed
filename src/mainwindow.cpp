@@ -31,6 +31,8 @@ MainWindow::~MainWindow()
 
 coordinate add_coord(coordinate c1, coordinate c2)
 {
+    /*! Helper func that adds two coordinates
+    */
     coordinate cf;
     cf.x = c1.x + c2.x;
     cf.y = c1.y + c2.y;
@@ -41,6 +43,8 @@ coordinate add_coord(coordinate c1, coordinate c2)
 // input is mx4 matrix and translation factor
 void translate_graph(vector<node> &v, coordinate c)
 {
+    /*! Translates graph taking a vector of nodes and an average coordinate
+    */
     for (int i = 0; i < static_cast<int>(v.size()); i++)
     {
         v[i].coord = add_coord(v[i].coord, c);
@@ -52,6 +56,9 @@ void translate_graph(vector<node> &v, coordinate c)
 
 void MainWindow::on_pushButton_clicked()
 {
+    /*! 3D to 2D 
+    *   Draws projection with dir ratio 1 0 0 , 0 1 0, 0 0 1 and fourth by taking input from GUI 
+    */
     mode = 0;
     QString qs = ui->t4->toPlainText();
     string s = qs.toStdString();
@@ -208,6 +215,9 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    /*! 2D to 3D 
+    *   Gets input and then draws projection with dir ratio 1 0 0 , 0 1 0, 0 0 1 and fourth by taking input from GUI
+    */
     mode = 1;
     QString qs = ui->t4->toPlainText();
     string fname = qs.toStdString();
@@ -356,6 +366,8 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_moveX_clicked()
 {
+    /*! Rotates graph about X coordinate axis
+    */
     cout << "moveX pressed \n";
     if(mode == 0){
         // 3d to 2d
@@ -451,6 +463,8 @@ void MainWindow::on_moveX_clicked()
 
 void MainWindow::on_moveY_clicked()
 {
+    /*! Rotates graph about Y coordinate axis
+    */
     cout << "moveY pressed \n";
     if(mode == 0){
         QString qs = ui->t4->toPlainText();
@@ -544,6 +558,8 @@ void MainWindow::on_moveY_clicked()
 
 void MainWindow::on_moveZ_clicked()
 {
+    /*! Rotates graph about Z coordinate axis
+    */
     cout << "moveZ pressed \n";
     if(mode == 0){
         QString qs = ui->t4->toPlainText();
