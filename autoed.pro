@@ -29,7 +29,7 @@ OBJECTS_DIR = ./build/obj
 RCC_DIR     = ./build/qrc
 UI_DIR      = ./build/uic
 
-SOURCES += ./src/*.cpp
+SOURCES += ./src/*.cpp ./src/qt/*.cpp 
 HEADERS += ./include/*.h
 
 FORMS += ./forms/*.ui \

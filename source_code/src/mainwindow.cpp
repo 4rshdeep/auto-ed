@@ -1,5 +1,6 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "include/mainwindow.h"
+// #include "include/ui_mainwindow.h"
+#include <ui_mainwindow.h>
 #include <bits/stdc++.h>
 #include <QtCore>
 #include <QtGui>
@@ -54,11 +55,13 @@ void MainWindow::on_pushButton_clicked()
     mode = 0;
     QString qs = ui->t4->toPlainText();
     string s = qs.toStdString();
+    
+    cout << s;
     graph g = get_3D_graph(s);
 
     if (g.nodes.size()==0) {
-        ui->l1->setText("File Not Found");
         ui->t4->setText("3dcube.txt");
+        ui->l1->setText("File Not Found");
         return;
     }
     vector<node> nodes = g.nodes;
@@ -200,7 +203,6 @@ void MainWindow::on_pushButton_clicked()
     pi = draw_xy(e);
     ui->l4->setPicture(pi);
     ui->l4->show();
-    // clear edges
     e.clear();
 }
 
