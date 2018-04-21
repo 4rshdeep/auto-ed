@@ -35,4 +35,4 @@ Run the following in the terminal
 ## Authors
 Arshdeep Singh [@4rshdeep](https://github.com/4rshdeep/)    
 Ansh Sapra [@ansh2233](https://github.com/ansh2233/)
-@4rshdeep
+
